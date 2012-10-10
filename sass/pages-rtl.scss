@@ -1,0 +1,27 @@
+/**
+ * @file
+ * RTL companion for the pages.css file.
+ */
+
+@import "base";
+
+
+/*
+ * Header
+ */
+
+#logo { /* Wrapping link for logo */
+  float: right;
+}
+
+/*
+ * Content
+ */
+
+ul.inline li { /* List of links */
+  display: inline-block; /* Bug in Safari causes display: inline to fail. */
+  padding: 0 0 0 1em;
+}
+span.field-label { /* The inline field label used by the Fences.module */
+  padding: 0 0 0 1em;
+}

@@ -1,0 +1,30 @@
+/**
+ * @file
+ * RTL companion for the navigation.css file.
+ */
+
+@import "base";
+
+
+ul li.collapsed {
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *list-style-image: url(../images/menu-collapsed-rtl.png);
+  }
+  list-style-image: inline-image("menu-collapsed-rtl.png");
+}
+
+#navigation {
+  ul.links, /* Main menu and secondary menu links */
+  ul.menu { /* Menu block links */
+    text-align: right;
+
+    li { /* A simple method to get navigation links to appear in one line. */
+      float: right;
+      padding: 0 0 0 10px;
+    }
+  }
+}
+
+#secondary-menu {
+  float: left;
+}

@@ -1,0 +1,73 @@
+/**
+ * @file
+ * Print styling
+ *
+ * We provide some sane print styling for Drupal using Zen's layout method.
+ */
+
+@import "base";
+
+
+@media print {
+
+  a:link,
+  a:visited { /* underline all links */
+    text-decoration: underline !important;
+
+    #site-name & { /* Don't underline header */
+      text-decoration: none !important;
+    }
+  }
+
+  #content {
+    a[href]:after { /* Add visible URL after links. */
+      content: " (" attr(href) ")";
+      font-weight: normal;
+      font-size: $base-font-size;
+    }
+
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after { /* Only display useful links. */
+      content: "";
+    }
+
+    abbr[title]:after { /* Add visible title after abbreviations. */
+      content: " (" attr(title) ")";
+    }
+  }
+
+  #content { /* Un-float the content */
+    float: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body,
+  #page,
+  #main,
+  #content { /* Turn off any background colors or images */
+    color: #000;
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+
+  #skip-link,
+  #toolbar,
+  #navigation,
+  .region-sidebar-first,
+  .region-sidebar-second,
+  #footer,
+  .breadcrumb,
+  .tabs,
+  .action-links,
+  .links,
+  .book-navigation,
+  .forum-topic-navigation,
+  .pager,
+  .feed-icons { /* Hide sidebars and nav elements */
+    visibility: hidden;
+    display: none;
+  }
+
+} /* End @media print */

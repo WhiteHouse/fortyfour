@@ -1,0 +1,764 @@
+//   TODO
+//[] Base Font declarations
+//[] 
+
+@import "base";
+
+@import "compass/css3/border-radius";
+$default-border-radius: 5px;
+
+@import "compass/css3/box-shadow";
+$default-box-shadow-color: #c5c5c5;
+$default-box-shadow-h-offset: 0px;
+$default-box-shadow-v-offset: 0px;
+$default-box-shadow-blur: 5px;
+@import "buttons";
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:75%;
+  color:#333333;
+  height:100%;
+  margin:0;
+  padding:0;
+  background:#fff url(../images/bg-main-one-repeat.jpg) repeat-y center top;
+}
+  
+.header-wrap{
+  //height: 133px;
+}
+#header{
+  position: relative;
+  padding: 0px;
+  height: 133px;
+}
+
+#drop-nav{
+  background-color: #fff;
+  @include border-bottom-left-radius;
+  @include border-bottom-right-radius;
+  border-right: 1px solid #c5c5c5;
+  border-bottom: 1px solid #c5c5c5;
+  border-left: 1px solid #c5c5c5;  
+  margin-bottom: 2.5em;
+  @include box-shadow();
+  min-height: 20px;
+  position: relative;
+}
+
+.handle-wrap{
+  position: absolute;
+  bottom: -25px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  height: 26px;
+}
+
+#content{
+  background-color: #fff;
+  //@include border-radius();
+  //border: 1px solid #c5c5c5;
+}
+
+.page-wrapper {
+  background: url(../images/bg-main.jpg) no-repeat scroll top center;
+  min-height: 1000px; /* Revised from 100% on site */
+  margin: 0;
+  min-width:976px;
+  padding: 0;
+  position: relative;
+}
+
+.banner-bg{
+	background:url(../images/topbarbg.png) top left repeat-x;
+}
+#banner{
+	background:url(../images/topbarbg.png) top left repeat-x;
+	height: 31px;
+}
+.flag{
+  background: url(../images/flag.png) left center no-repeat;
+  color: #fff;
+  float: right;
+  font-size: 0.67em;
+  font-family: georgia , serif;
+  font-style: italic;
+  padding-left: 27px;
+  line-height: 2.67em;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+#secondary-menu{
+  position:relative;
+}
+#secondary-menu h2{
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #9abfe5; 
+  float: left;
+  font: 0.75em arial;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: 0px;
+  padding-left:8px;
+}
+.arrow-down{
+  background: url(../images/arrow-down.png) right center no-repeat;
+  padding-right: 20px;
+}
+.arrow-up{
+  background: #07326A url(../images/arrow-up.png) right center no-repeat;
+  padding-right: 20px;
+}
+#secondary-menu ul{
+  background: #fff;//#EAEFF5;
+  display: none;
+  z-index:1;
+  margin: 0;
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  padding: 5px 10px;
+  border: 1px solid #369;
+  @include border-bottom-left-radius;
+  @include border-bottom-right-radius;
+  margin-bottom: 2.5em;
+}
+#secondary-menu ul li{
+  display:block;
+}
+#secondary-menu ul li a{
+  color: #369;
+  text-decoration: none;
+}
+#secondary-menu ul li a:hover{
+  color: #333;
+}
+
+#logo{
+	padding-top: 40px;
+}
+.seal{
+  position: absolute;
+  top: -25px;
+  text-align: center;
+  width: 156px;
+  left: 42%;
+}
+.takeover .block{
+  margin: 0;
+}
+
+.hidden{
+  display: none;
+}
+
+/*Spriting*/
+#hdr-flag a, #wh-header-link-get-email-updates a, #wh-header-link-get-email-updates a.modal, #wh-header-link-contact-us a, #wh-header-link-contact-us a:hover{
+  background:url(../images/home/homesprite.png) no-repeat;
+  background-repeat: no-repeat;
+}
+
+#subhead-wrapper, #sub-footer, #wh-footer{
+ background-image: url(../images/home/homesprite.png);
+ background-repeat: no-repeat;
+}
+/************ Styles that define the layout of the page.   Includes info about width, height, margins, padding and float info *************/
+#page {
+	background: url(../images/bg-main.jpg) no-repeat scroll top center;
+	height: 100%;
+	min-width: 976px;
+	margin: 0;
+	padding: 0;
+	/* The following fixes sclaing issues on iphone */
+	-webkit-background-size: 1280px auto; 
+}
+
+.center-on-page {
+	width: 976px;
+	margin: 0 auto;
+	min-height: 600px;
+}
+
+#subhead-wrapper {
+	height: 22px;
+	margin: 0;
+	padding: 10px 13px;
+	background-position: 0px -88px;
+}
+
+p { font-size: 1em;
+    line-height: 1.5;
+}
+
+
+/******* HEADER EMBLEM ******************/
+
+#hdr-emblem {
+  float: left; 
+  height: 62px;
+  margin: 10px 0 0 0;
+  width: 116px;
+}
+
+#hdr-emblem img {
+  width: 120px; height: 60px;
+  }
+
+/******* HEADER GENERIC ******************/
+
+#wh-header {
+  font-family:Georgia, "Times New Roman", Times, serif;
+  font-size: 1em;    /*16px x .75   = 12px */
+  }
+
+#wh-header span {   
+  width: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+#wh-header span a {
+  text-indent: -9000px; 
+  width: 340px; 
+  height: 42px; 
+  display: block;
+  }
+  
+#wh-header-title {
+  float: left;
+  width: 430px;
+  margin: 30px 0 0 0;
+}
+
+/******* HEADER LINKS ******************/
+
+#hdr-links {
+  width: 270px; 
+  float: right; 
+  text-align: right; 
+  margin: 33px 8px 0 0;
+  height: 23px;
+  padding: 15px 0 0 0;
+}
+
+#hdr-links a {
+  padding: 0 10px;
+  color: #336699;
+  text-decoration: none;
+}
+
+#hdr-links a:hover {text-decoration: underline;}
+
+#hdr-links ul {
+  margin: 0; 
+  padding: 0;
+}
+
+#hdr-links li {list-style-type: none; display: inline; margin: 0; padding: 0;}
+
+#hdr-links li.line {
+  border-left: 1px solid #CCC;
+}
+
+#hdr-flag {width: 21px; float: left; margin: 85px 0 0 8px; padding: 0; text-indent: -9000px; height: 20px; position: absolute;  }
+
+#hdr-flag a {display: block; width: 21px; background-position: -68px -69px; height: 19px; }
+
+/***************** Header ******************/
+#hdr-emblem {
+	float: left;
+	height: 42px;
+	margin: 30px 0 0 0;
+}
+
+#hdr-emblem img {
+	width: 100px;
+	height: 40px;
+}
+
+#hdr-links {
+	width: 270px;
+	float: right;
+	margin: 33px 8px 0 0;
+	height: 23px;
+	padding: 15px 0 0 0;
+}
+
+
+/**
+ * CSS for Get Email Updates modal popup and form.
+ */
+#wh-header-link-get-email-updates {
+  background-position: -950px 12px;
+  padding-left: 20px;
+  font-size: .9em;
+}
+
+#hdr-links li#wh-header-link-get-email-updates {
+  margin-right: -3px;
+}
+
+
+#wh-header-link-get-email-updates a {
+  background-position: -950px 2px;
+  padding-left: 20px;
+}
+
+#wh-header-link-get-email-updates a:hover,
+#wh-header-link-get-email-updates a.modal {
+   background-position: -950px -10px; 
+}
+  
+#hdr-links #wh-header-link-contact-us {
+  padding-left: 10px;
+}
+#wh-header-link-contact-us a {
+  background-position: -950px -22px;
+  padding-left: 20px;
+  font-size: .9em;
+}
+#wh-header-link-contact-us a:hover {
+  background-position: -951px -37px;
+  }
+
+
+/***************** Footer ******************/
+#wh-footer {
+	background-position: 0px -322px;
+	padding: 65px 0 40px 0;
+	margin: 0 0 0 0;
+        position: relative;
+        height:100%
+}
+
+#wh-footer a {
+  color: #666;
+  text-decoration: none;
+}
+
+#wh-footer a:hover { text-decoration: underline; }
+
+#wh-footer ul {margin: 0; padding: 0;}
+
+#wh-footer h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  text-transform: none;
+}
+
+#wh-footer li {
+  list-style-type: none;
+  margin: 0 0 5px 0;
+  padding: 0;
+  font-size: .917em;
+  line-height: 1.0em;
+}
+
+
+#sub-footer {
+  text-align: center;
+  padding-bottom: 80px;
+  line-height: 1em;
+}
+
+#sub-footer a, #sub-footer a:visited {
+  color: #999;
+  text-decoration: none;
+}
+
+#sub-footer ul {
+  margin: 5px 0;
+  clear: both;
+  padding: 0;
+  text-align: center;
+  font-size: .833em;
+}
+
+#sub-footer li {
+  list-style-type: none;
+  display: inline;
+  text-align: center;
+  border-right: 1px solid #999;
+  padding: 0 7px 0 3px;
+}
+
+#sub-footer li.last {
+  border: none;
+  padding-right: 0;
+}
+
+#wh-footer .col {
+	float: left;
+	width: 137px;
+	margin: 0 0 0 20px;
+}
+
+#sub-footer {
+	background-position: 0px -131px;
+        background-color: #fff;
+	padding: 15px 0 0 0;
+	margin: 0;
+        position: relative;
+}
+
+#ms_main_nav_footer {
+
+}
+
+#ms_main_nav_footer p {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1em;
+  color:#CCCCCC;
+  margin:0 0 10px 0;
+  background: none repeat scroll 0 0 #F4F4F4;
+}
+#ms_main_nav_footer p a {
+  color: #999999;
+}
+
+#ms_main_nav_footer .delimiter {
+  padding: 0px 4px;
+}
+
+/************** Breadcrumb and Search **************/
+#breadcrumb {
+	padding: 5px 0 5px 8px;
+	float: left;
+	width: 500px;
+}
+
+#sub-search {
+	width: 303px;
+	float: right;
+}
+
+/*************** Left Navigation *****************/
+#left-nav {
+	width: 155px;
+	float: left;
+	padding: 25px 25px 0 20px;
+}
+#microsite #left-nav {	
+	padding-top: 2px;
+}
+
+.excel-content #left-nav {	
+	width: 960px;
+	padding: 20px 10px 0 10px;
+}
+
+
+/***************** Interior Pages ******************/
+.extend-page-full {
+	background: #FFF;
+	/*  No right bluish background column *****/
+}
+
+.page-no-cols {
+	padding-left: 10px;
+}
+
+#content {
+	width: 958px;
+	float: left;
+}
+
+.page #content {
+	width: 440px;
+	float: left;
+	padding: 25px 15px 0 0;
+}
+
+div.no-right #content {
+	width: 630px;
+	padding: 25px 25px 0 20px;
+}
+
+body.full #content {
+	width: 615px;
+	float: left;
+	padding: 25px 25px 0 20px;
+	background: url(../images/bg-int-col.gif) repeat-y;
+}
+
+#right-rail {
+	width: /*262px;*/ 272px;
+	float: right;
+	background: url(../images/bg-rightrail.jpg) left top no-repeat;
+	padding: 20px 20px 15px 23px;
+	min-height: 500px;
+}
+
+/******* MAIN TOP NAVIGATION ******************/
+
+/*** First-Level Main navigation ***/
+
+#top-nav-wrapper {
+  //margin-top: 34px;
+}
+
+ul#topnav {
+  background:url(../images/home/homesprite.png) no-repeat;
+  width:942px;
+  height: 34px;
+  margin: 3px 0 0 34px;
+  padding:0;
+  float: left;
+}
+
+ul#topnav li {
+  margin-top: 0;
+}
+
+#topnav li.first-level span {
+  position:absolute;
+  left:-9999px;
+  z-index: 50;
+}
+
+#topnav li,
+#topnav li.first-level a {
+  min-height: 34px;
+  display:block;
+}
+
+#topnav li {
+  float:left;
+  list-style:none;
+  display:inline;
+  padding: 0;
+}
+
+li#nav-blog                 a.first-level {width: 65px;}
+li#nav-media-center         a.first-level {width: 135px;}
+li#nav-briefing-room        a.first-level {width: 141px;}
+li#nav-issues               a.first-level {width: 71px; }
+  li#nav-the-admin              {margin-left: /*90px */85px;}
+li#nav-the-admin            a.first-level {width: 160px;}
+li#nav-the-wh               a.first-level {width: /*144px;*/ 139px;}
+li#nav-the-gov              a.first-level {width: 146px; }
+
+li#nav-blog:hover           a.first-level {background:url(../images/home/homesprite.png) 0px -34px no-repeat; }
+li#nav-media-center:hover   a.first-level {background:url(../images/home/homesprite.png) -65px -34px no-repeat; }
+li#nav-briefing-room:hover  a.first-level {background:url(../images/home/homesprite.png) -200px -34px no-repeat; }
+li#nav-issues:hover         a.first-level {background:url(../images/home/homesprite.png) -340px -34px no-repeat; }
+li#nav-the-admin:hover      a.first-level {background:url(../images/home/homesprite.png) /*-504px*/ -497px -34px no-repeat; }
+li#nav-the-wh:hover         a.first-level {background:url(../images/home/homesprite.png) -656px -34px no-repeat; }
+li#nav-the-gov:hover        a.first-level {background:url(../images/nav-sprite.gif) -795px -34px no-repeat; }
+
+/*** Second-Level Main navigation ***/
+
+ul#topnav li.first-level ul {
+  display: block;
+  margin: 0 0 0 10px;
+  float: left;
+  padding: 20px 0 5px 0;
+  width: 180px;
+}
+
+ul#topnav li.first-level ul li {
+  margin: 0 0 13px 0;
+  padding: 0;
+  width: 180px;
+  min-height: 12px;
+  float: left;
+} 
+ul#topnav li.first-level ul li a {
+  color: #0f4f89;
+  font: bold 12px arial;
+  text-decoration: none;
+  min-height: 12px;
+}
+
+ul#topnav li.first-level ul li a:hover {
+  text-decoration: underline;
+}
+
+/*** Tertiary Main Navigation **********/
+
+ul#topnav li.first-level ul.topnav-dd-inner-sub {
+  padding: 0;
+  margin: 0;
+}
+
+ul#topnav li.first-level ul.topnav-dd-inner-sub li {
+  margin: 7px 0 0 0;
+}
+
+ul#topnav li.first-level ul.topnav-dd-inner-sub li a {
+  font-weight: normal;
+}
+
+/*** End of Tertiary Main Menu Items ***/
+
+/*** Dropdown Shadow-related **/
+ul#topnav li div.topnav-dd-outer {
+  position: absolute;
+  z-index: 500;
+  width: 426px;
+  left: -999em;
+  background: url(../images/backgrounds/bg-nav-left-edge-trans.png) no-repeat left bottom;
+  margin-left: -9px;
+}
+
+/** Featured spaces are wider **/
+ul#topnav li div.topnav-dd-outer-featured {
+  width: 651px;
+}
+
+ul#topnav div.topnav-feature {
+  width: 185px;
+  overflow: hidden;
+  float: left;
+  padding: 18px 10px 18px 40px;
+  background: url(../images/backgrounds/bg-nav-featured-right.png) no-repeat top left;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+ul#topnav div.topnav-feature a {
+  color: #0f4f89;
+  min-height: 12px;
+}
+
+ul#topnav div.topnav-feature h3 {
+  margin: 0 0 7px 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 16px;
+  min-height: 12px;
+  font-weight: bold;
+}
+
+ul#topnav div.topnav-feature p {
+  margin: 0 0 7px 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 16px;
+  min-height: 12px;
+}
+
+ul#topnav div.topnav-feature hr {
+  margin: 10px 0;
+}
+
+ul#topnav div#nav-the-admin-feature,
+ul#topnav div#nav-the-wh-feature,
+ul#topnav div#nav-the-gov-feature {
+  background: url(../images/backgrounds/bg-nav-featured-left.png) no-repeat top right;
+  padding: 18px 40px 18px 10px;
+}
+
+/** Three Column spaces are wider **/
+ul#topnav li div.topnav-dd-outer-three-col {
+  width: 616px;
+}
+
+ul#topnav li div.topnav-dd-outer-three-col-featured {
+  width: 841px;
+}
+
+ul#issues-landing-entry-list { float:left; width: 142px; }
+#issues-landing-links ul#issues-landing-entry-list li { width: 139px; padding: 3px; }
+
+ul li#nav-issues div.topnav-dd-outer-three-col,
+ul li#nav-issues div.topnav-dd-outer-featured,
+ul li#nav-issues div.topnav-dd-outer-three-col-featured {
+  margin-left: -384px;
+  background: url(../images/backgrounds/bg-nav-left-edge-blank.png) no-repeat left bottom;
+}
+
+ul li#nav-briefing-room div.topnav-dd-outer-three-col-featured {
+  margin-left: -243px;
+  background: url(../images/backgrounds/bg-nav-left-edge-blank.png) no-repeat left bottom;
+}
+
+ul li#nav-the-admin div.topnav-dd-outer { margin-left: -162px; }
+ul li#nav-the-admin div.topnav-dd-outer-featured { margin-left: -197px; }
+ul li#nav-the-admin div.topnav-dd-outer-three-col-featured { margin-left: -387px; }
+
+ul li#nav-the-wh div.topnav-dd-outer { margin-left: -132px; } /* not checked */
+ul li#nav-the-wh div.topnav-dd-outer-featured { margin-left: -357px; }
+ul li#nav-the-wh div.topnav-dd-outer-three-col { margin-left: -322px; }
+ul li#nav-the-wh div.topnav-dd-outer-three-col-featured { margin-left: -547px; }
+
+ul li#nav-the-gov div.topnav-dd-outer { margin-left: -271px;}
+ul li#nav-the-gov div.topnav-dd-outer-featured { margin-left: -496px;}
+
+/* The edges of the right aligned menu items aren't under the blue bar, so we have to remove shadow so it does not look bad */
+ul li#nav-the-admin div.topnav-dd-inner,
+ul li#nav-the-wh div.topnav-dd-inner,
+ul li#nav-the-gov div.topnav-dd-inner {
+  background: url(../images/backgrounds/bg-nav-right-edge-trans2.png) no-repeat left bottom;
+  margin-right: 9px;
+}
+
+ul#topnav li:hover div.topnav-dd-outer {
+  left: auto;
+}
+
+div.topnav-dd-inner {
+  background: url(../images/backgrounds/bg-nav-right-edge-trans.png) no-repeat right bottom;
+  margin-left: 17px;
+  margin-bottom: -5px;
+  padding: 0 0 17px 0;
+}
+
+/*** End of Dropdown Shadow-related **/
+
+a:focus { -moz-outline-style: none; } /*this avoids having image replacement sections display a dotted outline*/
+
+/* Maintenance page CSS */
+
+#maintenance-page #petition-inner {
+  padding: 0px;
+}
+
+#maintenance-page #petition-inner .main-content {
+  float: none;
+  width: 100%;
+  padding: 0px;
+}
+
+#maintenance-page h1.apologies {
+  color: #fff;
+  text-align: center;
+  font-family: Georgia,"Times New Roman",Times,serif;
+  font-size: 36px;
+  margin: 10px;
+}
+
+#maintenance-page .this-section {
+  color: #fff;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  margin: 5px 0px;
+}
+
+#maintenance-page .we-appreciate {
+  color: #fff;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  margin: 5px 0px;
+}
+
+#maintenance-page .bold-construction {
+  font-weight: bold;
+}
+
+#maintenance-page .construction-text-wrap {
+  width: 500px;
+  position: relative;
+  top: -638px;
+  left: 235px;
+  margin: 5px 0px;
+}

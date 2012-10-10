@@ -1,0 +1,140 @@
+/**
+ * @file
+ * Positioning for a fixed-width, desktop-centric layout.
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+
+@import "base";
+
+
+// We are going to create a 980px wide, 5 column grid with 20px gutters between
+// columns (applied as 10px of left/right padding on each column).
+$zen-column-count:  5;
+$zen-gutter-width:  20px;
+$zen-grid-width:    980px;
+
+
+// IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 2 ways:
+// - (Preferred) Install the box-sizing polyfill and set the variable below to
+//   the absolute path URL to the boxsizing.htc file.
+//   @see https://github.com/Schepp/box-sizing-polyfill
+//   $box-sizing-polyfill-path: "/path/to/boxsizing.htc";
+// - Use the same CSS unit for grid width and gutter width (use px for both or
+//   use % for both, etc.) and set the box-sizing variable to content-box.
+     $zen-box-sizing: content-box;
+
+
+// You can generate more efficient CSS if you manually apply the
+// zen-grid-item-base mixin to all grid items from within a single ruleset.
+$zen-auto-include-item-base: false;
+// $zen-auto-include-flow-item-base: false;
+
+
+/*
+ * Center the page.
+ */
+
+#page,
+.region-bottom, .region-banner, .takeover, #header, #main-nav, .footer-inner, #drop-nav{
+  /* For screen sizes larger than 1200px, prevent excessively long lines of text by setting a max-width. */
+  margin-left: auto;
+  margin-right: auto;
+  width: 976px;
+}
+
+/*
+ * Apply the shared properties of grid items in a single, efficient ruleset.
+ */
+// See the note about $zen-auto-include-item-base above.
+
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+#footer {
+  @include zen-grid-item-base();
+}
+
+/*
+ * Containers for grid items and flow items.
+ */
+
+#header,
+#main,
+#footer {
+  @include zen-grid-container();
+}
+
+/*
+ * Navigation bar
+ */
+
+#navigation {
+  position: absolute;
+  top: 0; /* Move the navbar up inside #main's padding. */
+  height: 3em;
+  width: $zen-grid-width;
+}
+
+/*
+ * The layout when there are no sidebars.
+ */
+
+#content {
+  width: $zen-grid-width;
+}
+
+/*
+ * The layout when there is only one sidebar, the left one.
+ */
+
+.sidebar-first {
+  #content { /* Span 4 columns, starting in 2nd column from left. */
+    @include zen-grid-item(4, 2);
+  }
+
+  .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+    @include zen-grid-item(1, 1);
+  }
+}
+
+/*
+ * The layout when there is only one sidebar, the right one.
+ */
+
+.sidebar-second {
+  #content { /* Span 4 columns, starting in 1st column from left. */
+    @include zen-grid-item(4, 1);
+  }
+
+  .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
+    @include zen-grid-item(1, 5);
+  }
+}
+
+/*
+ * The layout when there are two sidebars.
+ */
+
+.two-sidebars {
+  #content { /* Span 3 columns, starting in 2nd column from left. */
+    //@include zen-grid-item(3, 2);
+    width: 400px;
+  }
+
+  .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+    //@include zen-grid-item(1, 1);
+    width:200px;
+  }
+
+  .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
+    //@include zen-grid-item(1, 5);
+    width: 200px;
+  }
+}

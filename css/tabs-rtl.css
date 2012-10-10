@@ -1,0 +1,14 @@
+/**
+ * @file
+ * RTL companion for the tabs.css file.
+ */
+/* line 11, ../sass/tabs-rtl.scss */
+ul.primary li,
+ul.secondary li {
+  float: right;
+}
+
+/* line 17, ../sass/tabs-rtl.scss */
+ul.primary li {
+  margin: 0.5em 3px 0 0;
+}
