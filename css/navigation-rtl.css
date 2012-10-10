@@ -1,0 +1,27 @@
+/**
+ * @file
+ * RTL companion for the navigation.css file.
+ */
+/* line 9, ../sass/navigation-rtl.scss */
+ul li.collapsed {
+  list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
+}
+
+/* line 18, ../sass/navigation-rtl.scss */
+#navigation ul.links,
+#navigation ul.menu {
+  /* Menu block links */
+  text-align: right;
+}
+/* line 21, ../sass/navigation-rtl.scss */
+#navigation ul.links li,
+#navigation ul.menu li {
+  /* A simple method to get navigation links to appear in one line. */
+  float: right;
+  padding: 0 0 0 10px;
+}
+
+/* line 28, ../sass/navigation-rtl.scss */
+#secondary-menu {
+  float: left;
+}

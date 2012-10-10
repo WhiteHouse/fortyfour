@@ -1,0 +1,93 @@
+/**
+ * @file
+ * Node Styling
+ *
+ * Style anything that isn't in the $content variable.
+ */
+/* line 11, ../sass/nodes.scss */
+.node {
+  /* Node wrapper */
+}
+/* line 13, ../sass/nodes.scss */
+.preview .node {
+  /* Preview of the content before submitting new or updated content */
+  /* background-color: #ffffea; */
+  /* Drupal core uses a #ffffea background */
+}
+/* line 17, ../sass/nodes.scss */
+.node .node-title {
+  /* Node title */
+}
+/* line 20, ../sass/nodes.scss */
+.node .user-picture {
+  /* The picture of the node author */
+}
+/* line 23, ../sass/nodes.scss */
+.node .submitted {
+  /* The "posted by" information */
+}
+/* line 26, ../sass/nodes.scss */
+.node .content {
+  /* Node's content wrapper */
+  position: relative;
+}
+/* line 30, ../sass/nodes.scss */
+.node ul.links {
+  /* Node links. See also the ul.links declaration in the pages.css. */
+}
+
+/* line 35, ../sass/nodes.scss */
+.node-promoted {
+  /* A node that has been promoted to the front page */
+}
+
+/* line 38, ../sass/nodes.scss */
+.node-sticky {
+  /* A sticky node (displayed before others in a list) */
+}
+
+/* line 41, ../sass/nodes.scss */
+.node-by-viewer {
+  /* A node created by the current user */
+}
+
+/* line 44, ../sass/nodes.scss */
+.node-teaser {
+  /* A node displayed as teaser */
+}
+
+/*
+ * All nodes are given a node-FOO class that describes the type of content that
+ * it is. If you create a new content type called "my-custom-type", it will
+ * receive a "node-my-custom-type" class.
+ */
+/* line 53, ../sass/nodes.scss */
+.node-page {
+  /* Page content node */
+}
+
+/* line 56, ../sass/nodes.scss */
+.node-article {
+  /* Article content node */
+}
+
+/* line 59, ../sass/nodes.scss */
+.node-unpublished {
+  /* Unpublished nodes */
+  /* background-color: #fff4f4; */
+  /* Drupal core uses a #fff4f4 background */
+}
+/* line 62, ../sass/nodes.scss */
+.node-unpublished p.unpublished {
+  /* The word "Unpublished" displayed underneath the content. */
+  height: 0;
+  overflow: visible;
+  color: #d8d8d8;
+  font-size: 75px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word;
+}

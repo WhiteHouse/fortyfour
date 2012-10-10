@@ -1,0 +1,50 @@
+/* normalize-rtl.css - RTL language extension of normalize.scss. */
+
+@import "base";
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+
+dd {
+  margin: 0 $indent-amount 0 0;
+}
+
+/*
+ * Addresses paddings set differently in IE6/7
+ */
+
+menu,
+ol,
+ul,
+.item-list ul /* Drupal override */ {
+  padding: 0 $indent-amount 0 0;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+/*
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+
+legend {
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *margin-left: 0;
+    *margin-right: -7px; /* 3 */
+  }
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+th {
+  text-align: right;
+}

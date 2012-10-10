@@ -1,0 +1,587 @@
+/**
+ * @file
+ * Positioning for responsive layout .
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+/*
+ * Center the page.
+ */
+/* line 44, ../../sass/layouts/responsive-sidebars.scss */
+#page,
+.region-bottom, .region-banner, .takeover, #header, #main-nav, .footer-inner, #drop-nav {
+  /* For screen sizes larger than 1200px, prevent excessively long lines of text by setting a max-width. */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 976px;
+}
+
+/*
+ * Apply the shared properties of grid items in a single, efficient ruleset.
+ */
+/* line 61, ../../sass/layouts/responsive-sidebars.scss */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+#footer {
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/*
+ * Containers for grid items and flow items.
+ */
+/* line 52, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#header:before, #header:after,
+#main:before,
+#main:after,
+#footer:before,
+#footer:after {
+  content: "";
+  display: table;
+}
+/* line 56, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#header:after,
+#main:after,
+#footer:after {
+  clear: both;
+}
+
+/*
+ * Display 
+ */
+@media all and (max-width: 768px) {
+  /* line 80, ../../sass/layouts/responsive-sidebars.scss */
+  .seal {
+    display: none;
+  }
+}
+/* line 85, ../../sass/layouts/responsive-sidebars.scss */
+a.sidebar-open, a.sidebar-close {
+  display: none;
+}
+
+/*
+ * Navigation bar
+ */
+@media all and (min-width: 481px) and (max-width: 975px) {
+  /*
+   * Dashboard specific rules
+   */
+  /* line 106, ../../sass/layouts/responsive-sidebars.scss */
+  .node .content, .node-chart {
+    width: 100%;
+  }
+
+  /* line 109, ../../sass/layouts/responsive-sidebars.scss */
+  .chart-info {
+    float: left;
+    width: 100%;
+  }
+
+  /* line 113, ../../sass/layouts/responsive-sidebars.scss */
+  .change-box, .share-box {
+    width: 48%;
+    display: inline-block;
+    float: left;
+  }
+
+  /* line 118, ../../sass/layouts/responsive-sidebars.scss */
+  .change-box {
+    margin-right: 2%;
+  }
+
+  /* line 121, ../../sass/layouts/responsive-sidebars.scss */
+  .share-box {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  /* line 125, ../../sass/layouts/responsive-sidebars.scss */
+  h3.aside {
+    text-align: left;
+  }
+
+  /* line 128, ../../sass/layouts/responsive-sidebars.scss */
+  a.sidebar-open, a.sidebar-close {
+    display: none;
+  }
+
+  /* line 131, ../../sass/layouts/responsive-sidebars.scss */
+  .region-bottom {
+    width: 100%;
+  }
+
+  /*
+   * Use 3 grid columns for smaller screens.
+   */
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+  /* line 145, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-first #content {
+    /* Span 2 columns, starting in 2nd column from left. */
+    float: left;
+    width: 66.66667%;
+    margin-left: 33.33333%;
+    margin-right: -100%;
+  }
+  /* line 149, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-first .region-sidebar-first {
+    /* Span 1 column, starting in 1st column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+  }
+
+  /*
+   * The layout when there is only one sidebar, the right one.
+   */
+  /* line 159, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-second #content {
+    /* Span 2 columns, starting in 1st column from left. */
+    float: left;
+    width: 66.66667%;
+    margin-left: 0%;
+    margin-right: -66.66667%;
+  }
+  /* line 163, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-second .region-sidebar-second {
+    /* Span 1 column, starting in 3rd column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+  }
+
+  /*
+   * The layout when there are two sidebars.
+   */
+  /* line 173, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars #content {
+    /* Span 2 columns, starting in 2nd column from left. */
+    float: left;
+    width: 66.66667%;
+    margin-left: 33.33333%;
+    margin-right: -100%;
+  }
+  /* line 177, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-first {
+    /* Span 1 column, starting in 1st column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+  }
+  /* line 181, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second {
+    /* Start a new row and span all 3 columns. */
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    clear: left;
+  }
+  /* line 52, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  .two-sidebars .region-sidebar-second:before, .two-sidebars .region-sidebar-second:after {
+    content: "";
+    display: table;
+  }
+  /* line 56, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  .two-sidebars .region-sidebar-second:after {
+    clear: both;
+  }
+  /* line 186, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second .block {
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  /* line 189, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
+    /* Span 1 column, starting in the 1st column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+    clear: left;
+  }
+  /* line 193, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
+    /* Span 1 column, starting in the 2nd column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 33.33333%;
+    margin-right: -66.66667%;
+  }
+  /* line 196, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n) {
+    /* Span 1 column, starting in the 3rd column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+  }
+}
+@media all and (min-width: 976px) {
+  /*
+   * Dashboard Specific
+   */
+  /* line 208, ../../sass/layouts/responsive-sidebars.scss */
+  .share-box {
+    text-align: center;
+  }
+
+  /* line 212, ../../sass/layouts/responsive-sidebars.scss */
+  .node-chart {
+    width: 70%;
+  }
+
+  /* line 216, ../../sass/layouts/responsive-sidebars.scss */
+  .chart-info {
+    width: 28%;
+    float: right;
+  }
+
+  /* line 221, ../../sass/layouts/responsive-sidebars.scss */
+  a.sidebar-close {
+    display: inline-block;
+  }
+
+  /* line 225, ../../sass/layouts/responsive-sidebars.scss */
+  .region-bottom {
+    width: 50%;
+  }
+
+  /*
+   * Use 5 grid columns for larger screens.
+   */
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+  /* line 239, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-first #content {
+    /* Span 4 columns, starting in 2nd column from left. */
+    float: left;
+    width: 80%;
+    margin-left: 20%;
+    margin-right: -100%;
+  }
+  /* line 243, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-first .region-sidebar-first {
+    /* Span 1 column, starting in 1st column from left. */
+    float: left;
+    width: 20%;
+    margin-left: 0%;
+    margin-right: -20%;
+  }
+
+  /*
+   * The layout when there is only one sidebar, the right one.
+   */
+  /* line 253, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-second #content {
+    /* Span 4 columns, starting in 1st column from left. */
+    float: left;
+    width: 80%;
+    margin-left: 0%;
+    margin-right: -80%;
+  }
+  /* line 257, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-second .region-sidebar-second {
+    /* Span 1 column, starting in 5th column from left. */
+    float: left;
+    width: 20%;
+    margin-left: 80%;
+    margin-right: -100%;
+  }
+
+  /*
+   * The layout when there are two sidebars.
+   */
+  /* line 267, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars #content {
+    /* Span 3 columns, starting in 2nd column from left. */
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: -80%;
+  }
+  /* line 271, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-first {
+    /* Span 1 column, starting in 1st column from left. */
+    float: left;
+    width: 20%;
+    margin-left: 0%;
+    margin-right: -20%;
+  }
+  /* line 275, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second {
+    /* Span 1 column, starting in 5th column from left. */
+    float: left;
+    width: 20%;
+    margin-left: 80%;
+    margin-right: -100%;
+  }
+}
+@media all and (min-width: 481px) {
+  /* line 282, ../../sass/layouts/responsive-sidebars.scss */
+  #secondary-menu {
+    display: block;
+  }
+
+  /* line 285, ../../sass/layouts/responsive-sidebars.scss */
+  .flag {
+    display: block;
+  }
+
+  /* line 288, ../../sass/layouts/responsive-sidebars.scss */
+  .region-banner {
+    text-align: left;
+  }
+
+  /* line 291, ../../sass/layouts/responsive-sidebars.scss */
+  h1.title {
+    line-height: 135%;
+  }
+
+  /* line 294, ../../sass/layouts/responsive-sidebars.scss */
+  #page {
+    margin-bottom: 1em;
+  }
+
+  /* line 297, ../../sass/layouts/responsive-sidebars.scss */
+  #content {
+    margin-bottom: 1em;
+  }
+
+  /* line 300, ../../sass/layouts/responsive-sidebars.scss */
+  h1.title {
+    margin: 0;
+  }
+
+  /* line 303, ../../sass/layouts/responsive-sidebars.scss */
+  .node-chart {
+    float: left;
+  }
+
+  /* line 306, ../../sass/layouts/responsive-sidebars.scss */
+  h3.aside {
+    text-align: center;
+  }
+
+  /* line 309, ../../sass/layouts/responsive-sidebars.scss */
+  .change-box {
+    padding: 15px 0px;
+    margin-top: 20px;
+    border-top: 1px solid #cccccc;
+  }
+}
+@media all and (max-width: 480px) {
+  /* line 318, ../../sass/layouts/responsive-sidebars.scss */
+  aside.chart-info {
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
+    border-top: 1px solid #ccc;
+  }
+
+  /* line 323, ../../sass/layouts/responsive-sidebars.scss */
+  .footer-wrap {
+    display: none;
+  }
+
+  /* line 326, ../../sass/layouts/responsive-sidebars.scss */
+  .bottom-divider {
+    display: none;
+  }
+
+  /* line 329, ../../sass/layouts/responsive-sidebars.scss */
+  .source-info {
+    display: none;
+  }
+
+  /* line 335, ../../sass/layouts/responsive-sidebars.scss */
+  .header-wrap {
+    display: none;
+  }
+
+  /* line 338, ../../sass/layouts/responsive-sidebars.scss */
+  .flag {
+    display: none;
+  }
+
+  /* line 341, ../../sass/layouts/responsive-sidebars.scss */
+  #secondary-menu {
+    display: none;
+  }
+
+  /* line 344, ../../sass/layouts/responsive-sidebars.scss */
+  .phone-title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 75%;
+    font-weight: bold;
+    padding-top: 5px;
+  }
+
+  /* line 351, ../../sass/layouts/responsive-sidebars.scss */
+  .region-banner {
+    text-align: center;
+  }
+
+  /* line 354, ../../sass/layouts/responsive-sidebars.scss */
+  #main-nav {
+    display: none;
+  }
+
+  /* line 357, ../../sass/layouts/responsive-sidebars.scss */
+  h1.title {
+    font-size: 100%;
+    line-height: 100%;
+    margin-bottom: 5px;
+  }
+
+  /* line 362, ../../sass/layouts/responsive-sidebars.scss */
+  .field-name-field-chart-sub-title, .sub-title {
+    color: #666;
+    font-size: 85%;
+    line-height: 110%;
+  }
+
+  /* line 367, ../../sass/layouts/responsive-sidebars.scss */
+  #page {
+    margin-bottom: 0;
+  }
+
+  /* line 370, ../../sass/layouts/responsive-sidebars.scss */
+  #content {
+    position: absolute;
+    z-index: 1;
+    top: 45px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #555;
+    overflow: auto;
+    margin-bottom: 0;
+    margin-top: 14px;
+  }
+
+  /* line 382, ../../sass/layouts/responsive-sidebars.scss */
+  ul#phone-nav {
+    background: #ccc;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* line 389, ../../sass/layouts/responsive-sidebars.scss */
+  ul#phone-nav li {
+    display: inline-block;
+    padding: 4px 0px 0px 0px;
+  }
+
+  /* line 393, ../../sass/layouts/responsive-sidebars.scss */
+  ul#phone-nav li a {
+    color: #666;
+    text-decoration: none;
+  }
+
+  /* line 397, ../../sass/layouts/responsive-sidebars.scss */
+  #phone-nav li:nth-child(1), #phone-nav li:nth-child(2) {
+    padding-right: 65px;
+  }
+
+  /* line 400, ../../sass/layouts/responsive-sidebars.scss */
+  ul#phone-nav li.active a {
+    color: #000;
+  }
+
+  /* line 403, ../../sass/layouts/responsive-sidebars.scss */
+  .banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  /* line 410, ../../sass/layouts/responsive-sidebars.scss */
+  .phone-logo {
+    background: url(../../images/phone-logo.png) 4px center no-repeat;
+  }
+
+  /* line 413, ../../sass/layouts/responsive-sidebars.scss */
+  .change-box {
+    border-top: 0px;
+    float: left;
+    width: 100%;
+    height: 40px;
+    padding: 10px 0px;
+    margin: 0px 0px 15px 0px;
+  }
+
+  /* line 421, ../../sass/layouts/responsive-sidebars.scss */
+  h3.aside {
+    text-align: left;
+    margin: 0;
+  }
+
+  /* line 428, ../../sass/layouts/responsive-sidebars.scss */
+  .change-text {
+    text-transform: uppercase;
+    font-size: 75%;
+    font-weight: bold;
+  }
+
+  /* line 433, ../../sass/layouts/responsive-sidebars.scss */
+  .share-box, .field-name-body {
+    min-height: 480px;
+  }
+
+  /* line 436, ../../sass/layouts/responsive-sidebars.scss */
+  .scrollbar {
+    position: absolute;
+    z-index: 100;
+    width: 7px;
+    bottom: 7px;
+    top: 2px;
+    right: 1px;
+  }
+
+  /* line 441, ../../sass/layouts/responsive-sidebars.scss */
+  .scrollbar > div {
+    width: 100%;
+  }
+}
+@media all and (width: 480px) {
+  /* line 447, ../../sass/layouts/responsive-sidebars.scss */
+  .banner-bg {
+    display: none !important;
+  }
+
+  /* line 450, ../../sass/layouts/responsive-sidebars.scss */
+  #content {
+    top: 0px !important;
+    margin-top: 0px;
+  }
+}
