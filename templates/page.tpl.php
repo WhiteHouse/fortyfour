@@ -51,15 +51,16 @@
  *   associated with the page, and the node ID is the second argument
  *   in the page's path (e.g. node/12345 and node/12345/revisions, but not
  *   comment/reply/12345).
- * 
- * Fortyfour theme specific defined theme settings (see README.txt in fortyfour theme 
- * for more details)
- * - $fortyfour_page_wrapper: CSS class id to use when creating the page wrappers 
- * - $fortyfour_header: Fortyfour header elements 
- * - $fortyfour_header_menu: Fortyfour header navigation menu 
- * - $fortyfour_subfooter_menu: Fortyfour subfooter navigation menu 
- * - $fortyfour_footer_menu: Fortyfour theme footer navigation menu 
- * - $fortyfour_use_microsite_banner: whether or not to use the microsite banner 
+ *
+ * Fortyfour theme specific defined theme settings (see README.txt in fortyfour
+ * theme for more details)
+ * - $fortyfour_page_wrapper: CSS class id to use when creating the page
+ *   wrappers
+ * - $fortyfour_header: Fortyfour header elements
+ * - $fortyfour_header_menu: Fortyfour header navigation menu
+ * - $fortyfour_subfooter_menu: Fortyfour subfooter navigation menu
+ * - $fortyfour_footer_menu: Fortyfour theme footer navigation menu
+ * - $fortyfour_use_microsite_banner: whether or not to use the microsite banner
  *
  * @see template_preprocess()
  * @see template_preprocess_page()
@@ -68,22 +69,7 @@
  */
 ?>
 
-<?php
-
-  // Regions that needs rendered first so we know if it exists or not.
-  $takeover = render($page['takeover']);
-  $header = render($page['header']); 
-  $left_rail  = render($page['left_rail']);
-  $right_rail = render($page['right_rail']);
-  $takeover  = render($page['takeover']);
-  $dropnav = render($page['dropnav']);
-  $navigation = render($page['navigation']);
-  $footer = render($page['footer']); 
-  $bottom = render($page['bottom']); 
-
-?>
-
-<?php if ($fortyfour_use_microsite_banner) { ?>
+<?php if ($fortyfour_use_microsite_banner): ?>
 <div class="banner-bg">
 	<div id ="banner" role="banner" class="region-banner clearfix">
 
@@ -92,46 +78,45 @@
 	  <?php if ($secondary_menu): ?>
 	  <nav id="secondary-menu" role="navigation">
 	    <?php print theme('links__system_secondary_menu', array(
-	      'links' => $secondary_menu,
-	      'attributes' => array(
-	        'class' => array('links' , 'clearfix'),
-	      ),
-	      'heading' => array(
-	        'text' => $secondary_menu_heading,
-	        'level' => 'h2',
-	        'class' => array('menu-title', 'arrow-down'),
-	      ),
-	    )); ?>
+        'links' => $secondary_menu,
+        'attributes' => array(
+          'class' => array('links' , 'clearfix'),
+        ),
+        'heading' => array(
+          'text' => $secondary_menu_heading,
+          'level' => 'h2',
+          'class' => array('menu-title', 'arrow-down'),
+        ),
+      )); ?>
 	   </nav>
 	<?php endif; ?>
 	<!-- /external links menu-->
 	<span class="flag">President Barack Obama</span>
 	</div><!--end banner-->
 </div><!--End banner-bg-->
-<?php } // endif fortyfour_use_microsite_banner ?>
+<?php endif; ?> <!-- endif fortyfour_use_microsite_banner -->
 
 <div id="<?php echo $fortyfour_page_wrapper_class ?>-page" class="page-wrapper">
   <div class="center-on-page clearfix" id="page-inner">
-<?php if ($takeover): ?>
-	<div class="takeover"><?php print $takeover; ?></div>
-<?php endif; ?>
-
 <div id="wh-header" class="clearfix">
-<?php if ($fortyfour_header): ?>
-  <?php print render($fortyfour_header); ?>
+  <?php if ($fortyfour_header): ?>
+    <?php print render($fortyfour_header); ?>
+  <?php endif; ?>
+  <?php if ($fortyfour_mainnav): ?>
+    <?php print render($fortyfour_mainnav); ?>
+  <?php endif; ?>
+<?php if ($page['takeover']): ?>
+  <div class="takeover"><?php print render($page['takeover']); ?></div>
 <?php endif; ?>
-<?php if ($fortyfour_header_menu): ?>
-  <?php print render($fortyfour_header_menu); ?>
-<?php endif; ?>
-<?php if ($header): ?>
-  <?php print $header; ?>
+<?php if ($page['header']): ?>
+  <?php print render($page['header']); ?>
 <?php endif; ?>
 </div><!--wh-header-->
 
-<?php if ($dropnav): ?>
+<?php if ($page['dropnav']): ?>
   <div id="drop-nav" class="collapse">
     <div id="navigation" class="toggle-nav hidden">
-      <?php print $dropnav; ?>
+      <?php print render($page['dropnav']); ?>
     </div>
     <div class="handle-wrap"><a class="handle"></a></div>
   </div><!--drop-nav-->
@@ -150,21 +135,21 @@
     <div class="clear" id="<?php echo $fortyfour_page_wrapper_class ?>-outer">
       <div class="clearfix" id="<?php echo $fortyfour_page_wrapper_class ?>-inner">
 
-        <?php if ($left_rail): ?>
+        <?php if ($page['left_rail']): ?>
           <aside class="left-rail">
-            <?php print $left_rail; ?>
+            <?php print render($page['left_rail']); ?>
           </aside><!-- /.left-rail -->
         <?php endif; ?>
 
         <div id="content" class="column clearfix main-content" role="main">
-          <?php #print render($page['highlighted']); ?>
+          <?php // print render($page['highlighted']); ?>
           <a id="main-content"></a>
           <?php print render($page['content']); ?>
         </div><!-- /#content -->
 
-        <?php if ($right_rail): ?>
+        <?php if ($page['right_rail']): ?>
           <aside class="right-rail">
-            <?php print $right_rail; ?>
+            <?php print render($page['right_rail']); ?>
           </aside><!-- /.right-rail -->
         <?php endif; ?>
 
@@ -178,8 +163,12 @@
   <?php print render($page['footer']); ?>
   <div class="footer-bottom">
     <?php print render($page['bottom']); ?>
-    <?php print render($fortyfour_footer_menu); ?>
-    <?php print render($fortyfour_subfooter_menu); ?>
+    <?php if ($fortyfour_footer): ?>
+      <?php print render($fortyfour_footer); ?>
+    <? endif; ?>
+    <?php if ($fortyfour_subfooter): ?>
+      <?php print render($fortyfour_subfooter); ?>
+    <?php endif; ?>
   </div>
   </div>
 </div>

@@ -1,53 +1,73 @@
 <?php
 
 /**
+ * @file
+ * Template file for the fortyfour base theme.
+ */
+
+/**
  * Override or insert variables into the page template.
  */
 function fortyfour_process_page(&$variables) {
   _fortyfour_primary_layout_setup(&$variables);
 }
 
+/**
+ * Override or insert variables into the maintenace page template.
+ */
 function fortyfour_process_maintenance_page(&$variables) {
   _fortyfour_primary_layout_setup(&$variables);
 }
 
+/**
+ * Load template asset variables from theme_settings if locally modified.
+ */
 function _fortyfour_primary_layout_setup(&$variables) {
-  /* Load template asset variables from theme_settings if locally modified,
-     otherwise from variable_get / strongarm export */
-  
   $variables['fortyfour_use_microsite_banner'] = _fortyfour_get_use_microsite_banner();
-  
+
   $variables['fortyfour_page_wrapper_class'] = _fortyfour_get_page_wrapper();
 
-  $variables['fortyfour_header'] = array(
-    '#theme' => 'fortyfour_header'
-  );
+  if (theme_get_setting('fortyfour_use_whitehouse_header')) {
+    $variables['fortyfour_header']['#theme'] = 'fortyfour_header';
+  }
+  else {
+    $variables['fortyfour_header'] = FALSE;
+  }
 
-  $variables['fortyfour_header_menu'] = array(
-    '#theme' => 'fortyfour_mainnav'
-  );
-  
-  $variables['fortyfour_footer_menu'] = array(
-    '#theme' => 'fortyfour_footer'
-  );
-  
-  $variables['fortyfour_subfooter_menu'] = array(
-    '#theme' => 'fortyfour_subfooter'
-  );
+  if (theme_get_setting('fortyfour_use_whitehouse_mainnav')) {
+    $variables['fortyfour_mainnav']['#theme'] = 'fortyfour_mainnav';
+  }
+  else {
+    $variables['fortyfour_mainnav'] = FALSE;
+  }
+
+  if (theme_get_setting('fortyfour_use_whitehouse_footer')) {
+    $variables['fortyfour_footer']['#theme'] = 'fortyfour_footer';
+  }
+  else {
+    $variables['fortyfour_footer'] = FALSE;
+  }
+
+  if (theme_get_setting('fortyfour_use_whitehouse_subfooter')) {
+    $variables['fortyfour_subfooter']['#theme'] = 'fortyfour_subfooter';
+  }
+  else {
+    $variables['fortyfour_subfooter'] = FALSE;
+  }
 }
 
 /**
  * Provided default fortyfour_header.
  *
- * @return
- *  HTML
+ * @return HTML
+ *   Returns HTML.
  */
 function _fortyfour_get_page_wrapper() {
-  // Check for user-defined page wrapper
+  // Check for user-defined page wrapper.
   if (!$fortyfour_page_wrapper = theme_get_setting('fortyfour_page_wrapper')) {
 
-    // If no user-defined page wrapper exists, check to see if an included
-    // module is proving defaults (this is useful for implementations like
+    // If no user-defined page wrapper exists, check to see if an included...
+    // module is proving defaults (this is useful for implementations like...
     // petitions)
     !$fortyfour_page_wrapper = variable_get('fortyfour_page_wrapper', 'whitehouse');
   }
@@ -58,8 +78,8 @@ function _fortyfour_get_page_wrapper() {
 /**
  * Provided default fortyfour_get_use_microsite_banner.
  *
- * @return
- *  HTML
+ * @return HTML
+ *   Returns HTML.
  */
 function _fortyfour_get_use_microsite_banner() {
 
@@ -71,7 +91,7 @@ function _fortyfour_get_use_microsite_banner() {
     if (!$fortyfour_use_microsite_banner = variable_get('fortyfour_use_microsite_banner', FALSE)) {
 
       // If no module provides defaults, load defaults from default template
-      // files and sets the variable
+      // files and sets the variable.
       $fortyfour_use_microsite_banner = FALSE;
       variable_set('fortyfour_use_microsite_banner', $fortyfour_use_microsite_banner);
     }
@@ -80,7 +100,7 @@ function _fortyfour_get_use_microsite_banner() {
   return $fortyfour_use_microsite_banner;
 }
 /**
- * Implementation of hook_theme()
+ * Implements hook_theme().
  */
 function fortyfour_theme($existing, $type, $theme, $path) {
 
@@ -88,22 +108,22 @@ function fortyfour_theme($existing, $type, $theme, $path) {
     'fortyfour_header' => array(
       'template' => 'fortyfour-header',
       'variables' => array(),
-      'path' => drupal_get_path('theme', 'fortyfour').'/templates'
+      'path' => drupal_get_path('theme', 'fortyfour') . '/templates',
     ),
     'fortyfour_mainnav' => array(
       'template' => 'fortyfour-mainnav',
       'variables' => array(),
-      'path' => drupal_get_path('theme', 'fortyfour').'/templates'
+      'path' => drupal_get_path('theme', 'fortyfour') . '/templates',
     ),
     'fortyfour_footer' => array(
       'template' => 'fortyfour-footer',
       'variables' => array(),
-      'path' => drupal_get_path('theme', 'fortyfour').'/templates'
+      'path' => drupal_get_path('theme', 'fortyfour') . '/templates',
     ),
     'fortyfour_subfooter' => array(
       'template' => 'fortyfour-subfooter',
       'variables' => array(),
-      'path' => drupal_get_path('theme', 'fortyfour').'/templates'
-    )
+      'path' => drupal_get_path('theme', 'fortyfour') . '/templates',
+    ),
   );
 }

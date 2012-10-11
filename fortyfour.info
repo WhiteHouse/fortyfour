@@ -96,13 +96,13 @@ scripts[] = js/theme.js
 
 regions[takeover]       = Takeover
 regions[header]         = Header
-regions[navigation]     = Main Nav
 regions[dropnav]        = Dropdown navigation
 regions[content]        = Content
 regions[left_rail]  	= Left rail
 regions[right_rail] 	= Right rail
 regions[footer]         = Footer
 regions[bottom]         = Page bottom
+
 
 ; The page_top and page_bottom regions are hidden, which means they will not
 ; show up on the blocks administration page. But they are required in order for
@@ -146,6 +146,13 @@ settings[zen_html5_respond_meta][] = meta
 settings[zen_rebuild_registry]     = 1
 settings[zen_wireframes]           = 0
 
+; Default settings to toggle on/off whitehouse theme assets
+
+settings[fortyfour_use_whitehouse_header] = 1
+settings[fortyfour_use_whitehouse_mainnav] = 1
+settings[fortyfour_use_whitehouse_footer] = 1
+settings[fortyfour_use_whitehouse_subfooter] = 1
+
 ; To make this sub-theme an admin theme with shortcut links next to titles,
 ; uncomment the line below.
 
@@ -154,3 +161,11 @@ settings[zen_wireframes]           = 0
 ; To add a Panels layout (which can also be used by Display Suite), uncomment
 ; the line below and see the documentation at: http://drupal.org/node/495654
 ;plugins[panels][layouts] = layouts
+
+
+; Information added by drush on 2012-10-10
+version = "7.x-1.0-alpha1"
+core = "7.x"
+project = "fortyfour"
+datestamp = "1349912853"
+
