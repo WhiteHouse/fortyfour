@@ -116,49 +116,12 @@
       $('#secondary-menu h2').unbind('click');
     }
 
-    //Embed "more info" slider
-
-    $('a.embed-closed').click(function(){
-      $('.slide-wrap').css('position' , 'absolute');
-      $('.slide-wrap').css('right' , '0');
-      $('.slide-wrap').css('width' , '60%');
-      $('.chart-info').css('display' , 'block');
-      $('a.embed-handle').css('height' , '0px');
-      $('a.embed-handle').css('opacity' , '1.8');
-      $('a.embed-handle').css('background' , '#000 url(/sites/d7dashboard/themes/dashboard/images/menu_close-vert.png) 2px center no-repeat');
-      $('.slide-wrap').css('background-color' , '#000');
-      $('.slide-wrap').css('opacity' , '0.8');
-      $('.slide-wrap').css('color' , '#fff');
-      $('.embed-handle').removeClass('embed-closed');
-      $('.embed-handle').addClass('embed-open');
-    });
-
-    $('.embed-open').click(function(){
-      alert('clicked');
-      $('a.embed-handle').css('background' , '#000 url(/sites/d7dashboard/themes/dashboard/images/menu_close-vert.png) 2px center no-repeat');
-      $('.chart-info').css('display' , 'none');
-      $('.slide-wrap').css('width', '3%');
-    });
-
     //Seconday Links Dropdown
     function secondaryDropdown(){
       $('#secondary-menu h2').click(function(){
         $('#secondary-menu ul').slideToggle('fast');
         $(this).toggleClass('arrow-up').toggleClass('arrow-down');
       });
-    }
-    
-    function isAPhone(){
-      var menuHtml = '<ul id="phone-nav" role="navigation"><li class="active"><a href="#chart">Chart</a></li><li><a href="#about">About</a></li><li><a href="#share">Share</a></li></ul>';
-      $('.banner-bg').append(menuHtml);
-      $('.region-banner').append('<div class="phone-title phone-logo">White House Economic Indicators</div>');
-      window.Drupal.settings.charting.chartNode.chartHeight = '220';
-    }
-    
-    function notAPhone(){
-      $('div.phone-title').remove();
-      $('#phone-nav').remove();
-      document.removeEventListener('touchmove', preventDefault, false);
     }
     
     var share = $('.share-box');
