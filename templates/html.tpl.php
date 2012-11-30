@@ -83,22 +83,22 @@
     <meta name="MobileOptimized" content="width">
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
-    <meta name="apple-mobile-web-app-capable" content="yes" /> 
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <?php endif; ?>
   <meta http-equiv="cleartype" content="on">
 
   <?php print $styles; ?>
   <!--[if lt IE 9]>
-    <script src="/profiles/petition/themes/fortyfour/js/html5shiv.js"></script>
-    <script src="/profiles/petition/themes/fortyfour/js/html5shiv-printshiv"></script> 
+    <script src="/profiles/petitions/themes/fortyfour/js/html5shiv.js"></script>
+    <script src="/profiles/petitions/themes/fortyfour/js/html5shiv-printshiv"></script>
   <![endif]-->
   <!--[if IE 7]>
-    <link type="text/css" rel="stylesheet" media="all" href="/profiles/petition/themes/petitions44/css/ie7.css" />
-  <![endif]--> 
+    <link type="text/css" rel="stylesheet" media="all" href="/profiles/petitions/themes/petitions44/css/ie7.css" />
+  <![endif]-->
   <!--[if IE 6]>
-    <link type="text/css" rel="stylesheet" media="all" href="/profiles/petition/themes/petitions44/css/ie6.css" />
-  <![endif]--> 
+    <link type="text/css" rel="stylesheet" media="all" href="/profiles/petitions/themes/petitions44/css/ie6.css" />
+  <![endif]-->
   <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>

@@ -1,15 +1,15 @@
 <?php
 /**
  * @file
- * petitions44 main navigation static HTML storage file. This file houses the HTML that is being used to 
+ * petitions44 main navigation static HTML storage file. This file houses the HTML that is being used to
  * generate the $fortyfour_mainnav variable in the page.tpl.php file. This should be built to match
  * the HTML of whitehouse.gov
  *
  * Available variables:
  * None
- * 
+ *
  */
- 
+
 /**
  * @file
  * Petitions 44 theme's implementation to display main navigation content within the page.tpl.php file.
@@ -39,7 +39,7 @@
                 <div class="content">
                   <p class="menu-feature-title"><a href="https://wwws.whitehouse.gov/state-of-the-union-2012">State of the Union</a></p>
                   <p>Watch the Enhanced Video</p>
-                  <p><a href="https://wwws.whitehouse.gov/state-of-the-union-2012"><img src="/profiles/petition/themes/petitions/img/sotuthumb.jpg" alt="Jobs Act Speech"></a></p>
+                  <p><a href="https://wwws.whitehouse.gov/state-of-the-union-2012"><img src="/profiles/petitions/themes/fortyfour/images/sotuthumb.jpg" alt="Jobs Act Speech"></a></p>
                   <a id="context-block-nodeblock-43333" class="context-block editable edit-whitehouse-general-menu-features"></a><a id="context-block-nodeblock-43333" class="context-block editable edit-whitehouse-general-menu-features"></a></div>
               </div>
             </div>
@@ -90,7 +90,7 @@
                 <div class="content">
                   <p class="menu-feature-title"><a href="https://wwws.whitehouse.gov/briefing-room/disclosures/visitor-records?utm_source=wh&amp;utm_medium=tout&amp;utm_campaign=menu">A Commitment to Transparency</a></p>
                   <p>Browse White House visitor logs</p>
-                  <p><a href="https://wwws.whitehouse.gov/briefing-room/disclosures/visitor-records?utm_source=wh&amp;utm_medium=tout&amp;utm_campaign=menu"><img src="/profiles/petition/themes/petitions/img/menu_visitor_records.jpg" alt="President Obama greets White House visitors"></a></p>
+                  <p><a href="https://wwws.whitehouse.gov/briefing-room/disclosures/visitor-records?utm_source=wh&amp;utm_medium=tout&amp;utm_campaign=menu"><img src="/profiles/petitions/themes/fortyfour/images/menu_visitor_records.jpg" alt="President Obama greets White House visitors"></a></p>
                   <a id="context-block-nodeblock-43309" class="context-block editable edit-whitehouse-general-menu-features"></a><a id="context-block-nodeblock-43309" class="context-block editable edit-whitehouse-general-menu-features"></a></div>
               </div>
             </div>
@@ -171,11 +171,11 @@
                 <div class="content">
                   <p class="menu-feature-title"><a href="http://www.whitehouse.gov/economy/jobs/we-cant-wait">We Can't Wait</a></p>
                   <p>See executive actions President Obama has taken</p>
-                  <p><a href="http://www.whitehouse.gov/economy/jobs/we-cant-wait"><img src="/profiles/petition/themes/petitions/img/main_nav_cant_wait.jpg" alt="We Can't Wait"></a></p>
+                  <p><a href="http://www.whitehouse.gov/economy/jobs/we-cant-wait"><img src="/profiles/petitions/themes/fortyfour/images/main_nav_cant_wait.jpg" alt="We Can't Wait"></a></p>
                   <hr>
                   <p class="menu-feature-title"><a href="http://www.whitehouse.gov/issues/taxes/tax-receipt">Your Federal Tax Receipt</a></p>
                   <p>See how your federal tax dollars are spent</p>
-                  <p><a href="http://www.whitehouse.gov/issues/taxes/tax-receipt"><img src="/profiles/petition/themes/petitions/img/featured_tax_receipt.jpg" alt="Calculate Your Federal Taxpayer Receipt"></a></p>
+                  <p><a href="http://www.whitehouse.gov/issues/taxes/tax-receipt"><img src="/profiles/petitions/themes/fortyfour/images/featured_tax_receipt.jpg" alt="Calculate Your Federal Taxpayer Receipt"></a></p>
                   <a id="context-block-nodeblock-43315" class="context-block editable edit-whitehouse-general-menu-features"></a><a id="context-block-nodeblock-43315" class="context-block editable edit-whitehouse-general-menu-features"></a></div>
               </div>
             </div>
@@ -193,7 +193,7 @@
                 <div class="content">
                   <p class="menu-feature-title"><a href="https://wwws.whitehouse.gov/petitions">We the People</a></p>
                   <p>Create and Sign Petitions Now</p>
-                  <p><a href="https://wwws.whitehouse.gov/petitions"><img src="/profiles/petition/themes/petitions/img/featured_petitions.jpg" alt="We the People"></a></p>
+                  <p><a href="https://wwws.whitehouse.gov/petitions"><img src="/profiles/petitions/themes/fortyfour/images/featured_petitions.jpg" alt="We the People"></a></p>
                   <a id="context-block-nodeblock-43303" class="context-block editable edit-whitehouse-general-menu-features"></a><a id="context-block-nodeblock-43303" class="context-block editable edit-whitehouse-general-menu-features"></a></div>
               </div>
             </div>
@@ -237,7 +237,7 @@
                 <div class="content">
                   <p class="menu-feature-title"><a href="https://wwws.whitehouse.gov/about/interactive-tour?utm_source=wh&amp;utm_medium=tout&amp;utm_campaign=menu?utm_source=wh&amp;utm_medium=tout&amp;utm_campaign=menu">Inside the White House</a></p>
                   <p>Take an interactive tour</p>
-                  <p><a href="https://wwws.whitehouse.gov/about/interactive-tour?utm_source=wh&amp;utm_medium=tout&amp;utm_campaign=menu"><img src="/profiles/petition/themes/petitions/img/menu_interactive_tour.jpg" alt="Interactive Map of the White House"></a></p>
+                  <p><a href="https://wwws.whitehouse.gov/about/interactive-tour?utm_source=wh&amp;utm_medium=tout&amp;utm_campaign=menu"><img src="/profiles/petitions/themes/fortyfour/images/menu_interactive_tour.jpg" alt="Interactive Map of the White House"></a></p>
                   <a id="context-block-nodeblock-43321" class="context-block editable edit-whitehouse-general-menu-features"></a><a id="context-block-nodeblock-43321" class="context-block editable edit-whitehouse-general-menu-features"></a></div>
               </div>
             </div>

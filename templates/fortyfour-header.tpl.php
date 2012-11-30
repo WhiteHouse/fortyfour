@@ -1,14 +1,14 @@
 <?php
 /**
  * @file
- * petitions44 header static HTML storage file. This file houses the HTML that is being used to 
+ * petitions44 header static HTML storage file. This file houses the HTML that is being used to
  * generate the $fortyfour_header variable in the page.tpl.php file.
  *
  * Available variables:
  * None
- * 
+ *
  */
- 
+
 /**
  * @file
  * Petitions 44 theme's implementation to display header content within the page.tpl.php file.
@@ -21,7 +21,7 @@
 <!--/#wh-header-title-->
 <div id="hdr-emblem">
   <a href="https://wwws.whitehouse.gov/" class="active">
-    <img src="/profiles/petition/themes/petitions/img/clear.gif" alt="The White House Emblem" title="" width="1" height="1">
+    <img src="/profiles/petitions/themes/fortyfour/images/clear.gif" alt="The White House Emblem" title="" width="1" height="1">
   </a>
 </div>
 <!--/#hdr emblem-->
