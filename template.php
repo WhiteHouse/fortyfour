@@ -127,3 +127,13 @@ function fortyfour_theme($existing, $type, $theme, $path) {
     ),
   );
 }
+
+/**
+ * Implement theme_preprocess_hook ().
+ *
+ * Add path_to_fortyfour variable to all template files.
+ */
+function fortyfour_preprocess(&$variables, $hook) {
+  global $base_url;
+  $variables['path_to_fortyfour'] = $base_url . '/' . drupal_get_path('theme', 'fortyfour');
+}

@@ -41,6 +41,7 @@
  * - $title_suffix (array): An array containing additional output populated by
  *   modules, intended to be displayed after the main title tag that appears in
  *   the template.
+ * - $path_to_fortyfour: Dynamically generates path to fortyfour theme.
  *
  * Other variables:
  * - $node: Full node object. Contains data that may not be safe.

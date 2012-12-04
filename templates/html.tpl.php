@@ -62,6 +62,7 @@
  *     - no-sidebars: When no sidebar content exists.
  *     - one-sidebar and sidebar-first or sidebar-second: A combination of the
  *       two classes when only one of the two sidebars have content.
+ * - $path_to_fortyfour: Dynamically generates path to fortyfour theme.
  *
  * @see template_preprocess()
  * @see template_preprocess_html()
@@ -90,14 +91,8 @@
 
   <?php print $styles; ?>
   <!--[if lt IE 9]>
-    <script src="/profiles/petitions/themes/fortyfour/js/html5shiv.js"></script>
-    <script src="/profiles/petitions/themes/fortyfour/js/html5shiv-printshiv"></script>
-  <![endif]-->
-  <!--[if IE 7]>
-    <link type="text/css" rel="stylesheet" media="all" href="/profiles/petitions/themes/petitions44/css/ie7.css" />
-  <![endif]-->
-  <!--[if IE 6]>
-    <link type="text/css" rel="stylesheet" media="all" href="/profiles/petitions/themes/petitions44/css/ie6.css" />
+    <script src="<?php print $path_to_fortyfour; ?>/js/html5shiv.js"></script>
+    <script src="<?php print $path_to_fortyfour; ?>/js/html5shiv-printshiv"></script>
   <![endif]-->
   <?php print $scripts; ?>
 </head>

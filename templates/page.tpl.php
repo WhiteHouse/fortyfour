@@ -61,6 +61,7 @@
  * - $fortyfour_subfooter_menu: Fortyfour subfooter navigation menu
  * - $fortyfour_footer_menu: Fortyfour theme footer navigation menu
  * - $fortyfour_use_microsite_banner: whether or not to use the microsite banner
+ * - $path_to_fortyfour: Dynamically generates path to fortyfour theme.
  *
  * @see template_preprocess()
  * @see template_preprocess_page()

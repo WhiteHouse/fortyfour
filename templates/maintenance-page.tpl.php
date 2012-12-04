@@ -60,6 +60,7 @@
  * - $fortyfour_subfooter_menu: Fortyfour subfooter navigation menu
  * - $fortyfour_footer_menu: Fortyfour theme footer navigation menu
  * - $fortyfour_use_microsite_banner: whether or not to use the microsite banner
+ * - $path_to_fortyfour: Dynamically generates path to fortyfour theme.
  *
  * @see template_preprocess()
  * @see template_preprocess_page()
@@ -161,14 +162,8 @@
 
   <?php print $styles; ?>
   <!--[if lt IE 9]>
-    <script src="/profiles/petitions/themes/fortyfour/js/html5shiv.js"></script>
-    <script src="/profiles/petitions/themes/fortyfour/js/html5shiv-printshiv"></script>
-  <![endif]-->
-  <!--[if IE 7]>
-    <link type="text/css" rel="stylesheet" media="all" href="/profiles/petitions/themes/petitions44/css/ie7.css" />
-  <![endif]-->
-  <!--[if IE 6]>
-    <link type="text/css" rel="stylesheet" media="all" href="/profiles/petitions/themes/petitions44/css/ie6.css" />
+    <script src="<?php print $path_to_fortyfour; ?>/js/html5shiv.js"></script>
+    <script src="<?php print $path_to_fortyfour; ?>/js/html5shiv-printshiv"></script>
   <![endif]-->
   <?php print $scripts; ?>
 </head>
@@ -211,7 +206,7 @@
       <div class="clearfix" id="<?php echo $fortyfour_page_wrapper_class ?>-inner">
         <div id="content" class="column clearfix main-content" role="main">
           <a id="main-content"></a>
-          <img src="/profiles/petitions/themes/fortyfour/images/site_maintenance_petitions.jpg" alt="Photo of the White House under construction"/>
+          <img src="<?php print $path_to_fortyfour; ?>/images/site_maintenance_petitions.jpg" alt="Photo of the White House under construction"/>
           <div class="construction-text-wrap clear-block">
             <br>
             <div class="this-section">We the People is currently undergoing site maintenance.</div>
