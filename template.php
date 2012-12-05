@@ -13,7 +13,7 @@ function fortyfour_process_page(&$variables) {
 }
 
 /**
- * Override or insert variables into the maintenace page template.
+ * Override or insert variables into the maintenance page template.
  */
 function fortyfour_process_maintenance_page(&$variables) {
   _fortyfour_primary_layout_setup(&$variables);
@@ -69,7 +69,7 @@ function _fortyfour_get_page_wrapper() {
     // If no user-defined page wrapper exists, check to see if an included...
     // module is proving defaults (this is useful for implementations like...
     // petitions)
-    !$fortyfour_page_wrapper = variable_get('fortyfour_page_wrapper', 'whitehouse');
+    $fortyfour_page_wrapper = variable_get('fortyfour_page_wrapper', 'whitehouse');
   }
 
   return $fortyfour_page_wrapper;
@@ -87,7 +87,7 @@ function _fortyfour_get_use_microsite_banner() {
   if (!$fortyfour_use_microsite_banner = theme_get_setting('fortyfour_use_microsite_banner')) {
 
     // If no user-defined header exists, check to see if an included module is
-    // providing defaults (this is useful for implmentations like petitions).
+    // providing defaults (this is useful for implementations like petitions).
     if (!$fortyfour_use_microsite_banner = variable_get('fortyfour_use_microsite_banner', FALSE)) {
 
       // If no module provides defaults, load defaults from default template
