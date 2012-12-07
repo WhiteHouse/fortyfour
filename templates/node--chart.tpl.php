@@ -110,9 +110,6 @@
         </div>
       <?php endif; ?>
       <?php print render($content['field_chart_sub_title']); ?>
-      <!--<audio controls="controls">-->
-        <!--<source src="/sites/d7dashboard/files/mp3/raptor-sound.mp3" type="audio/mpeg" />-->
-      <!--</audio>-->
   </div>
   	<div id="chart-<?php print $node->nid ?>"></div>
     <div class="source-info clearfix">
