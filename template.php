@@ -99,31 +99,31 @@ function _fortyfour_get_use_microsite_banner() {
 
   return $fortyfour_use_microsite_banner;
 }
+
 /**
  * Implements hook_theme().
  */
 function fortyfour_theme($existing, $type, $theme, $path) {
-
   return array(
     'fortyfour_header' => array(
       'template' => 'fortyfour-header',
       'variables' => array(),
-      'path' => drupal_get_path('theme', 'fortyfour') . '/templates',
+      'path' => $path . '/templates',
     ),
     'fortyfour_mainnav' => array(
       'template' => 'fortyfour-mainnav',
       'variables' => array(),
-      'path' => drupal_get_path('theme', 'fortyfour') . '/templates',
+      'path' => $path . '/templates',
     ),
     'fortyfour_footer' => array(
       'template' => 'fortyfour-footer',
       'variables' => array(),
-      'path' => drupal_get_path('theme', 'fortyfour') . '/templates',
+      'path' => $path . '/templates',
     ),
     'fortyfour_subfooter' => array(
       'template' => 'fortyfour-subfooter',
       'variables' => array(),
-      'path' => drupal_get_path('theme', 'fortyfour') . '/templates',
+      'path' => $path . '/templates',
     ),
   );
 }
