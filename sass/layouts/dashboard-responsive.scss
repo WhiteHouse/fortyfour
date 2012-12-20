@@ -1,0 +1,625 @@
+/**
+ * @file
+ * Positioning for responsive layout .
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+
+@import "base";
+@import "compass/css3/border-radius";
+$default-border-radius: 5px;
+
+// We are going to create a 980px wide, 5 column grid with 20px gutters between
+// columns (applied as 10px of left/right padding on each column).
+$zen-column-count:  5;
+$zen-gutter-width:  20px;
+
+
+// IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 3 ways:
+// - Drop support for IE 6/7. :-) In the _base.scss, set $legacy-support-for-ie6
+//   and $legacy-support-for-ie7 to false.
+// - (Preferred) Install the box-sizing polyfill and set the variable below to
+//   the absolute path URL to the boxsizing.htc file.
+//   @see https://github.com/Schepp/box-sizing-polyfill
+//   $box-sizing-polyfill-path: "/path/to/boxsizing.htc";
+// - Use the same CSS unit for grid width and gutter width (use px for both or
+//   use % for both, etc.) and set the box-sizing variable to content-box.
+//   $zen-box-sizing: content-box;
+
+
+// You can generate more efficient CSS if you manually apply the
+// zen-grid-item-base mixin to all grid items from within a single ruleset.
+$zen-auto-include-item-base: false;
+// $zen-auto-include-flow-item-base: false;
+
+
+/*
+ * Center the page.
+ */
+
+#page,
+.region-bottom, .region-banner, .takeover, #header, #main-nav, .footer-inner{
+  /* For screen sizes larger than 1200px, prevent excessively long lines of text by setting a max-width. */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 976px;
+}
+
+/*
+ * Apply the shared properties of grid items in a single, efficient ruleset.
+ */
+// See the note about $zen-auto-include-item-base above.
+
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+#footer {
+  @include zen-grid-item-base();
+}
+
+/*
+ * Containers for grid items and flow items.
+ */
+
+#header,
+#main,
+#footer {
+  @include zen-grid-container();
+}
+
+/*
+ * Display 
+ */
+
+@media all and (max-width: 976px){
+  .seal{
+    display: none;
+  }  
+}
+
+@media all and (width: 768px){
+
+}
+
+
+a.sidebar-open , a.sidebar-close{
+  display:none;
+}
+
+/*
+ * Navigation bar
+ */
+
+@media all and (min-width: 481px) {
+  #main {
+    //padding-top: 1.5em; /* Move all the children of #main down to make room. */
+  }
+  #navigation {
+    //width: $zen-grid-width;
+  }
+  .category-list{
+    margin: 0;
+    padding: 0;
+  }
+  .category-list .btn{
+    margin-bottom: 5px;
+  }
+  .filter-list li a, .category-list li a{
+    font-size: 0.75em;
+  }
+  .node-chart{
+    background: url(../../images/seal_bg_02_gold_darker.jpg) center center no-repeat;
+  }
+}
+
+@media all and (min-width: 481px) and (max-width: 975px) {
+  /*
+   * Dashboard specific rules
+   */
+    .dash-info{
+      margin-right: 10px;
+    }
+    .node .content, .node-chart{
+      width: 100%
+    }
+    .chart-info{
+      float:left;
+      width: 100%;
+      border: 0;
+      padding-left: 0;
+    }
+    .change-box{
+      width: 70%;
+      display:inline-block;
+      float:left;
+    }
+    .change-box{
+      margin-right: 2%;
+    }
+    .share-box{
+      margin-bottom: 30px;
+      text-align:left;
+      display:inline-block;
+      float:left;
+      width: 28%
+    }
+    .share-box .btn{
+      display: block
+    }
+    a.share-btn{
+      width: 100%;
+    }
+    .about-box{
+      width: 70%;
+      float: left;
+      margin-top: -155px;
+    }
+    h3.aside{
+      text-align:left;
+    }
+    a.sidebar-open , a.sidebar-close{
+      display:none;
+    }
+    .region-bottom {
+      width: 100%;
+    }
+    .grid-chart {
+      width: 48%;
+      margin: 1%;
+    }
+    .highcharts-container{
+      width: 100%;
+    }
+    .category-list{
+      padding: 0 1%;
+    }
+    .social-block{
+      padding-top:20px;
+    }
+    .footer-more{
+      width: 185px;
+    }
+    .footer-init{
+      width: 230px;
+    }
+    .logo{
+      background: url(../../images/economic_dashboard_tablet_dash_logo.png) left center no-repeat;
+      margin-left: 10px;
+      padding-top: 40px;
+      padding-bottom: 67px;
+      text-indent: -9999px;
+      width: 375px;
+    }
+    #main{
+      margin: 0 1%;
+    }
+    #main-nav{
+      margin: 0 1%; 
+    }
+
+  /*
+   * Use 3 grid columns for smaller screens.
+   */
+  $zen-column-count: 3;
+
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+
+  .sidebar-first {
+    #content { /* Span 2 columns, starting in 2nd column from left. */
+      @include zen-grid-item(2, 2);
+    }
+
+    .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+      @include zen-grid-item(1, 1);
+    }
+  }
+
+  /*
+   * The layout when there is only one sidebar, the right one.
+   */
+
+  .sidebar-second {
+    #content { /* Span 2 columns, starting in 1st column from left. */
+      @include zen-grid-item(2, 1);
+    }
+
+    .region-sidebar-second { /* Span 1 column, starting in 3rd column from left. */
+      @include zen-grid-item(1, 3);
+    }
+  }
+
+  /*
+   * The layout when there are two sidebars.
+   */
+
+  .two-sidebars {
+    #content { /* Span 2 columns, starting in 2nd column from left. */
+      @include zen-grid-item(2, 2);
+    }
+
+    .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+      @include zen-grid-item(1, 1);
+    }
+
+    .region-sidebar-second { /* Start a new row and span all 3 columns. */
+      @include zen-grid-item(3, 1);
+      @include zen-nested-container(); // Since we're making every block in this region be a grid item.
+      @include zen-clear();
+
+      .block {
+        @include zen-grid-item-base();
+      }
+      .block:nth-child(3n+1) { /* Span 1 column, starting in the 1st column from left. */
+        @include zen-grid-item(1, 1);
+        @include zen-clear();
+      }
+      .block:nth-child(3n+2) { /* Span 1 column, starting in the 2nd column from left. */
+        @include zen-grid-item(1, 2);
+      }
+      .block:nth-child(3n) { /* Span 1 column, starting in the 3rd column from left. */
+        @include zen-grid-item(1, 3);
+      }
+    }
+  }
+}
+
+@media all and (min-width: 976px) {
+  /*
+   * Dashboard Specific
+   */
+
+  .share-box{
+    text-align: center;
+  }
+  a.share-btn{
+    width: 120px;
+  }
+
+  .node-chart{
+    width: 70%;
+  }
+
+  .chart-info{
+    width: 28%;
+    float: right;
+    border-left: 1px solid #ccc;
+    padding-left: 10px;
+    position: relative;
+  }
+  
+  a.sidebar-close{
+    display: inline-block;
+  }
+  
+  .region-bottom {
+    width: 50%;
+  }
+  .footer-more{
+    width: 230px;
+  }
+  .footer-init{
+    width: 230px;
+  }
+  .logo{
+    background: url(../../images/logo.png) left center no-repeat;
+    padding-top: 40px;
+    padding-bottom: 67px;
+    text-indent: -9999px;
+    width: 355px;
+  }
+  .chart-info{
+    background-image: linear-gradient(left , #F6F6F6 36%, #FFFFFF 68%);
+    background-image: -o-linear-gradient(left , #F6F6F6 36%, #FFFFFF 68%);
+    background-image: -moz-linear-gradient(left , #F6F6F6 36%, #FFFFFF 68%);
+    background-image: -webkit-linear-gradient(left , #F6F6F6 36%, #FFFFFF 68%);
+    background-image: -ms-linear-gradient(left , #F6F6F6 36%, #FFFFFF 68%);
+    background-image: -webkit-gradient(
+      linear,
+      left 0,
+      right 0,
+      color-stop(0.36, #F6F6F6),
+      color-stop(0.68, #FFFFFF)
+    );
+  }
+
+  /*
+  * Front Page thumbnail grid
+  */
+  .grid-chart {
+    width: 232px;
+    margin: 8px;
+  }
+  .thumbnail-chart{
+    width: 230px;
+  }
+  /*
+   * Use 5 grid columns for larger screens.
+   */
+  $zen-column-count: 5;
+
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+
+  .sidebar-first {
+    #content { /* Span 4 columns, starting in 2nd column from left. */
+      @include zen-grid-item(4, 2);
+    }
+
+    .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+      @include zen-grid-item(1, 1);
+    }
+  }
+
+  /*
+   * The layout when there is only one sidebar, the right one.
+   */
+
+  .sidebar-second {
+    #content { /* Span 4 columns, starting in 1st column from left. */
+      @include zen-grid-item(4, 1);
+    }
+
+    .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
+      @include zen-grid-item(1, 5);
+    }
+  }
+
+  /*
+   * The layout when there are two sidebars.
+   */
+
+  .two-sidebars {
+    #content { /* Span 3 columns, starting in 2nd column from left. */
+      @include zen-grid-item(3, 2);
+    }
+
+    .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+      @include zen-grid-item(1, 1);
+    }
+
+    .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
+      @include zen-grid-item(1, 5);
+    }
+  }
+}
+
+@media all and (min-width: 481px) {
+  #secondary-menu{
+    display: block;
+  }
+  .flag{
+    display: block;
+  }
+  .region-banner{
+    text-align: left;
+  }
+  a.dash-info{
+    background: url(../../images/info_icon.png) center right no-repeat;
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    width: 135px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #666;
+    padding-right: 25px;
+    text-align: right;
+    text-decoration: none;
+  }
+  a.dash-info:hover{
+    color: #369;
+  }
+  h1.title{
+    line-height: 135%;
+  }
+  #page {
+    padding-bottom: 4em;
+    margin-bottom: 3em;
+    //background: url(../../images/fred_logo.png) 99% 99% no-repeat;
+  }
+  .page-frontpage #page {
+    background: none;
+  }
+  #content {
+    margin-bottom: 1em;
+  }
+  h1.title{
+    margin: 0;
+  }
+  .node-chart{
+    float:left;
+  }
+  h3.aside{
+    text-align : left;
+  }
+  .change-box{
+    padding: 15px 0px;
+    margin-top: 20px;
+    border-top: 1px solid #ccc
+  }
+  .grid-chart{
+    height: 230px;
+    border: 1px solid #C5C5C5;
+  }
+  #block-views-category-block-block{
+    padding-right: 40px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  //iphone styles here
+  aside.chart-info{
+   border-top: 1px solid #ccc;
+  }
+  .footer-wrap {
+   display:none;
+  }
+  .bottom-divider{
+   display: none;
+  }
+  .source-info{
+   display: none;
+  }
+  .header-wrap{
+   display: none;
+  }
+  .flag{
+   display: none;
+  }
+  #secondary-menu{
+   display: none;
+  }
+  .phone-title{
+   color: #fff;
+   text-transform: uppercase;
+   font-size: 75%;
+   font-weight: bold;
+   padding-top: 5px;
+  }
+  .region-banner{
+   text-align: center;
+  }
+  #main-nav{
+   display: none;
+  }
+  h1.title{
+   font-size: 100%;
+   line-height: 100%;
+   margin-bottom:5px;
+  }
+  .field-name-field-chart-sub-title, .sub-title{
+   color: #666;
+   font-size: 85%;
+   line-height: 110%;
+  }
+  #page {
+   margin-bottom: 0;
+  }
+  #content {
+    position:absolute; 
+    z-index:1;
+    top:45px; 
+    bottom:0; 
+    left:0;
+    width:100%;
+    background:#555;
+    overflow:auto;
+    margin-bottom: 0;
+    margin-top: 14px;
+  }
+  ul#phone-nav {
+   background: #ccc;
+   margin: 0px;
+   padding: 0px;
+   width: 100%;
+   text-align: center;
+  }
+  ul#phone-nav li{
+   display: inline-block;
+   padding: 4px 0px 0px 0px;
+  }
+  ul#phone-nav li a{
+    color: #666;
+    text-decoration: none;    
+  }
+  #phone-nav li:nth-child(1), #phone-nav li:nth-child(2){
+    padding-right: 65px;
+  }
+  ul#phone-nav li.active a{
+    color: #000;
+  }
+  .banner-bg{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    z-index: 1;
+  }
+  .phone-logo{
+    background: url(../../images/phone-logo.png) 4px center no-repeat;
+  }
+  .change-box{
+    border-top: 0px;
+    float: left;
+    width: 100%;
+    height: 40px;
+    padding: 10px 0px;
+    margin: 0px 0px 15px 0px;
+  }
+  h3.aside{
+    text-align: left;
+    margin: 0;
+  }
+  .highcharts-container{
+
+  }
+  .change-text{
+    text-transform: uppercase;
+    font-size: 75%;
+    font-weight: bold;
+  }
+  .share-box ,.field-name-body{
+    min-height: 480px;
+  }
+  .scrollbar {
+  	position:absolute;
+  	z-index:100;
+  	width:7px;bottom:7px;top:2px;right:1px
+  }
+  .scrollbar > div {
+  	width:100%;
+  }
+  .grid-chart{
+    border: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .thumbnail-chart{
+    display: none;
+  }
+  .category-list{
+    margin: 0;
+    padding: 0;
+  }
+  .category-list .btn{
+    font-size: 1em;
+    font-weight: bold;
+    padding-top: 10px;
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    @include border-radius(0);
+  }
+  #block-views-category-block-block{
+    padding: 0;
+  }
+  .filter-list li a, .category-list li a{
+    font-size: 1em;
+  }
+}
+
+@media all and (width: 480px) {
+ .banner-bg {
+   display: none !important;
+ }
+ #content{
+   top: 0px !important;
+   margin-top: 0px;
+ }
+}
+
+@media all and (max-width: 320px) {
+
+
+}

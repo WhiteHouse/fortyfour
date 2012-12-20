@@ -50,8 +50,6 @@ body {
 
 #logo { /* Wrapping link for logo */
   float: left; /* LTR */
-  margin: 0;
-  padding: 0;
 
   img {
     vertical-align: bottom;
@@ -124,7 +122,7 @@ h2.block-title, /* Block title */
 h2.title, /* Comment section heading */
 h2.comment-form, /* Comment form heading */
 h3.title { /* Comment title */
-  margin: 0;
+  //margin: 0;
 }
 
 tr.even { /* Some tables have rows marked even or odd. */

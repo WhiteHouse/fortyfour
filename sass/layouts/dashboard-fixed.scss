@@ -1,0 +1,105 @@
+.category-list{
+  margin: 0;
+  padding: 0;
+}
+.category-list .btn{
+  margin-bottom: 5px;
+}
+.filter-list li a, .category-list li a{
+  font-size: 0.75em;
+}
+.share-box{
+  text-align: center;
+}
+a.share-btn{
+  width: 120px;
+}
+.node-chart{
+  background: url(../../images/seal_bg_02_gold_darker.jpg) center center no-repeat;
+  width: 70%;
+}
+.chart-info{
+  width: 28%;
+  float: right;
+}
+a.sidebar-close{
+  display: inline-block;
+}
+.region-bottom {
+  width: 50%;
+}
+.footer-more{
+  width: 230px;
+}
+.footer-init{
+  width: 230px;
+}
+.logo{
+  background: url(../../images/logo.png) left center no-repeat;
+  padding-top: 40px;
+  padding-bottom: 67px;
+  text-indent: -9999px;
+  width: 355px;
+}
+
+/*
+* Front Page thumbnail grid
+*/
+.grid-chart {
+  width: 232px;
+  margin: 8px;
+}
+.thumbnail-chart{
+  width: 230px;
+}
+  #secondary-menu{
+  display: block;
+}
+.flag{
+  display: block;
+}
+.region-banner{
+  text-align: left;
+}
+h1.title{
+  line-height: 135%;
+}
+#page {
+  margin-bottom: 1em;
+}
+#content {
+  margin-bottom: 1em;
+}
+h1.title{
+  margin: 0;
+}
+.node-chart{
+  float:left;
+}
+h3.aside{
+  text-align : left;
+}
+.change-box{
+  padding: 15px 0px;
+  margin-top: 20px;
+  border-top: 1px solid #ccc
+}
+.grid-chart{
+  height: 230px;
+  border: 1px solid #C5C5C5;
+}
+#block-views-category-block-block{
+  padding-right: 40px;
+}
+.embedded .highcharts-container{
+  z-index: -1;
+}
+.embedded .chart-info{
+  float: left !important;
+  width: 95% !important;
+}
+.chart-info{
+  border-left: 1px solid #ccc;
+  padding-left: 10px;
+  position: relative;
+}

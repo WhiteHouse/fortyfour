@@ -24,6 +24,7 @@
   }
 
   .content { /* Node's content wrapper */
+    position: relative;
   }
 
   ul.links { /* Node links. See also the ul.links declaration in the pages.css. */

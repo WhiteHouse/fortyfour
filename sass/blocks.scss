@@ -8,7 +8,7 @@
 
 .block { /* Block wrapper */
   margin-bottom: 1.5em;
-  line-height: 0;
+  //line-height: 0;
 
   &.first { /* The first block in the region */
   }
@@ -23,7 +23,11 @@
   }
 
   h2.block-title { /* Block title */
-    font-size: 1em 
+    font-size: 0.75em;
+    font-weight: bold;
+    text-transform: uppercase; 
+    margin:0;
+    padding: 1.282em 0;
   }
 }
 
