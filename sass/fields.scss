@@ -1,0 +1,106 @@
+/**
+ * @file
+ * Field Styling
+ *
+ * The Fences module allows site builders to pick the semeantic HTML5 element
+ * for each field while editing the field's settings. There's no way a theme
+ * can ever know which element to use for the fields on your site, so Zen
+ * just uses lets Drupal core or Fences decide. Since you DO NOT want 3 wrapping
+ * divs around every field (do you?), we highly recommend Fences.
+ *
+ * http://drupal.org/project/fences
+ */
+
+@import "base";
+
+
+/*
+ * Field wrappers when the Fences module is enabled.
+ */
+
+.field-label { /* The optional label for a field. */
+}
+
+.field-FIELDNAME { /* Underscores in field name are replaced with dashes. */
+}
+
+
+/*
+ * If you don't use the Fences module, that's fine. Really. I think. Just use
+ * these selectors instead:
+ */
+
+.field { /* Wrapper for any field. */
+}
+
+/*
+ * Field types (Core)
+ */
+
+.field-type-text {
+}
+
+.field-type-text-long {
+}
+
+.field-type-text-with-summary {
+}
+
+.field-type-image {
+}
+
+.field-type-file {
+}
+
+.field-type-taxonomy-term-reference {
+}
+
+.field-type-number-integer {
+}
+
+.field-type-number-decimal {
+}
+
+.field-type-number-float {
+}
+
+.field-type-list-text {
+}
+
+.field-type-list-boolean {
+}
+
+.field-type-list-integer {
+}
+
+.field-type-list-float {
+}
+
+/*
+ * Field types (Contrib)
+ */
+
+.field-type-datetime { /* Always use "datetime" when creating new CCK date fields. "date" and "datestamp" are legacy types. */
+}
+
+.field-type-node-reference {
+}
+
+.field-type-user-reference {
+}
+
+/*
+ * Named fields
+ */
+
+.field-name-body {
+}
+
+.field-name-field-image {
+}
+
+.field-name-field-tags {
+}
+
+.field-name-field-FIELDNAME { /* Underscores in field name are replaced with dashes. */
+}

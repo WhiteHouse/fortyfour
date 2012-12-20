@@ -1,0 +1,48 @@
+//   TODO
+//[] Base Font declarations
+//[] 
+@import "base";
+body{
+  background: #efefef;
+}
+.body-bg {
+}
+#page{
+  background: #efefef url(../images/dashboard_header.png) center top no-repeat;
+}
+.banner-bg{
+	background:url(../images/topbarbg.png) top left repeat-x;
+}
+#banner{
+	background:url(../images/topbarbg.png) top left repeat-x;
+	height: 31px;
+}
+a#return {
+	background: url(../images/flag.png) top left no-repeat;
+	padding-left: 30px;
+	color: #CCF;
+	float: left;
+	font: 0.75em arial;
+	margin: 6px 0px 6px 10px;
+}	
+#logo{
+	padding-top: 40px;
+  padding-bottom: 65px;
+}
+#page{
+	position: relative;
+}
+.seal{
+	position: absolute;
+	top: -25px;
+	text-align: center;
+	width: 100%;
+}
+.takeover .block{
+	margin: 0;
+}
+p, pre{
+  font-size: 0.8125 * $base-font-size;
+  line-height: 1.25 * $base-font-size;
+}
+

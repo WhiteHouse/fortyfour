@@ -1,0 +1,29 @@
+/**
+ * @file
+ * RTL companion for the pages.css file.
+ */
+/*
+ * Header
+ */
+/* line 13, ../sass/pages-rtl.scss */
+#logo {
+  /* Wrapping link for logo */
+  float: right;
+}
+
+/*
+ * Content
+ */
+/* line 21, ../sass/pages-rtl.scss */
+ul.inline li {
+  /* List of links */
+  display: inline-block;
+  /* Bug in Safari causes display: inline to fail. */
+  padding: 0 0 0 1em;
+}
+
+/* line 25, ../sass/pages-rtl.scss */
+span.field-label {
+  /* The inline field label used by the Fences.module */
+  padding: 0 0 0 1em;
+}

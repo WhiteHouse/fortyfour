@@ -1,0 +1,36 @@
+/* normalize-rtl.css - RTL language extension of normalize.scss. */
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7
+ */
+/* line 14, ../sass/normalize-rtl.scss */
+dd {
+  margin: 0 30px 0 0;
+}
+
+/*
+ * Addresses paddings set differently in IE6/7
+ */
+/* line 25, ../sass/normalize-rtl.scss */
+menu,
+ol,
+ul,
+.item-list ul {
+  padding: 0 30px 0 0;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/*
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/* line 48, ../sass/normalize-rtl.scss */
+th {
+  text-align: right;
+}
