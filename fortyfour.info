@@ -53,9 +53,9 @@ stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/fields.css
 stylesheets[all][] = css/print.css
 
-;Fourtyfour specific
+;fortyfour specific
 ;stylesheets[all][] = css/debug.css
-stylesheets[all][] = css/fourtyfour.css
+stylesheets[all][] = css/fortyfour.css
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
