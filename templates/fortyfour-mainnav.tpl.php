@@ -34,7 +34,7 @@
             <li> <a href="https://wwws.whitehouse.gov/podcasts">Podcasts</a> </li>
           </ul>
           <div id="nav-media-center-feature" class="topnav-feature">
-            <div class="cp_tile "> <a class="context-block-region" id="context-block-region-wh_nav_media_center">Media Menu Feature</a>
+            <div class="cp_tile ">
               <div id="block-nodeblock-43333" class="clear-block block block-nodeblock ">
                 <div class="content">
                   <p class="menu-feature-title"><a href="https://wwws.whitehouse.gov/state-of-the-union-2012">State of the Union</a></p>
@@ -85,7 +85,7 @@
             </li>
           </ul>
           <div id="nav-briefing-room-feature" class="topnav-feature" style="height: 225px; ">
-            <div class="cp_tile "> <a class="context-block-region" id="context-block-region-wh_nav_briefing_room">Briefing Room Menu Feature</a>
+            <div class="cp_tile ">
               <div id="block-nodeblock-43309" class="clear-block block block-nodeblock ">
                 <div class="content">
                   <p class="menu-feature-title"><a href="https://wwws.whitehouse.gov/briefing-room/disclosures/visitor-records?utm_source=wh&amp;utm_medium=tout&amp;utm_campaign=menu">A Commitment to Transparency</a></p>
@@ -166,7 +166,7 @@
             <li> <a href="https://wwws.whitehouse.gov/issues/additional-issues">Additional Issues</a> </li>
           </ul>
           <div id="nav-issues-feature" class="topnav-feature" style="height: 290px; ">
-            <div class="cp_tile "> <a class="context-block-region" id="context-block-region-wh_nav_issues">Issues Menu Feature</a>
+            <div class="cp_tile ">
               <div id="block-nodeblock-43315" class="clear-block block block-nodeblock ">
                 <div class="content">
                   <p class="menu-feature-title"><a href="http://www.whitehouse.gov/economy/jobs/we-cant-wait">We Can't Wait</a></p>
@@ -188,7 +188,7 @@
       <div class="topnav-dd-outer topnav-dd-outer-three-col topnav-dd-outer-featured topnav-dd-outer-three-col-featured">
         <div class="topnav-dd-inner clearfix">
           <div id="nav-the-admin-feature" class="topnav-feature" style="height: 156px; ">
-            <div class="cp_tile "> <a class="context-block-region" id="context-block-region-wh_nav_the_admin">The Administration Menu Feature</a>
+            <div class="cp_tile ">
               <div id="block-nodeblock-43303" class="clear-block block block-nodeblock ">
                 <div class="content">
                   <p class="menu-feature-title"><a href="https://wwws.whitehouse.gov/petitions">We the People</a></p>
@@ -232,7 +232,7 @@
       <div class="topnav-dd-outer topnav-dd-outer-three-col topnav-dd-outer-featured topnav-dd-outer-three-col-featured">
         <div class="topnav-dd-inner clearfix">
           <div id="nav-the-wh-feature" class="topnav-feature" style="height: 254px; ">
-            <div class="cp_tile "> <a class="context-block-region" id="context-block-region-wh_nav_the_wh">The White House Menu Feature</a>
+            <div class="cp_tile ">
               <div id="block-nodeblock-43321" class="clear-block block block-nodeblock ">
                 <div class="content">
                   <p class="menu-feature-title"><a href="https://wwws.whitehouse.gov/about/interactive-tour?utm_source=wh&amp;utm_medium=tout&amp;utm_campaign=menu?utm_source=wh&amp;utm_medium=tout&amp;utm_campaign=menu">Inside the White House</a></p>
