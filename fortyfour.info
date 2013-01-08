@@ -161,11 +161,3 @@ settings[fortyfour_use_whitehouse_subfooter] = 1
 ; To add a Panels layout (which can also be used by Display Suite), uncomment
 ; the line below and see the documentation at: http://drupal.org/node/495654
 ;plugins[panels][layouts] = layouts
-
-
-; Information added by drush on 2012-10-10
-version = "7.x-1.0-alpha1"
-core = "7.x"
-project = "fortyfour"
-datestamp = "1349912853"
-
