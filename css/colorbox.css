@@ -1,0 +1,164 @@
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+/* line 5, ../sass/colorbox.scss */
+#colorbox, #cboxOverlay, #cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* line 6, ../sass/colorbox.scss */
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 7, ../sass/colorbox.scss */
+#cboxMiddleLeft, #cboxBottomLeft {
+  clear: left;
+}
+
+/* line 8, ../sass/colorbox.scss */
+#cboxContent {
+  position: relative;
+}
+
+/* line 9, ../sass/colorbox.scss */
+#cboxLoadedContent {
+  overflow: auto;
+}
+
+/* line 10, ../sass/colorbox.scss */
+#cboxTitle {
+  margin: 0;
+}
+
+/* line 11, ../sass/colorbox.scss */
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 12, ../sass/colorbox.scss */
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+  cursor: pointer;
+}
+
+/* line 13, ../sass/colorbox.scss */
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block;
+  max-width: none;
+}
+
+/* line 14, ../sass/colorbox.scss */
+.cboxIframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+/* line 15, ../sass/colorbox.scss */
+#colorbox, #cboxContent, #cboxLoadedContent {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+/* line 22, ../sass/colorbox.scss */
+#cboxOverlay {
+  background: #000;
+}
+
+/* line 24, ../sass/colorbox.scss */
+#cboxContent {
+  margin-top: 20px;
+}
+
+/* line 25, ../sass/colorbox.scss */
+.cboxIframe {
+  background: #fff;
+}
+
+/* line 26, ../sass/colorbox.scss */
+#cboxError {
+  padding: 50px;
+  border: 1px solid #ccc;
+}
+
+/* line 27, ../sass/colorbox.scss */
+#cboxLoadedContent {
+  border: 5px solid #000;
+  background: #fff;
+}
+
+/* line 28, ../sass/colorbox.scss */
+#cboxTitle {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  color: #ccc;
+}
+
+/* line 29, ../sass/colorbox.scss */
+#cboxCurrent {
+  position: absolute;
+  top: -20px;
+  right: 0px;
+  color: #ccc;
+}
+
+/* line 30, ../sass/colorbox.scss */
+#cboxSlideshow {
+  position: absolute;
+  top: -20px;
+  right: 90px;
+  color: #fff;
+}
+
+/* line 31, ../sass/colorbox.scss */
+#cboxClose {
+  background: url(../images/modal_close_button.png);
+  text-indent: -9999px;
+  width: 53px;
+  height: 16px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* line 40, ../sass/colorbox.scss */
+#cboxPrevious:hover {
+  background-position: bottom left;
+}
+
+/* line 41, ../sass/colorbox.scss */
+#cboxNext:hover {
+  background-position: bottom right;
+}
+
+/* line 42, ../sass/colorbox.scss */
+#cboxLoadingOverlay {
+  background: #000;
+}
+
+/* line 43, ../sass/colorbox.scss */
+#cboxLoadingGraphic {
+  background: url(images/loading.gif) no-repeat center center;
+}

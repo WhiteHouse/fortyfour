@@ -71,29 +71,45 @@
 ?>
 
 <?php
-  // Conent that needs rendered first so we know if it exists or not.
+  // Regions that needs rendered first so we know if it exists or not.
   $sidebar_first  = render($page['sidebar_first']);
   $sidebar_second = render($page['sidebar_second']);
   $takeover  = render($page['takeover']);
+  $navigation = render($page['navigation']);
 ?>
 
-<div class="body-bg">
 <div class="banner-bg">
-  <div id ="banner" role="banner" class="region-banner clearfix"><a id="return">Return to the White House Home Page</a></div>
-  <div class="seal"></div>
+  <div id ="banner" role="banner" class="region-banner clearfix">
+    
+    <!-- Use Secondary Links for external Links to other WH.gov sites-->
+    <!--<a id="return" href="#">Whitehouse.gov</a>-->
+      <?php if ($secondary_menu): ?>
+      <nav id="secondary-menu" role="navigation">
+        <?php print theme('links__system_secondary_menu', array(
+          'links' => $secondary_menu,
+          'attributes' => array(
+            'class' => array('links' , 'clearfix'),
+          ),
+          'heading' => array(
+            'text' => $secondary_menu_heading,
+            'level' => 'h2',
+            'class' => array('menu-title', 'arrow-down'),
+          ),
+        )); ?>
+    </nav>
+    <?php endif; ?>
+    <!-- /external links menu-->
+    <span class="flag">President Barack Obama</span>
+  </div>
 </div>
+<div class="header-wrap">
 <?php if ($takeover): ?>
 <div class="takeover">
   <?php print $takeover; ?>
 </div>
 <?php endif; ?>
-<div id="page">
-  <div class="seal"><img class="" src="/sites/d7dashboard/themes/fourtyfour/images/seal.png"/></div>
   <header id="header" role="banner">
-    <?php if ($logo): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-    <?php endif; ?>
-
+    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo" class="logo">Economic Dashboard</a>
     <?php if ($site_name || $site_slogan): ?>
       <hgroup id="name-and-slogan">
         <?php if ($site_name): ?>
@@ -107,81 +123,73 @@
         <?php endif; ?>
       </hgroup><!-- /#name-and-slogan -->
     <?php endif; ?>
-
-    <?php print render($page['header']); ?>
-
+    <div class="seal"><img src="<?php print $theme_path; ?>/images/seal.png"/></div>
+    <a class="dash-info" href="#">Learn About the Dashboard</a>
   </header>
-  <div id="navigation">
-      <?php if ($main_menu): ?>
-        <nav id="main-menu" role="navigation">
-          <?php
-          // This code snippet is hard to modify. We recommend turning off the
-          // "Main menu" on your sub-theme's settings form, deleting this PHP
-          // code block, and, instead, using the "Menu block" module.
-          // @see http://drupal.org/project/menu_block
-          print theme('links__system_main_menu', array(
-            'links' => $main_menu,
-            'attributes' => array(
-              'class' => array('links', 'inline', 'clearfix'),
-            ),
-            'heading' => array(
-              'text' => t('Main menu'),
-              'level' => 'h2',
-              'class' => array('element-invisible'),
-            ),
-          )); ?>
-        </nav>
-      <?php endif; ?>
-      <?php if ($secondary_menu): ?>
-      <nav id="secondary-menu" role="navigation">
-        <?php print theme('links__system_secondary_menu', array(
-          'links' => $secondary_menu,
+</div>
+<div id="main-nav" class="collapse">
+  
+  <div id="navigation" class="toggle-nav hidden">
+    <?php if ($main_menu): ?>
+      <nav id="main-menu" role="navigation">
+        <?php
+        // This code snippet is hard to modify. We recommend turning off the
+        // "Main menu" on your sub-theme's settings form, deleting this PHP
+        // code block, and, instead, using the "Menu block" module.
+        // @see http://drupal.org/project/menu_block
+        print theme('links__system_main_menu', array(
+          'links' => $main_menu,
           'attributes' => array(
             'class' => array('links', 'inline', 'clearfix'),
           ),
           'heading' => array(
-            'text' => $secondary_menu_heading,
+            'text' => t('Main menu'),
             'level' => 'h2',
             'class' => array('element-invisible'),
           ),
         )); ?>
-    </nav>
+      </nav>
     <?php endif; ?>
-    <?php print render($page['navigation']); ?>
+    <?php if ($navigation): ?>
+      <?php print $navigation; ?>
+    <?php endif; ?>
   </div>
-
-  <div id="main">
-
-    <div id="content" class="column" role="main">
-      <?php print render($page['highlighted']); ?>
-      <?php print $breadcrumb; ?>
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1 class="title" id="page-title"><?php print $title; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
+  
+  <div class="handle-wrap"><a class="handle">Select a Chart</a></div>
+</div><!--main nav-->
+<div id="page">  
+  <?php print render($page['header']); ?>
+  
+  <div id="main" class="clearfix">
+    <?php if (user_is_logged_in()): ?>
       <?php print $messages; ?>
       <?php print render($tabs); ?>
       <?php print render($page['help']); ?>
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-      <?php print render($page['content']); ?>
-      <?php print $feed_icons; ?>
-    </div><!-- /#content -->
-
-    <?php if ($sidebar_first || $sidebar_second): ?>
-      <aside class="sidebars">
-        <?php print $sidebar_first; ?>
-        <?php print $sidebar_second; ?>
-      </aside><!-- /.sidebars -->
     <?php endif; ?>
+  <div id="content" class="column clearfix" role="main">
+    <?php print render($page['highlighted']); ?>
+    <a id="main-content"></a>
+    <?php print render($page['content']); ?>
+  </div><!-- /#content -->
+
+  <?php if ($sidebar_first || $sidebar_second): ?>
+    <aside class="sidebars">
+      <?php print $sidebar_first; ?>
+      <?php print $sidebar_second; ?>
+    </aside><!-- /.sidebars -->
+  <?php endif; ?>
 
   </div><!-- /#main -->
-
-  <?php print render($page['footer']); ?>
-
 </div><!-- /#page -->
-</div><!--body-bg-->
-<?php print render($page['bottom']); ?>
+<div class="bottom-divider"></div>
+<div class="footer-wrap">
+  <div class="footer-inner">
+  <?php print render($page['footer']); ?>
+  <div class="footer-bottom">
+    <?php print render($page['bottom']); ?>
+  </div>
+  </div>
+</div>

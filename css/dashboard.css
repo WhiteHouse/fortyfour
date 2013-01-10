@@ -1,0 +1,1538 @@
+/*bootstrap style buttons*/
+/* line 3, ../sass/_buttons.scss */
+.btn {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  padding: 4px 10px 4px;
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 18px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, white, #e6e6e6);
+  background-image: -ms-linear-gradient(top, white, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+  background-image: -o-linear-gradient(top, white, #e6e6e6);
+  background-image: linear-gradient(top, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+  border: 1px solid #cccccc;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  *margin-left: .3em;
+}
+
+/* line 44, ../sass/_buttons.scss */
+.btn:hover,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+  background-color: #e6e6e6;
+}
+
+/* line 48, ../sass/_buttons.scss */
+.btn:active,
+.btn.active {
+  background-color: #cccccc \9;
+}
+
+/* line 51, ../sass/_buttons.scss */
+.btn:first-child {
+  *margin-left: 0;
+}
+
+/* line 54, ../sass/_buttons.scss */
+.btn:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -ms-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+
+/* line 65, ../sass/_buttons.scss */
+.btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* line 71, ../sass/_buttons.scss */
+.btn.active,
+.btn:active {
+  background-image: none;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #e6e6e6;
+  background-color: #d9d9d9 \9;
+  outline: 0;
+}
+
+/* line 81, ../sass/_buttons.scss */
+.btn.disabled,
+.btn[disabled] {
+  cursor: default;
+  background-image: none;
+  background-color: #e6e6e6;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 91, ../sass/_buttons.scss */
+.btn-large {
+  padding: 9px 14px;
+  font-size: 15px;
+  line-height: normal;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 99, ../sass/_buttons.scss */
+.btn-large [class^="icon-"] {
+  margin-top: 1px;
+}
+
+/* line 102, ../sass/_buttons.scss */
+.btn-small {
+  padding: 5px 9px;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+/* line 107, ../sass/_buttons.scss */
+.btn-small [class^="icon-"] {
+  margin-top: -1px;
+}
+
+/* line 110, ../sass/_buttons.scss */
+.btn-mini {
+  padding: 2px 6px;
+  font-size: 11px;
+  line-height: 14px;
+}
+
+/* line 126, ../sass/_buttons.scss */
+.btn-primary,
+.btn-primary:hover,
+.btn-warning,
+.btn-warning:hover,
+.btn-danger,
+.btn-danger:hover,
+.btn-success,
+.btn-success:hover,
+.btn-info,
+.btn-info:hover,
+.btn-inverse,
+.btn-inverse:hover {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+}
+
+/* line 135, ../sass/_buttons.scss */
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-inverse.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* line 138, ../sass/_buttons.scss */
+.btn-primary {
+  background-color: #0074cc;
+  background-image: -moz-linear-gradient(top, #0088cc, #0055cc);
+  background-image: -ms-linear-gradient(top, #0088cc, #0055cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0055cc);
+  background-image: -o-linear-gradient(top, #0088cc, #0055cc);
+  background-image: linear-gradient(top, #0088cc, #0055cc);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
+  border-color: #0055cc #0055cc #003580;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+/* line 156, ../sass/_buttons.scss */
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  background-color: #0055cc;
+}
+
+/* line 160, ../sass/_buttons.scss */
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #004099 \9;
+}
+
+/* line 163, ../sass/_buttons.scss */
+.btn-warning {
+  background-color: #faa732;
+  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
+  background-image: -ms-linear-gradient(top, #fbb450, #f89406);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
+  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
+  background-image: -o-linear-gradient(top, #fbb450, #f89406);
+  background-image: linear-gradient(top, #fbb450, #f89406);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
+  border-color: #f89406 #f89406 #ad6704;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+/* line 181, ../sass/_buttons.scss */
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning.active,
+.btn-warning.disabled,
+.btn-warning[disabled] {
+  background-color: #f89406;
+}
+
+/* line 185, ../sass/_buttons.scss */
+.btn-warning:active,
+.btn-warning.active {
+  background-color: #c67605 \9;
+}
+
+/* line 188, ../sass/_buttons.scss */
+.btn-danger {
+  background-color: #da4f49;
+  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: -ms-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
+  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: linear-gradient(top, #ee5f5b, #bd362f);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
+  border-color: #bd362f #bd362f #802420;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+/* line 206, ../sass/_buttons.scss */
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger.active,
+.btn-danger.disabled,
+.btn-danger[disabled] {
+  background-color: #bd362f;
+}
+
+/* line 210, ../sass/_buttons.scss */
+.btn-danger:active,
+.btn-danger.active {
+  background-color: #942a25 \9;
+}
+
+/* line 213, ../sass/_buttons.scss */
+.btn-success {
+  background-color: #5bb75b;
+  background-image: -moz-linear-gradient(top, #62c462, #51a351);
+  background-image: -ms-linear-gradient(top, #62c462, #51a351);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
+  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
+  background-image: -o-linear-gradient(top, #62c462, #51a351);
+  background-image: linear-gradient(top, #62c462, #51a351);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
+  border-color: #51a351 #51a351 #387038;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+/* line 231, ../sass/_buttons.scss */
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  background-color: #51a351;
+}
+
+/* line 235, ../sass/_buttons.scss */
+.btn-success:active,
+.btn-success.active {
+  background-color: #408140 \9;
+}
+
+/* line 238, ../sass/_buttons.scss */
+.btn-info {
+  background-color: #49afcd;
+  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
+  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: linear-gradient(top, #5bc0de, #2f96b4);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
+  border-color: #2f96b4 #2f96b4 #1f6377;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+/* line 256, ../sass/_buttons.scss */
+.btn-info:hover,
+.btn-info:active,
+.btn-info.active,
+.btn-info.disabled,
+.btn-info[disabled] {
+  background-color: #2f96b4;
+}
+
+/* line 260, ../sass/_buttons.scss */
+.btn-info:active,
+.btn-info.active {
+  background-color: #24748c \9;
+}
+
+/* line 263, ../sass/_buttons.scss */
+.btn-inverse {
+  background-color: #414141;
+  background-image: -moz-linear-gradient(top, #555555, #222222);
+  background-image: -ms-linear-gradient(top, #555555, #222222);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#222222));
+  background-image: -webkit-linear-gradient(top, #555555, #222222);
+  background-image: -o-linear-gradient(top, #555555, #222222);
+  background-image: linear-gradient(top, #555555, #222222);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#222222', GradientType=0);
+  border-color: #222222 #222222 #000000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+/* line 281, ../sass/_buttons.scss */
+.btn-inverse:hover,
+.btn-inverse:active,
+.btn-inverse.active,
+.btn-inverse.disabled,
+.btn-inverse[disabled] {
+  background-color: #222222;
+}
+
+/* line 285, ../sass/_buttons.scss */
+.btn-inverse:active,
+.btn-inverse.active {
+  background-color: #080808 \9;
+}
+
+/* line 289, ../sass/_buttons.scss */
+button.btn,
+input[type="submit"].btn {
+  *padding-top: 2px;
+  *padding-bottom: 2px;
+}
+
+/* line 294, ../sass/_buttons.scss */
+button.btn::-moz-focus-inner,
+input[type="submit"].btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* line 299, ../sass/_buttons.scss */
+button.btn.btn-large,
+input[type="submit"].btn.btn-large {
+  *padding-top: 7px;
+  *padding-bottom: 7px;
+}
+
+/* line 304, ../sass/_buttons.scss */
+button.btn.btn-small,
+input[type="submit"].btn.btn-small {
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+}
+
+/* line 309, ../sass/_buttons.scss */
+button.btn.btn-mini,
+input[type="submit"].btn.btn-mini {
+  *padding-top: 1px;
+  *padding-bottom: 1px;
+}
+
+/* line 313, ../sass/_buttons.scss */
+.btn-group {
+  position: relative;
+  *zoom: 1;
+  *margin-left: .3em;
+}
+
+/* line 319, ../sass/_buttons.scss */
+.btn-group:before,
+.btn-group:after {
+  display: table;
+  content: "";
+}
+
+/* line 323, ../sass/_buttons.scss */
+.btn-group:after {
+  clear: both;
+}
+
+/* line 326, ../sass/_buttons.scss */
+.btn-group:first-child {
+  *margin-left: 0;
+}
+
+/* line 329, ../sass/_buttons.scss */
+.btn-group + .btn-group {
+  margin-left: 5px;
+}
+
+/* line 332, ../sass/_buttons.scss */
+.btn-toolbar {
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+/* line 336, ../sass/_buttons.scss */
+.btn-toolbar .btn-group {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+}
+
+/* line 343, ../sass/_buttons.scss */
+.btn-group .btn {
+  position: relative;
+  float: left;
+  margin-left: -1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 351, ../sass/_buttons.scss */
+.btn-group .btn:first-child {
+  margin-left: 0;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* line 361, ../sass/_buttons.scss */
+.btn-group .btn:last-child,
+.btn-group .dropdown-toggle {
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* line 369, ../sass/_buttons.scss */
+.btn-group .btn.large:first-child {
+  margin-left: 0;
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  border-top-left-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+/* line 379, ../sass/_buttons.scss */
+.btn-group .btn.large:last-child,
+.btn-group .large.dropdown-toggle {
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-right-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+/* line 390, ../sass/_buttons.scss */
+.btn-group .btn:hover,
+.btn-group .btn:focus,
+.btn-group .btn:active,
+.btn-group .btn.active {
+  z-index: 2;
+}
+
+/* line 394, ../sass/_buttons.scss */
+.btn-group .dropdown-toggle:active,
+.btn-group.open .dropdown-toggle {
+  outline: 0;
+}
+
+/* line 397, ../sass/_buttons.scss */
+.btn-group .dropdown-toggle {
+  padding-left: 8px;
+  padding-right: 8px;
+  -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+}
+
+/* line 406, ../sass/_buttons.scss */
+.btn-group .btn-mini.dropdown-toggle {
+  padding-left: 5px;
+  padding-right: 5px;
+  *padding-top: 1px;
+  *padding-bottom: 1px;
+}
+
+/* line 412, ../sass/_buttons.scss */
+.btn-group .btn-small.dropdown-toggle {
+  *padding-top: 4px;
+  *padding-bottom: 4px;
+}
+
+/* line 416, ../sass/_buttons.scss */
+.btn-group .btn-large.dropdown-toggle {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* line 420, ../sass/_buttons.scss */
+.btn-group.open {
+  *z-index: 1000;
+}
+
+/* line 423, ../sass/_buttons.scss */
+.btn-group.open .dropdown-menu {
+  display: block;
+  margin-top: 1px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 430, ../sass/_buttons.scss */
+.btn-group.open .dropdown-toggle {
+  background-image: none;
+  -webkit-box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* line 436, ../sass/_buttons.scss */
+.btn .caret {
+  margin-top: 7px;
+  margin-left: 0;
+}
+
+/* line 441, ../sass/_buttons.scss */
+.btn:hover .caret,
+.open.btn-group .caret {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/* line 445, ../sass/_buttons.scss */
+.btn-mini .caret {
+  margin-top: 5px;
+}
+
+/* line 448, ../sass/_buttons.scss */
+.btn-small .caret {
+  margin-top: 6px;
+}
+
+/* line 451, ../sass/_buttons.scss */
+.btn-large .caret {
+  margin-top: 6px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000000;
+}
+
+/* line 462, ../sass/_buttons.scss */
+.btn-primary .caret,
+.btn-warning .caret,
+.btn-danger .caret,
+.btn-info .caret,
+.btn-success .caret,
+.btn-inverse .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+}
+
+/* line 18, ../sass/dashboard.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 21, ../sass/dashboard.scss */
+body {
+  background: #efefef;
+}
+
+/* line 24, ../sass/dashboard.scss */
+.header-wrap {
+  background: #d4d7d9 url(../images/header_bg.png) bottom left repeat-x;
+  border-bottom: 2px solid #c5c5c5;
+  min-height: 133px;
+}
+
+/* line 29, ../sass/dashboard.scss */
+#header {
+  position: relative;
+  background: #efefef url(../images/dashboard_header.png) center top no-repeat;
+  padding: 0px;
+}
+
+/* line 35, ../sass/dashboard.scss */
+#main-nav {
+  background-color: #fff;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-right: 1px solid #c5c5c5;
+  border-bottom: 1px solid #c5c5c5;
+  border-left: 1px solid #c5c5c5;
+  margin-bottom: 2.5em;
+  -webkit-box-shadow: 0px 0px 5px #c5c5c5;
+  -moz-box-shadow: 0px 0px 5px #c5c5c5;
+  box-shadow: 0px 0px 5px #c5c5c5;
+  min-height: 20px;
+  position: relative;
+}
+
+/* line 47, ../sass/dashboard.scss */
+.handle-wrap {
+  position: absolute;
+  bottom: -24px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  height: 26px;
+}
+
+/* line 55, ../sass/dashboard.scss */
+a.handle {
+  color: #336699;
+  background: url(../images/economic_dashbaord_menu_open.png) top center no-repeat white;
+  display: inline-block;
+  font-size: 70%;
+  padding-right: 27px;
+  height: 25px;
+  width: 230px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-box-shadow: 0px 2px 2px #c5c5c5;
+  -moz-box-shadow: 0px 2px 2px #c5c5c5;
+  box-shadow: 0px 2px 2px #c5c5c5;
+  border-right: 1px solid #c5c5c5;
+  border-bottom: 1px solid #c5c5c5;
+  border-left: 1px solid #c5c5c5;
+  cursor: pointer;
+}
+
+/* line 71, ../sass/dashboard.scss */
+.handle-close {
+  background: url(../images/economic_dashbaord_menu_close.png) top center no-repeat white !important;
+}
+
+/* line 74, ../sass/dashboard.scss */
+#content {
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+}
+
+/* line 79, ../sass/dashboard.scss */
+#main {
+  margin-top: 20px;
+}
+
+/* line 82, ../sass/dashboard.scss */
+.banner-bg {
+  background: url(../images/topbarbg.png) top left repeat-x;
+}
+
+/* line 85, ../sass/dashboard.scss */
+#banner {
+  background: url(../images/topbarbg.png) top left repeat-x;
+  height: 31px;
+}
+
+/* line 89, ../sass/dashboard.scss */
+.flag {
+  background: url(../images/flag.png) left center no-repeat;
+  color: #fff;
+  float: right;
+  font-size: 0.67em;
+  font-family: georgia , serif;
+  font-style: italic;
+  padding-left: 27px;
+  line-height: 2.67em;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+/* line 101, ../sass/dashboard.scss */
+#secondary-menu {
+  position: relative;
+}
+
+/* line 104, ../sass/dashboard.scss */
+#secondary-menu h2 {
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #9abfe5;
+  float: left;
+  font: 10px arial;
+  font-weight: bold;
+  line-height: 14px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: 0px;
+  padding-left: 12px;
+  padding-right: 40px;
+}
+
+/* line 119, ../sass/dashboard.scss */
+.arrow-down {
+  background: #07336a url(../images/arrow-down.png) 120px center no-repeat;
+}
+
+/* line 122, ../sass/dashboard.scss */
+.arrow-up {
+  background: white url(../images/arrow-up.png) 120px center no-repeat;
+  color: #000 !important;
+}
+
+/* line 126, ../sass/dashboard.scss */
+#secondary-menu ul {
+  -webkit-box-shadow: 0px 3px 5px black;
+  -moz-box-shadow: 0px 3px 5px black;
+  box-shadow: 0px 3px 5px black;
+  background: #fff;
+  display: none;
+  z-index: 1;
+  margin: 0;
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  padding: 5px 10px;
+  margin-bottom: 2.5em;
+  min-width: 190px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+/* line 142, ../sass/dashboard.scss */
+#secondary-menu ul li {
+  display: block;
+  margin-bottom: 5px;
+  min-width: 150px;
+}
+
+/* line 147, ../sass/dashboard.scss */
+#secondary-menu ul li a {
+  color: #369;
+  text-decoration: none;
+}
+
+/* line 151, ../sass/dashboard.scss */
+#secondary-menu ul li a:hover {
+  color: #333;
+}
+
+/* line 154, ../sass/dashboard.scss */
+.seal {
+  position: absolute;
+  top: -25px;
+  text-align: center;
+  width: 156px;
+  left: 42%;
+}
+
+/* line 162, ../sass/dashboard.scss */
+.takeover .block {
+  margin: 0;
+}
+
+/* line 165, ../sass/dashboard.scss */
+p, pre {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 169, ../sass/dashboard.scss */
+.hidden {
+  display: none;
+}
+
+/* line 172, ../sass/dashboard.scss */
+.node-chart {
+  position: relative;
+}
+
+/* line 175, ../sass/dashboard.scss */
+a.show-btn {
+  color: #369;
+  font-size: 11px;
+  position: absolute;
+  top: -35px;
+  left: -10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 184, ../sass/dashboard.scss */
+h1.title {
+  float: left;
+  font-weight: normal;
+  padding: 0.5em 0em 0em 0.5em;
+  width: 100%;
+}
+
+/* line 190, ../sass/dashboard.scss */
+.field-name-field-chart-sub-title, .sub-title {
+  padding-left: 1em;
+  color: #666666;
+}
+
+/* line 194, ../sass/dashboard.scss */
+.change-box {
+  background-color: #eaeff5;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  min-height: 65px;
+}
+
+/* line 200, ../sass/dashboard.scss */
+.percent-change {
+  color: #336699;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* line 205, ../sass/dashboard.scss */
+h3.aside {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+/* line 210, ../sass/dashboard.scss */
+h3.strike {
+  border-bottom: 1px solid #999;
+  line-height: 0px;
+}
+
+/* line 214, ../sass/dashboard.scss */
+.white-bg {
+  background-color: #fff;
+  padding: 0px 8px;
+}
+
+/* line 219, ../sass/dashboard.scss */
+.source-info {
+  color: #666;
+  font-size: 70%;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  padding: 15px 0px;
+}
+
+/* line 226, ../sass/dashboard.scss */
+.source-attr a {
+  text-decoration: none;
+  color: #666;
+  font-weight: bold;
+}
+
+/* line 231, ../sass/dashboard.scss */
+.source-attr a:hover {
+  text-decoration: underline;
+}
+
+/* line 234, ../sass/dashboard.scss */
+.source-attr {
+  float: left;
+}
+
+/* line 237, ../sass/dashboard.scss */
+.source-date {
+  float: right;
+}
+
+/* line 241, ../sass/dashboard.scss */
+.field-name-body {
+  position: relative;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+/* line 247, ../sass/dashboard.scss */
+.field-name-body p {
+  margin-top: 0px;
+}
+
+/* line 251, ../sass/dashboard.scss */
+.read-more, .read-less {
+  text-transform: uppercase;
+  line-height: 0px;
+  border-bottom: 1px solid #999;
+  z-index: 999;
+  width: 100%;
+  text-align: right;
+  color: #336699;
+  float: right;
+}
+
+/* line 262, ../sass/dashboard.scss */
+.read-more a, .read-less a {
+  background-color: #fff;
+  padding: 0px 3px;
+  color: #336699;
+  width: 100%;
+  text-decoration: none;
+}
+
+/*Dashboard Specific Button Styles */
+/* line 272, ../sass/dashboard.scss */
+a.share-btn {
+  height: 38px;
+  color: #336699;
+  padding: 10px;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+/* line 280, ../sass/dashboard.scss */
+.last-btn {
+  margin-right: 0px !important;
+}
+
+/* line 283, ../sass/dashboard.scss */
+.title-area {
+  border-bottom: 1px solid #999;
+  padding-bottom: 0.5em;
+}
+
+/* line 288, ../sass/dashboard.scss */
+a.sidebar-close, a.sidebar-open {
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #F6F6F6;
+  font-weight: bold;
+  position: absolute;
+  border-right: 1px solid #CCC;
+  border-top: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+  color: #666;
+  padding: 3px 20px;
+  font-family: Georgia;
+  text-decoration: none;
+}
+
+/* line 303, ../sass/dashboard.scss */
+a.sidebar-close {
+  left: -1px;
+  top: -32px;
+}
+
+/* line 308, ../sass/dashboard.scss */
+a.sidebar-open {
+  right: -10px;
+  top: -32px;
+}
+
+/* line 313, ../sass/dashboard.scss */
+.chart-info-close {
+  float: left;
+  width: 100%;
+}
+
+/* line 318, ../sass/dashboard.scss */
+.content-close {
+  width: 100% !important;
+}
+
+/* line 322, ../sass/dashboard.scss */
+.change-box-close {
+  width: 48%;
+  display: inline-block;
+  float: left;
+  margin-bottom: 2%;
+}
+
+/* line 329, ../sass/dashboard.scss */
+.share-box-close {
+  width: 48%;
+  display: inline-block;
+  float: left;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* line 337, ../sass/dashboard.scss */
+h3.aside-close {
+  text-align: left;
+}
+
+/* line 343, ../sass/dashboard.scss */
+.sidebar-open {
+  display: none;
+}
+
+/* line 347, ../sass/dashboard.scss */
+div.user-info {
+  border: 1px solid #336699;
+  background: #EAEFF5;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  padding: 5px;
+}
+
+/* line 355, ../sass/dashboard.scss */
+.user-info p {
+  margin: 0px;
+  padding: 5px;
+}
+
+/* line 359, ../sass/dashboard.scss */
+.user-info span {
+  color: #369;
+  font-weight: bold;
+}
+
+/* line 363, ../sass/dashboard.scss */
+.bottom-divider {
+  width: 100%;
+  background-color: #07326A;
+  height: 10px;
+}
+
+/* line 368, ../sass/dashboard.scss */
+.footer-wrap {
+  background-color: #fff;
+  width: 100%;
+  padding: 30px 0px;
+}
+
+/* line 375, ../sass/dashboard.scss */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* line 379, ../sass/dashboard.scss */
+.region-bottom {
+  border-top: 1px solid #999;
+}
+
+/* line 382, ../sass/dashboard.scss */
+.filter-list {
+  display: inline-block;
+}
+
+/* line 385, ../sass/dashboard.scss */
+.filter-list, .category-list {
+  float: left;
+  line-height: 100%;
+  list-style-type: none;
+}
+
+/* line 390, ../sass/dashboard.scss */
+.filter-list li a, .category-list li a {
+  color: #369;
+  text-decoration: none;
+}
+
+/* line 394, ../sass/dashboard.scss */
+.category-list {
+  width: 100%;
+}
+
+/* line 397, ../sass/dashboard.scss */
+.category-list li a {
+  display: inline-block;
+  float: left;
+}
+
+/* line 401, ../sass/dashboard.scss */
+.category-list .btn {
+  margin-right: 5px;
+}
+
+/* line 404, ../sass/dashboard.scss */
+.region-navigation h2 {
+  font-size: 0.75em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 409, ../sass/dashboard.scss */
+#block-views-category-block-block {
+  float: left;
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+/* line 415, ../sass/dashboard.scss */
+#navigation h2 {
+  padding: 1.282em 0 0.641em 0;
+}
+
+/* line 418, ../sass/dashboard.scss */
+.grid-chart {
+  background: #fff;
+  float: left;
+  display: inline-block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* line 425, ../sass/dashboard.scss */
+.first-grid {
+  margin-left: 0 !important;
+}
+
+/* line 428, ../sass/dashboard.scss */
+.last-grid {
+  margin-right: 0 !important;
+}
+
+/* line 431, ../sass/dashboard.scss */
+.front #content {
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 438, ../sass/dashboard.scss */
+.view-front-page-grid a {
+  text-decoration: none;
+}
+
+/* line 441, ../sass/dashboard.scss */
+.views-field-title {
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #F4F4F4;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 125%;
+  padding: 8px;
+  border-bottom: 1px solid #C5C5C5;
+  min-height: 46px;
+  text-indent: 0px;
+}
+
+/* line 453, ../sass/dashboard.scss */
+.views-field-title a {
+  text-decoration: none;
+  color: #000;
+  width: 80%;
+  display: block;
+}
+
+/* line 459, ../sass/dashboard.scss */
+.views-field-term-node-tid {
+  display: none;
+}
+
+/* line 462, ../sass/dashboard.scss */
+.thumbnail-chart {
+  height: 180px;
+}
+
+/* line 465, ../sass/dashboard.scss */
+.grid-chart:hover {
+  background-color: #f4f4f4;
+}
+
+/* line 468, ../sass/dashboard.scss */
+.embed-code {
+  display: none;
+  font-family: monospace;
+  font-size: 1em;
+  text-align: left;
+  width: 100%;
+  height: 60px;
+  padding: 5px;
+}
+
+/* line 479, ../sass/dashboard.scss */
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 484, ../sass/dashboard.scss */
+footer ul li, footer ul li a {
+  color: #000;
+  font-weight: normal;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+/* line 490, ../sass/dashboard.scss */
+footer h3 {
+  color: black;
+  font-size: 0.75em;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+
+/* line 496, ../sass/dashboard.scss */
+footer .block {
+  margin: 0;
+}
+
+/* line 499, ../sass/dashboard.scss */
+.footer-more {
+  display: inline-block;
+  float: left;
+}
+
+/* line 503, ../sass/dashboard.scss */
+.footer-init {
+  width: 270px;
+  display: inline-block;
+  float: left;
+}
+
+/* line 508, ../sass/dashboard.scss */
+.social-block {
+  text-indent: -9999px;
+  width: 280px;
+  margin: 0;
+  display: inline-block;
+  float: left;
+}
+
+/* line 515, ../sass/dashboard.scss */
+.social-block a {
+  margin-right: 10px;
+}
+
+/* line 518, ../sass/dashboard.scss */
+.footer-facebook, .footer-twitter, .footer-youtube, .footer-flickr, .footer-linkedin, .footer-foursquare, .footer-vimeo, .footer-googleplus {
+  background-image: url(../images/wh_home_footer_social_icons.gif);
+  height: 25px;
+  width: 25px;
+  float: left;
+}
+
+/* line 524, ../sass/dashboard.scss */
+.footer-facebook {
+  background-position: 0 0;
+  width: 20px;
+}
+
+/* line 528, ../sass/dashboard.scss */
+.footer-facebook:hover {
+  background-position: 0 24px;
+}
+
+/* line 531, ../sass/dashboard.scss */
+.footer-twitter {
+  background-position: -30px 0;
+}
+
+/* line 534, ../sass/dashboard.scss */
+.footer-twitter:hover {
+  background-position: -30px -30px;
+}
+
+/* line 537, ../sass/dashboard.scss */
+.footer-googleplus {
+  background-position: -67px -52px;
+}
+
+/* line 540, ../sass/dashboard.scss */
+.footer-googleplus:hover {
+  background-position: -67px -28px;
+}
+
+/* line 543, ../sass/dashboard.scss */
+.footer-youtube {
+  background-position: -107px -54px;
+}
+
+/* line 546, ../sass/dashboard.scss */
+.footer-youtube:hover {
+  background-position: -107px -84px;
+}
+
+/* line 549, ../sass/dashboard.scss */
+.footer-flickr {
+  background-position: -142px -107px;
+}
+
+/* line 552, ../sass/dashboard.scss */
+.footer-flickr:hover {
+  background-position: -142px -137px;
+}
+
+/* line 555, ../sass/dashboard.scss */
+.footer-linkedin {
+  background-position: -180px -108px;
+}
+
+/* line 558, ../sass/dashboard.scss */
+.footer-linkedin:hover {
+  background-position: -180px -138px;
+}
+
+/* line 561, ../sass/dashboard.scss */
+.footer-foursquare {
+  background-position: -218px -162px;
+}
+
+/* line 564, ../sass/dashboard.scss */
+.footer-foursquare:hover {
+  background-position: -218px -192px;
+}
+
+/* line 567, ../sass/dashboard.scss */
+.footer-vimeo {
+  background-position: -255px -162px;
+}
+
+/* line 570, ../sass/dashboard.scss */
+.footer-vimeo:hover {
+  background-position: -255px -192px;
+}
+
+/* line 573, ../sass/dashboard.scss */
+.form-item {
+  margin: 0;
+}
+
+/* line 576, ../sass/dashboard.scss */
+.hidden-link {
+  display: none;
+}
+
+/**
+ *  Modal Styling
+ */
+/* line 582, ../sass/dashboard.scss */
+.intro-modal {
+  background-color: #fff;
+  color: #666;
+  width: 481px;
+  padding: 10px;
+}
+
+/* line 588, ../sass/dashboard.scss */
+.intro-modal h2 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+/* line 594, ../sass/dashboard.scss */
+.intro-modal span {
+  color: #336699;
+}
+
+/* line 597, ../sass/dashboard.scss */
+.intro-modal p {
+  margin: 0.7em 0;
+}
+
+/* line 600, ../sass/dashboard.scss */
+p.sub-video {
+  text-transform: uppercase;
+  font-size: 0.75em;
+  margin: 0;
+}
+
+/**
+ *  Social Networking
+ */
+/* line 609, ../sass/dashboard.scss */
+.social-front p {
+  margin-top: 0px;
+}
+
+/* line 612, ../sass/dashboard.scss */
+.social-list {
+  margin-top: 15px;
+}
+
+/* line 615, ../sass/dashboard.scss */
+.social-list a {
+  color: #000;
+}
+
+/* line 618, ../sass/dashboard.scss */
+.social-list a:hover {
+  text-decoration: underline;
+}
+
+/* line 621, ../sass/dashboard.scss */
+.fb-color, .gplus-color, .foursquare-color, .linked-in-color {
+  background: url(../img/engage_icons_20x20.png) top left no-repeat;
+  float: left;
+  padding-left: 30px;
+  height: 21px;
+  margin-bottom: 20px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+/* line 630, ../sass/dashboard.scss */
+.fb-color {
+  background-position: 0 -44px;
+}
+
+/* line 633, ../sass/dashboard.scss */
+.fb-color:hover {
+  background-position: 0 -66px;
+}
+
+/* line 636, ../sass/dashboard.scss */
+.gplus-color {
+  background-position: 0 -88px;
+}
+
+/* line 639, ../sass/dashboard.scss */
+.gplus-color:hover {
+  background-position: 0 -110px;
+}
+
+/* line 642, ../sass/dashboard.scss */
+.foursquare-color {
+  background-position: 0 -264px;
+}
+
+/* line 645, ../sass/dashboard.scss */
+.foursquare-color:hover {
+  background-position: 0 -286px;
+}
+
+/* line 648, ../sass/dashboard.scss */
+.linked-in-color {
+  background-position: 0 -132px;
+}
+
+/* line 651, ../sass/dashboard.scss */
+.linked-in-color:hover {
+  background-position: 0 -154px;
+}
+
+/* line 654, ../sass/dashboard.scss */
+.twitter-color {
+  background-position: 0 0;
+}
+
+/* line 657, ../sass/dashboard.scss */
+.flickr-color {
+  background-position: 0 0;
+}
+
+/* line 660, ../sass/dashboard.scss */
+.yt-color {
+  background-position: 0 0;
+}
+
+/* line 663, ../sass/dashboard.scss */
+.quora-color {
+  background-position: 0 0;
+}
+
+/* line 666, ../sass/dashboard.scss */
+.github-color {
+  background-position: 0 0;
+}
+
+/* line 669, ../sass/dashboard.scss */
+.vimeo-color {
+  background-position: 0 0;
+}
+
+/* line 672, ../sass/dashboard.scss */
+.drupal-color {
+  background-position: 0 0;
+}
+
+/* line 675, ../sass/dashboard.scss */
+.slideshare-color {
+  background-position: 0 0;
+}
+
+/* line 678, ../sass/dashboard.scss */
+.scribd-color {
+  background-position: 0 0;
+}

@@ -146,11 +146,11 @@ function STARTERKIT_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+function fortyfour_preprocess_page(&$variables, $hook) {
+  $theme_path = path_to_theme();
+  $variables['theme_path'] = base_path() . $theme_path;
+  drupal_add_js(array('fortyfour' => array('themePath' => $theme_path)), 'setting');
 }
-// */
 
 /**
  * Override or insert variables into the node templates.

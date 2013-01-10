@@ -12,8 +12,6 @@ description = A Zen subtheme to be used as a base for White House microsites.
 core        = 7.x
 base theme  = zen
 
-
-
 ; This section controls the CSS files for your theme. There are 3 different
 ; things you can do with a "stylesheets" line:
 ; - Add a new stylesheet for your theme.
@@ -41,6 +39,7 @@ stylesheets[all][] = system.menus.css
 stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/wireframes.css
 stylesheets[all][] = css/layouts/responsive-sidebars.css
+stylesheets[all][] = css/layouts/dashboard-responsive.css
 stylesheets[all][] = css/page-backgrounds.css
 stylesheets[all][] = css/tabs.css
 stylesheets[all][] = css/pages.css
@@ -53,9 +52,14 @@ stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/fields.css
 stylesheets[all][] = css/print.css
 
-;fortyfour specific
-;stylesheets[all][] = css/debug.css
-stylesheets[all][] = css/fortyfour.css
+;Override fourty-four stylesheets
+stylesheets[all][] = css/fourtyfour.css
+
+;Dashboard styles
+stylesheets[all][] = css/dashboard.css
+
+;Library Stylesheets
+stylesheets[all][] = css/colorbox.css
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
@@ -70,8 +74,13 @@ stylesheets[all][] = css/fortyfour.css
 
 
 ; Optionally add some JavaScripts to your theme.
+;scripts[] = js/harvey.js
+; Custom Modernizr build: html5Shiv v3.6, Modernizr.load, Add CSS Classes
+scripts[] = js/modernizr-dashboard.js
 
-;scripts[] = js/script.js
+scripts[] = js/theme.js
+scripts[] = js/jquery.expander.min.js
+scripts[] = js/jquery.colorbox.js
 
 
 

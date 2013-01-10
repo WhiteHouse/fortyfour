@@ -1,0 +1,818 @@
+/**
+ * @file
+ * Positioning for responsive layout .
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+/*
+ * Center the page.
+ */
+/* line 45, ../../sass/layouts/dashboard-responsive.scss */
+#page,
+.region-bottom, .region-banner, .takeover, #header, #main-nav, .footer-inner {
+  /* For screen sizes larger than 1200px, prevent excessively long lines of text by setting a max-width. */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 976px;
+}
+
+/*
+ * Apply the shared properties of grid items in a single, efficient ruleset.
+ */
+/* line 62, ../../sass/layouts/dashboard-responsive.scss */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+#footer {
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/*
+ * Containers for grid items and flow items.
+ */
+/* line 52, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#header:before, #header:after,
+#main:before,
+#main:after,
+#footer:before,
+#footer:after {
+  content: "";
+  display: table;
+}
+/* line 56, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#header:after,
+#main:after,
+#footer:after {
+  clear: both;
+}
+
+/*
+ * Display 
+ */
+@media all and (max-width: 976px) {
+  /* line 81, ../../sass/layouts/dashboard-responsive.scss */
+  .seal {
+    display: none;
+  }
+}
+/* line 91, ../../sass/layouts/dashboard-responsive.scss */
+a.sidebar-open, a.sidebar-close {
+  display: none;
+}
+
+/*
+ * Navigation bar
+ */
+@media all and (min-width: 481px) {
+  /* line 106, ../../sass/layouts/dashboard-responsive.scss */
+  .category-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 110, ../../sass/layouts/dashboard-responsive.scss */
+  .category-list .btn {
+    margin-bottom: 5px;
+  }
+
+  /* line 113, ../../sass/layouts/dashboard-responsive.scss */
+  .filter-list li a, .category-list li a {
+    font-size: 0.75em;
+  }
+
+  /* line 116, ../../sass/layouts/dashboard-responsive.scss */
+  .node-chart {
+    background: url(../../images/seal_bg_02_gold_darker.jpg) center center no-repeat;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 975px) {
+  /*
+   * Dashboard specific rules
+   */
+  /* line 125, ../../sass/layouts/dashboard-responsive.scss */
+  .dash-info {
+    margin-right: 10px;
+  }
+
+  /* line 128, ../../sass/layouts/dashboard-responsive.scss */
+  .node .content, .node-chart {
+    width: 100%;
+  }
+
+  /* line 131, ../../sass/layouts/dashboard-responsive.scss */
+  .chart-info {
+    float: left;
+    width: 100%;
+    border: 0;
+    padding-left: 0;
+  }
+
+  /* line 137, ../../sass/layouts/dashboard-responsive.scss */
+  .change-box {
+    width: 70%;
+    display: inline-block;
+    float: left;
+  }
+
+  /* line 142, ../../sass/layouts/dashboard-responsive.scss */
+  .change-box {
+    margin-right: 2%;
+  }
+
+  /* line 145, ../../sass/layouts/dashboard-responsive.scss */
+  .share-box {
+    margin-bottom: 30px;
+    text-align: left;
+    display: inline-block;
+    float: left;
+    width: 28%;
+  }
+
+  /* line 152, ../../sass/layouts/dashboard-responsive.scss */
+  .share-box .btn {
+    display: block;
+  }
+
+  /* line 155, ../../sass/layouts/dashboard-responsive.scss */
+  a.share-btn {
+    width: 100%;
+  }
+
+  /* line 158, ../../sass/layouts/dashboard-responsive.scss */
+  .about-box {
+    width: 70%;
+    float: left;
+    margin-top: -155px;
+  }
+
+  /* line 163, ../../sass/layouts/dashboard-responsive.scss */
+  h3.aside {
+    text-align: left;
+  }
+
+  /* line 166, ../../sass/layouts/dashboard-responsive.scss */
+  a.sidebar-open, a.sidebar-close {
+    display: none;
+  }
+
+  /* line 169, ../../sass/layouts/dashboard-responsive.scss */
+  .region-bottom {
+    width: 100%;
+  }
+
+  /* line 172, ../../sass/layouts/dashboard-responsive.scss */
+  .grid-chart {
+    width: 48%;
+    margin: 1%;
+  }
+
+  /* line 176, ../../sass/layouts/dashboard-responsive.scss */
+  .highcharts-container {
+    width: 100%;
+  }
+
+  /* line 179, ../../sass/layouts/dashboard-responsive.scss */
+  .category-list {
+    padding: 0 1%;
+  }
+
+  /* line 182, ../../sass/layouts/dashboard-responsive.scss */
+  .social-block {
+    padding-top: 20px;
+  }
+
+  /* line 185, ../../sass/layouts/dashboard-responsive.scss */
+  .footer-more {
+    width: 185px;
+  }
+
+  /* line 188, ../../sass/layouts/dashboard-responsive.scss */
+  .footer-init {
+    width: 230px;
+  }
+
+  /* line 191, ../../sass/layouts/dashboard-responsive.scss */
+  .logo {
+    background: url(../../images/economic_dashboard_tablet_dash_logo.png) left center no-repeat;
+    margin-left: 10px;
+    padding-top: 40px;
+    padding-bottom: 67px;
+    text-indent: -9999px;
+    width: 375px;
+  }
+
+  /* line 199, ../../sass/layouts/dashboard-responsive.scss */
+  #main {
+    margin: 0 1%;
+  }
+
+  /* line 202, ../../sass/layouts/dashboard-responsive.scss */
+  #main-nav {
+    margin: 0 1%;
+  }
+
+  /*
+   * Use 3 grid columns for smaller screens.
+   */
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+  /* line 216, ../../sass/layouts/dashboard-responsive.scss */
+  .sidebar-first #content {
+    /* Span 2 columns, starting in 2nd column from left. */
+    float: left;
+    width: 66.66667%;
+    margin-left: 33.33333%;
+    margin-right: -100%;
+  }
+  /* line 220, ../../sass/layouts/dashboard-responsive.scss */
+  .sidebar-first .region-sidebar-first {
+    /* Span 1 column, starting in 1st column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+  }
+
+  /*
+   * The layout when there is only one sidebar, the right one.
+   */
+  /* line 230, ../../sass/layouts/dashboard-responsive.scss */
+  .sidebar-second #content {
+    /* Span 2 columns, starting in 1st column from left. */
+    float: left;
+    width: 66.66667%;
+    margin-left: 0%;
+    margin-right: -66.66667%;
+  }
+  /* line 234, ../../sass/layouts/dashboard-responsive.scss */
+  .sidebar-second .region-sidebar-second {
+    /* Span 1 column, starting in 3rd column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+  }
+
+  /*
+   * The layout when there are two sidebars.
+   */
+  /* line 244, ../../sass/layouts/dashboard-responsive.scss */
+  .two-sidebars #content {
+    /* Span 2 columns, starting in 2nd column from left. */
+    float: left;
+    width: 66.66667%;
+    margin-left: 33.33333%;
+    margin-right: -100%;
+  }
+  /* line 248, ../../sass/layouts/dashboard-responsive.scss */
+  .two-sidebars .region-sidebar-first {
+    /* Span 1 column, starting in 1st column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+  }
+  /* line 252, ../../sass/layouts/dashboard-responsive.scss */
+  .two-sidebars .region-sidebar-second {
+    /* Start a new row and span all 3 columns. */
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    clear: left;
+  }
+  /* line 52, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  .two-sidebars .region-sidebar-second:before, .two-sidebars .region-sidebar-second:after {
+    content: "";
+    display: table;
+  }
+  /* line 56, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  .two-sidebars .region-sidebar-second:after {
+    clear: both;
+  }
+  /* line 257, ../../sass/layouts/dashboard-responsive.scss */
+  .two-sidebars .region-sidebar-second .block {
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  /* line 260, ../../sass/layouts/dashboard-responsive.scss */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
+    /* Span 1 column, starting in the 1st column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+    clear: left;
+  }
+  /* line 264, ../../sass/layouts/dashboard-responsive.scss */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
+    /* Span 1 column, starting in the 2nd column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 33.33333%;
+    margin-right: -66.66667%;
+  }
+  /* line 267, ../../sass/layouts/dashboard-responsive.scss */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n) {
+    /* Span 1 column, starting in the 3rd column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+  }
+}
+@media all and (min-width: 976px) {
+  /*
+   * Dashboard Specific
+   */
+  /* line 279, ../../sass/layouts/dashboard-responsive.scss */
+  .share-box {
+    text-align: center;
+  }
+
+  /* line 282, ../../sass/layouts/dashboard-responsive.scss */
+  a.share-btn {
+    width: 120px;
+  }
+
+  /* line 286, ../../sass/layouts/dashboard-responsive.scss */
+  .node-chart {
+    width: 70%;
+  }
+
+  /* line 290, ../../sass/layouts/dashboard-responsive.scss */
+  .chart-info {
+    width: 28%;
+    float: right;
+    border-left: 1px solid #ccc;
+    padding-left: 10px;
+    position: relative;
+  }
+
+  /* line 298, ../../sass/layouts/dashboard-responsive.scss */
+  a.sidebar-close {
+    display: inline-block;
+  }
+
+  /* line 302, ../../sass/layouts/dashboard-responsive.scss */
+  .region-bottom {
+    width: 50%;
+  }
+
+  /* line 305, ../../sass/layouts/dashboard-responsive.scss */
+  .footer-more {
+    width: 230px;
+  }
+
+  /* line 308, ../../sass/layouts/dashboard-responsive.scss */
+  .footer-init {
+    width: 230px;
+  }
+
+  /* line 311, ../../sass/layouts/dashboard-responsive.scss */
+  .logo {
+    background: url(../../images/logo.png) left center no-repeat;
+    padding-top: 40px;
+    padding-bottom: 67px;
+    text-indent: -9999px;
+    width: 355px;
+  }
+
+  /* line 318, ../../sass/layouts/dashboard-responsive.scss */
+  .chart-info {
+    background-image: linear-gradient(left, #f6f6f6 36%, #ffffff 68%);
+    background-image: -o-linear-gradient(left, #f6f6f6 36%, white 68%);
+    background-image: -moz-linear-gradient(left, #f6f6f6 36%, white 68%);
+    background-image: -webkit-linear-gradient(left, #f6f6f6 36%, white 68%);
+    background-image: -ms-linear-gradient(left, #f6f6f6 36%, white 68%);
+    background-image: -webkit-gradient(linear, left 0, right 0, color-stop(0.36, #f6f6f6), color-stop(0.68, white));
+  }
+
+  /*
+  * Front Page thumbnail grid
+  */
+  /* line 336, ../../sass/layouts/dashboard-responsive.scss */
+  .grid-chart {
+    width: 232px;
+    margin: 8px;
+  }
+
+  /* line 340, ../../sass/layouts/dashboard-responsive.scss */
+  .thumbnail-chart {
+    width: 230px;
+  }
+
+  /*
+   * Use 5 grid columns for larger screens.
+   */
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+  /* line 353, ../../sass/layouts/dashboard-responsive.scss */
+  .sidebar-first #content {
+    /* Span 4 columns, starting in 2nd column from left. */
+    float: left;
+    width: 80%;
+    margin-left: 20%;
+    margin-right: -100%;
+  }
+  /* line 357, ../../sass/layouts/dashboard-responsive.scss */
+  .sidebar-first .region-sidebar-first {
+    /* Span 1 column, starting in 1st column from left. */
+    float: left;
+    width: 20%;
+    margin-left: 0%;
+    margin-right: -20%;
+  }
+
+  /*
+   * The layout when there is only one sidebar, the right one.
+   */
+  /* line 367, ../../sass/layouts/dashboard-responsive.scss */
+  .sidebar-second #content {
+    /* Span 4 columns, starting in 1st column from left. */
+    float: left;
+    width: 80%;
+    margin-left: 0%;
+    margin-right: -80%;
+  }
+  /* line 371, ../../sass/layouts/dashboard-responsive.scss */
+  .sidebar-second .region-sidebar-second {
+    /* Span 1 column, starting in 5th column from left. */
+    float: left;
+    width: 20%;
+    margin-left: 80%;
+    margin-right: -100%;
+  }
+
+  /*
+   * The layout when there are two sidebars.
+   */
+  /* line 381, ../../sass/layouts/dashboard-responsive.scss */
+  .two-sidebars #content {
+    /* Span 3 columns, starting in 2nd column from left. */
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: -80%;
+  }
+  /* line 385, ../../sass/layouts/dashboard-responsive.scss */
+  .two-sidebars .region-sidebar-first {
+    /* Span 1 column, starting in 1st column from left. */
+    float: left;
+    width: 20%;
+    margin-left: 0%;
+    margin-right: -20%;
+  }
+  /* line 389, ../../sass/layouts/dashboard-responsive.scss */
+  .two-sidebars .region-sidebar-second {
+    /* Span 1 column, starting in 5th column from left. */
+    float: left;
+    width: 20%;
+    margin-left: 80%;
+    margin-right: -100%;
+  }
+}
+@media all and (min-width: 481px) {
+  /* line 396, ../../sass/layouts/dashboard-responsive.scss */
+  #secondary-menu {
+    display: block;
+  }
+
+  /* line 399, ../../sass/layouts/dashboard-responsive.scss */
+  .flag {
+    display: block;
+  }
+
+  /* line 402, ../../sass/layouts/dashboard-responsive.scss */
+  .region-banner {
+    text-align: left;
+  }
+
+  /* line 405, ../../sass/layouts/dashboard-responsive.scss */
+  a.dash-info {
+    background: url(../../images/info_icon.png) center right no-repeat;
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    width: 135px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #666;
+    padding-right: 25px;
+    text-align: right;
+    text-decoration: none;
+  }
+
+  /* line 420, ../../sass/layouts/dashboard-responsive.scss */
+  a.dash-info:hover {
+    color: #369;
+  }
+
+  /* line 423, ../../sass/layouts/dashboard-responsive.scss */
+  h1.title {
+    line-height: 135%;
+  }
+
+  /* line 426, ../../sass/layouts/dashboard-responsive.scss */
+  #page {
+    padding-bottom: 4em;
+    margin-bottom: 3em;
+  }
+
+  /* line 431, ../../sass/layouts/dashboard-responsive.scss */
+  .page-frontpage #page {
+    background: none;
+  }
+
+  /* line 434, ../../sass/layouts/dashboard-responsive.scss */
+  #content {
+    margin-bottom: 1em;
+  }
+
+  /* line 437, ../../sass/layouts/dashboard-responsive.scss */
+  h1.title {
+    margin: 0;
+  }
+
+  /* line 440, ../../sass/layouts/dashboard-responsive.scss */
+  .node-chart {
+    float: left;
+  }
+
+  /* line 443, ../../sass/layouts/dashboard-responsive.scss */
+  h3.aside {
+    text-align: left;
+  }
+
+  /* line 446, ../../sass/layouts/dashboard-responsive.scss */
+  .change-box {
+    padding: 15px 0px;
+    margin-top: 20px;
+    border-top: 1px solid #cccccc;
+  }
+
+  /* line 451, ../../sass/layouts/dashboard-responsive.scss */
+  .grid-chart {
+    height: 230px;
+    border: 1px solid #C5C5C5;
+  }
+
+  /* line 455, ../../sass/layouts/dashboard-responsive.scss */
+  #block-views-category-block-block {
+    padding-right: 40px;
+  }
+}
+@media all and (max-width: 480px) {
+  /* line 462, ../../sass/layouts/dashboard-responsive.scss */
+  aside.chart-info {
+    border-top: 1px solid #ccc;
+  }
+
+  /* line 465, ../../sass/layouts/dashboard-responsive.scss */
+  .footer-wrap {
+    display: none;
+  }
+
+  /* line 468, ../../sass/layouts/dashboard-responsive.scss */
+  .bottom-divider {
+    display: none;
+  }
+
+  /* line 471, ../../sass/layouts/dashboard-responsive.scss */
+  .source-info {
+    display: none;
+  }
+
+  /* line 474, ../../sass/layouts/dashboard-responsive.scss */
+  .header-wrap {
+    display: none;
+  }
+
+  /* line 477, ../../sass/layouts/dashboard-responsive.scss */
+  .flag {
+    display: none;
+  }
+
+  /* line 480, ../../sass/layouts/dashboard-responsive.scss */
+  #secondary-menu {
+    display: none;
+  }
+
+  /* line 483, ../../sass/layouts/dashboard-responsive.scss */
+  .phone-title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 75%;
+    font-weight: bold;
+    padding-top: 5px;
+  }
+
+  /* line 490, ../../sass/layouts/dashboard-responsive.scss */
+  .region-banner {
+    text-align: center;
+  }
+
+  /* line 493, ../../sass/layouts/dashboard-responsive.scss */
+  #main-nav {
+    display: none;
+  }
+
+  /* line 496, ../../sass/layouts/dashboard-responsive.scss */
+  h1.title {
+    font-size: 100%;
+    line-height: 100%;
+    margin-bottom: 5px;
+  }
+
+  /* line 501, ../../sass/layouts/dashboard-responsive.scss */
+  .field-name-field-chart-sub-title, .sub-title {
+    color: #666;
+    font-size: 85%;
+    line-height: 110%;
+  }
+
+  /* line 506, ../../sass/layouts/dashboard-responsive.scss */
+  #page {
+    margin-bottom: 0;
+  }
+
+  /* line 509, ../../sass/layouts/dashboard-responsive.scss */
+  #content {
+    position: absolute;
+    z-index: 1;
+    top: 45px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #555;
+    overflow: auto;
+    margin-bottom: 0;
+    margin-top: 14px;
+  }
+
+  /* line 521, ../../sass/layouts/dashboard-responsive.scss */
+  ul#phone-nav {
+    background: #ccc;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* line 528, ../../sass/layouts/dashboard-responsive.scss */
+  ul#phone-nav li {
+    display: inline-block;
+    padding: 4px 0px 0px 0px;
+  }
+
+  /* line 532, ../../sass/layouts/dashboard-responsive.scss */
+  ul#phone-nav li a {
+    color: #666;
+    text-decoration: none;
+  }
+
+  /* line 536, ../../sass/layouts/dashboard-responsive.scss */
+  #phone-nav li:nth-child(1), #phone-nav li:nth-child(2) {
+    padding-right: 65px;
+  }
+
+  /* line 539, ../../sass/layouts/dashboard-responsive.scss */
+  ul#phone-nav li.active a {
+    color: #000;
+  }
+
+  /* line 542, ../../sass/layouts/dashboard-responsive.scss */
+  .banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  /* line 549, ../../sass/layouts/dashboard-responsive.scss */
+  .phone-logo {
+    background: url(../../images/phone-logo.png) 4px center no-repeat;
+  }
+
+  /* line 552, ../../sass/layouts/dashboard-responsive.scss */
+  .change-box {
+    border-top: 0px;
+    float: left;
+    width: 100%;
+    height: 40px;
+    padding: 10px 0px;
+    margin: 0px 0px 15px 0px;
+  }
+
+  /* line 560, ../../sass/layouts/dashboard-responsive.scss */
+  h3.aside {
+    text-align: left;
+    margin: 0;
+  }
+
+  /* line 567, ../../sass/layouts/dashboard-responsive.scss */
+  .change-text {
+    text-transform: uppercase;
+    font-size: 75%;
+    font-weight: bold;
+  }
+
+  /* line 572, ../../sass/layouts/dashboard-responsive.scss */
+  .share-box, .field-name-body {
+    min-height: 480px;
+  }
+
+  /* line 575, ../../sass/layouts/dashboard-responsive.scss */
+  .scrollbar {
+    position: absolute;
+    z-index: 100;
+    width: 7px;
+    bottom: 7px;
+    top: 2px;
+    right: 1px;
+  }
+
+  /* line 580, ../../sass/layouts/dashboard-responsive.scss */
+  .scrollbar > div {
+    width: 100%;
+  }
+
+  /* line 583, ../../sass/layouts/dashboard-responsive.scss */
+  .grid-chart {
+    border: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* line 588, ../../sass/layouts/dashboard-responsive.scss */
+  .thumbnail-chart {
+    display: none;
+  }
+
+  /* line 591, ../../sass/layouts/dashboard-responsive.scss */
+  .category-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 595, ../../sass/layouts/dashboard-responsive.scss */
+  .category-list .btn {
+    font-size: 1em;
+    font-weight: bold;
+    padding-top: 10px;
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+  }
+
+  /* line 604, ../../sass/layouts/dashboard-responsive.scss */
+  #block-views-category-block-block {
+    padding: 0;
+  }
+
+  /* line 607, ../../sass/layouts/dashboard-responsive.scss */
+  .filter-list li a, .category-list li a {
+    font-size: 1em;
+  }
+}
+@media all and (width: 480px) {
+  /* line 613, ../../sass/layouts/dashboard-responsive.scss */
+  .banner-bg {
+    display: none !important;
+  }
+
+  /* line 616, ../../sass/layouts/dashboard-responsive.scss */
+  #content {
+    top: 0px !important;
+    margin-top: 0px;
+  }
+}

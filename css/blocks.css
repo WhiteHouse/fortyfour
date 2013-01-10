@@ -6,7 +6,6 @@
 .block {
   /* Block wrapper */
   margin-bottom: 1.5em;
-  line-height: 0;
 }
 /* line 13, ../sass/blocks.scss */
 .block.first {
@@ -27,140 +26,144 @@
 /* line 25, ../sass/blocks.scss */
 .block h2.block-title {
   /* Block title */
-  font-size: 1em;
+  font-size: 0.75em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 1.282em 0;
 }
 
-/* line 31, ../sass/blocks.scss */
+/* line 35, ../sass/blocks.scss */
 #block-aggregator-category-1 {
   /* Block for the latest news items in the first category */
 }
 
-/* line 34, ../sass/blocks.scss */
+/* line 38, ../sass/blocks.scss */
 #block-aggregator-feed-1 {
   /* Block for the latest news items in the first feed */
 }
 
-/* line 37, ../sass/blocks.scss */
+/* line 41, ../sass/blocks.scss */
 #block-block-1 {
   /* First block created with "Add block" link */
 }
 
-/* line 40, ../sass/blocks.scss */
+/* line 44, ../sass/blocks.scss */
 #block-blog-recent {
   /* "Recent blog posts" block */
 }
 
-/* line 43, ../sass/blocks.scss */
+/* line 47, ../sass/blocks.scss */
 #block-book-navigation {
   /* "Book navigation" block for the current book's table of contents */
 }
 
-/* line 46, ../sass/blocks.scss */
+/* line 50, ../sass/blocks.scss */
 #block-comment-recent {
   /* "Recent comments" block */
 }
 
-/* line 49, ../sass/blocks.scss */
+/* line 53, ../sass/blocks.scss */
 #block-forum-active {
   /* "Active forum topics" block */
 }
 
-/* line 52, ../sass/blocks.scss */
+/* line 56, ../sass/blocks.scss */
 #block-forum-new {
   /* "New forum topics" block */
 }
 
-/* line 55, ../sass/blocks.scss */
+/* line 59, ../sass/blocks.scss */
 #block-locale-language {
   /* Language switcher block */
 }
 
-/* line 58, ../sass/blocks.scss */
+/* line 62, ../sass/blocks.scss */
 #block-menu-menu-NAME {
   /* Custom menu block */
 }
 
-/* line 61, ../sass/blocks.scss */
+/* line 65, ../sass/blocks.scss */
 #block-node-recent {
   /* "Recent content" block */
 }
 
-/* line 64, ../sass/blocks.scss */
+/* line 68, ../sass/blocks.scss */
 #block-node-syndicate {
   /* "Syndicate" block for primary RSS feed; see also page.css's .feed-icon */
 }
 
-/* line 67, ../sass/blocks.scss */
+/* line 71, ../sass/blocks.scss */
 #block-poll-recent {
   /* "Most recent poll" block */
 }
 
-/* line 70, ../sass/blocks.scss */
+/* line 74, ../sass/blocks.scss */
 #block-profile-author-information {
   /* "Author information" block for the profile of the page's author */
 }
 
-/* line 73, ../sass/blocks.scss */
+/* line 77, ../sass/blocks.scss */
 #block-search-form {
   /* "Search form" block */
 }
 
-/* line 76, ../sass/blocks.scss */
+/* line 80, ../sass/blocks.scss */
 #block-shortcut-shortcuts {
   /* "Shortcuts" block */
 }
 
-/* line 79, ../sass/blocks.scss */
+/* line 83, ../sass/blocks.scss */
 #block-statistics-popular {
   /* "Popular content" block */
 }
 
-/* line 82, ../sass/blocks.scss */
+/* line 86, ../sass/blocks.scss */
 #block-system-main-menu {
   /* "Main menu" block */
 }
 
-/* line 85, ../sass/blocks.scss */
+/* line 89, ../sass/blocks.scss */
 #block-system-management {
   /* "Management" block for Drupal management menu */
 }
 
-/* line 88, ../sass/blocks.scss */
+/* line 92, ../sass/blocks.scss */
 #block-system-navigation {
   /* "Navigation" block for Drupal navigation menu */
 }
 
-/* line 91, ../sass/blocks.scss */
+/* line 95, ../sass/blocks.scss */
 #block-system-user-menu {
   /* "User menu" block for Drupal user menu */
 }
 
-/* line 94, ../sass/blocks.scss */
+/* line 98, ../sass/blocks.scss */
 #block-system-help {
   /* "System help" block */
 }
 
-/* line 97, ../sass/blocks.scss */
+/* line 101, ../sass/blocks.scss */
 #block-system-main {
   /* "Main page content" block */
 }
 
-/* line 100, ../sass/blocks.scss */
+/* line 104, ../sass/blocks.scss */
 #block-system-powered-by {
   /* "Powered by Drupal" block */
 }
 
-/* line 103, ../sass/blocks.scss */
+/* line 107, ../sass/blocks.scss */
 #block-user-login {
   /* "User login form" block */
 }
 
-/* line 106, ../sass/blocks.scss */
+/* line 110, ../sass/blocks.scss */
 #block-user-new {
   /* "Who's new" block for a list of the newest users */
 }
 
-/* line 109, ../sass/blocks.scss */
+/* line 113, ../sass/blocks.scss */
 #block-user-online {
   /* "Who's online" block for a list of the online users */
 }

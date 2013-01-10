@@ -77,12 +77,6 @@ li a.active {
 /*
  * Main menu and Secondary menu links
  */
-/* line 84, ../sass/navigation.scss */
-#secondary-menu {
-  float: right;
-  /* LTR */
-}
-
 /*
  * Menu blocks
  */

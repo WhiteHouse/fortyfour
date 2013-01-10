@@ -1,0 +1,161 @@
+/* line 1, ../../sass/layouts/dashboard-fixed.scss */
+.category-list {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 5, ../../sass/layouts/dashboard-fixed.scss */
+.category-list .btn {
+  margin-bottom: 5px;
+}
+
+/* line 8, ../../sass/layouts/dashboard-fixed.scss */
+.filter-list li a, .category-list li a {
+  font-size: 0.75em;
+}
+
+/* line 11, ../../sass/layouts/dashboard-fixed.scss */
+.share-box {
+  text-align: center;
+}
+
+/* line 14, ../../sass/layouts/dashboard-fixed.scss */
+a.share-btn {
+  width: 120px;
+}
+
+/* line 17, ../../sass/layouts/dashboard-fixed.scss */
+.node-chart {
+  background: url(../../images/seal_bg_02_gold_darker.jpg) center center no-repeat;
+  width: 70%;
+}
+
+/* line 21, ../../sass/layouts/dashboard-fixed.scss */
+.chart-info {
+  width: 28%;
+  float: right;
+}
+
+/* line 25, ../../sass/layouts/dashboard-fixed.scss */
+a.sidebar-close {
+  display: inline-block;
+}
+
+/* line 28, ../../sass/layouts/dashboard-fixed.scss */
+.region-bottom {
+  width: 50%;
+}
+
+/* line 31, ../../sass/layouts/dashboard-fixed.scss */
+.footer-more {
+  width: 230px;
+}
+
+/* line 34, ../../sass/layouts/dashboard-fixed.scss */
+.footer-init {
+  width: 230px;
+}
+
+/* line 37, ../../sass/layouts/dashboard-fixed.scss */
+.logo {
+  background: url(../../images/logo.png) left center no-repeat;
+  padding-top: 40px;
+  padding-bottom: 67px;
+  text-indent: -9999px;
+  width: 355px;
+}
+
+/*
+* Front Page thumbnail grid
+*/
+/* line 48, ../../sass/layouts/dashboard-fixed.scss */
+.grid-chart {
+  width: 232px;
+  margin: 8px;
+}
+
+/* line 52, ../../sass/layouts/dashboard-fixed.scss */
+.thumbnail-chart {
+  width: 230px;
+}
+
+/* line 55, ../../sass/layouts/dashboard-fixed.scss */
+#secondary-menu {
+  display: block;
+}
+
+/* line 58, ../../sass/layouts/dashboard-fixed.scss */
+.flag {
+  display: block;
+}
+
+/* line 61, ../../sass/layouts/dashboard-fixed.scss */
+.region-banner {
+  text-align: left;
+}
+
+/* line 64, ../../sass/layouts/dashboard-fixed.scss */
+h1.title {
+  line-height: 135%;
+}
+
+/* line 67, ../../sass/layouts/dashboard-fixed.scss */
+#page {
+  margin-bottom: 1em;
+}
+
+/* line 70, ../../sass/layouts/dashboard-fixed.scss */
+#content {
+  margin-bottom: 1em;
+}
+
+/* line 73, ../../sass/layouts/dashboard-fixed.scss */
+h1.title {
+  margin: 0;
+}
+
+/* line 76, ../../sass/layouts/dashboard-fixed.scss */
+.node-chart {
+  float: left;
+}
+
+/* line 79, ../../sass/layouts/dashboard-fixed.scss */
+h3.aside {
+  text-align: left;
+}
+
+/* line 82, ../../sass/layouts/dashboard-fixed.scss */
+.change-box {
+  padding: 15px 0px;
+  margin-top: 20px;
+  border-top: 1px solid #cccccc;
+}
+
+/* line 87, ../../sass/layouts/dashboard-fixed.scss */
+.grid-chart {
+  height: 230px;
+  border: 1px solid #C5C5C5;
+}
+
+/* line 91, ../../sass/layouts/dashboard-fixed.scss */
+#block-views-category-block-block {
+  padding-right: 40px;
+}
+
+/* line 94, ../../sass/layouts/dashboard-fixed.scss */
+.embedded .highcharts-container {
+  z-index: -1;
+}
+
+/* line 97, ../../sass/layouts/dashboard-fixed.scss */
+.embedded .chart-info {
+  float: left !important;
+  width: 95% !important;
+}
+
+/* line 101, ../../sass/layouts/dashboard-fixed.scss */
+.chart-info {
+  border-left: 1px solid #ccc;
+  padding-left: 10px;
+  position: relative;
+}
