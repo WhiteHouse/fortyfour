@@ -33,6 +33,8 @@
  * - $breadcrumb: The breadcrumb trail for the current page.
  *
  * Page content (in order of occurrence in the default page.tpl.php):
+ * - $fortyfour_president: The theme setting for the president's name.
+ * - $learn_more_video: The html for a link to a video or link for a model.
  * - $title_prefix (array): An array containing additional output populated by
  *   modules, intended to be displayed in front of the main title tag that
  *   appears in the template.
@@ -99,7 +101,9 @@
     </nav>
     <?php endif; ?>
     <!-- /external links menu-->
-    <span class="flag">President Barack Obama</span>
+
+    <!-- Name of the President -->
+    <?php print theme('president_header', array('president' => $fortyfour_president)); ?>
   </div>
 </div>
 <div class="header-wrap">
@@ -124,7 +128,8 @@
       </hgroup><!-- /#name-and-slogan -->
     <?php endif; ?>
     <div class="seal"><img src="<?php print $theme_path; ?>/images/seal.png"/></div>
-    <a class="dash-info" href="#">Learn About the Dashboard</a>
+    <!-- Learn more video -->
+    <?php print $learn_more_video; ?>
   </header>
 </div>
 <div id="main-nav" class="collapse">
@@ -155,7 +160,7 @@
     <?php endif; ?>
   </div>
   
-  <div class="handle-wrap"><a class="handle">Select a Chart</a></div>
+  <div class="handle-wrap"><a class="handle">Menu</a></div>
 </div><!--main nav-->
 <div id="page">  
   <?php print render($page['header']); ?>

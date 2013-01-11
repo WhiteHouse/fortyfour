@@ -101,6 +101,20 @@
  *   http://drupal.org/node/223440 and http://drupal.org/node/1089656
  */
 
+/**
+ * Implemenatation of hook_theme().
+ *
+ * @param $existing
+ * @param $type
+ * @param $theme
+ * @param $path
+ * @return array
+ */
+function fortyfour_theme($existing, $type, $theme, $path) {
+  include_once './' . drupal_get_path('theme', 'fortyfour') . '/fortyfour-internals/template.theme-registry.inc';
+  return _fortyfour_theme($existing, $type, $theme, $path);
+}
+
 
 /**
  * Override or insert variables into the maintenance page template.
@@ -147,9 +161,25 @@ function STARTERKIT_preprocess_html(&$variables, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 function fortyfour_preprocess_page(&$variables, $hook) {
+  // Set forty four's theme path for JS.
   $theme_path = path_to_theme();
   $variables['theme_path'] = base_path() . $theme_path;
   drupal_add_js(array('fortyfour' => array('themePath' => $theme_path)), 'setting');
+
+  // Get the Fortyfour_President theme setting and pass it to the template.
+  $variables['fortyfour_president'] = theme_get_setting('fortyfour_president');
+
+  // More info video link
+  $html = theme('learn_more_video',
+    array(
+      'url' => theme_get_setting('learn_more_video_url'),
+      'title' => theme_get_setting('learn_more_video_title'),
+      'description' => theme_get_setting('learn_more_video_description'),
+      'subtext' => theme_get_setting('learn_more_video_subtext'),
+      'link_text' => theme_get_setting('learn_more_video_link_text'),
+    )
+  );
+  $variables['learn_more_video'] = $html;
 }
 
 /**

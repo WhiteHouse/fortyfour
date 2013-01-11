@@ -139,23 +139,39 @@ features[] = secondary_menu
 
 ; Set the default values of settings on the theme-settings.php form.
 
-settings[zen_breadcrumb]           = yes
-settings[zen_breadcrumb_separator] = ' › '
-settings[zen_breadcrumb_home]      = 1
-settings[zen_breadcrumb_trailing]  = 1
-settings[zen_breadcrumb_title]     = 0
-settings[zen_skip_link_anchor]     = main-menu
-settings[zen_skip_link_text]       = Jump to navigation
-settings[zen_html5_respond_meta][] = respond
-settings[zen_html5_respond_meta][] = html5
-settings[zen_html5_respond_meta][] = meta
-settings[zen_rebuild_registry]     = 1
-settings[zen_wireframes]           = 0
+; System specific theme settings.
+settings[toggle_logo]               = 1
+settings[toggle_name]               = 0
+settings[toggle_slogan]             = 0
+settings[node_user_picture]         = 1
+settings[comment_user_picture]      = 1
+;settings[comment_user_verification] = 1
+settings[toggle_favicon]            = 0
+settings[main_menu]                 = 1
+settings[secondary_menu]            = 1
+
+
+; Zen specific theme settings.
+settings[zen_breadcrumb]            = yes
+settings[zen_breadcrumb_separator]  = ' › '
+settings[zen_breadcrumb_home]       = 1
+settings[zen_breadcrumb_trailing]   = 1
+settings[zen_breadcrumb_title]      = 0
+settings[zen_skip_link_anchor]      = main-menu
+settings[zen_skip_link_text]        = Jump to navigation
+settings[zen_html5_respond_meta][]  = respond
+settings[zen_html5_respond_meta][]  = html5
+settings[zen_html5_respond_meta][]  = meta
+settings[zen_rebuild_registry]      = 1
+settings[zen_wireframes]            = 0
+
+; Forty Four specific theme settings.
+settings[fortyfour_president]       = 'President Barack Obama'
 
 ; To make this sub-theme an admin theme with shortcut links next to titles,
 ; uncomment the line below.
 
-;settings[shortcut_module_link]    = 1
+;settings[shortcut_module_link]     = 1
 
 ; To add a Panels layout (which can also be used by Display Suite), uncomment
 ; the line below and see the documentation at: http://drupal.org/node/495654

@@ -14,15 +14,51 @@ function fortyfour_form_system_theme_settings_alter(&$form, &$form_state, $form_
   }
 
   // Create the form using Forms API: http://api.drupal.org/api/7
-
-  /* -- Delete this line if you want to use this setting
-  $form['STARTERKIT_example'] = array(
-    '#type'          => 'checkbox',
-    '#title'         => t('STARTERKIT sample setting'),
-    '#default_value' => theme_get_setting('STARTERKIT_example'),
-    '#description'   => t("This option doesn't do anything; it's just an example."),
+  $form['fortyfour'] = array(
+    '#type'          => 'fieldset',
+    '#title'         => t('Forty Four settings'),
   );
-  // */
+  $form['fortyfour']['fortyfour_president'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('President\'s Name'),
+    '#default_value' => theme_get_setting('fortyfour_president'),
+    '#description'   => t("This option sets the President's name next to the flag."),
+  );
+
+  $form['learn_more_video'] = array(
+    '#type'          => 'fieldset',
+    '#title'         => t('More Info Video Settings'),
+  );
+  $form['learn_more_video']['learn_more_video_url'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Video URL'),
+    '#default_value' => theme_get_setting('learn_more_video_url'),
+    '#description'   => t("The video url to load."),
+  );
+  $form['learn_more_video']['learn_more_video_title'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Video Title'),
+    '#default_value' => theme_get_setting('learn_more_video_title'),
+    '#description'   => t("The title of the video."),
+  );
+  $form['learn_more_video']['learn_more_video_description'] = array(
+    '#type'          => 'textarea',
+    '#title'         => t('Video Description'),
+    '#default_value' => theme_get_setting('learn_more_video_description'),
+    '#description'   => t("The description of the video."),
+  );
+  $form['learn_more_video']['learn_more_video_subtext'] = array(
+    '#type'          => 'textarea',
+    '#title'         => t('Video Subtext'),
+    '#default_value' => theme_get_setting('learn_more_video_subtext'),
+    '#description'   => t("The text shown after or below the video."),
+  );
+  $form['learn_more_video']['learn_more_video_link_text'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Video Link'),
+    '#default_value' => theme_get_setting('learn_more_video_link_text'),
+    '#description'   => t("The text for the link to the video."),
+  );
 
   // Remove some of the base theme's settings.
   /* -- Delete this line if you want to turn off this setting.
