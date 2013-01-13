@@ -3,7 +3,7 @@
  * @file views-view-unformatted.tpl.php
  * Default simple view template to display a list of rows.
  *
- * Additional Varialbles:
+ * Additional Variables:
  * - $path_to_fortyfour: Dynamically generates path to fortyfour theme.
  *
  * @ingroup views_templates
