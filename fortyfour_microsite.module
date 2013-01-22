@@ -1,0 +1,224 @@
+<?php
+
+/**
+ * @file
+ * Forty Four Microsite Theme Support Module.
+ */
+
+/**
+ * Implements hook_block_info().
+ *
+ * @return array
+ *   Block configuration.
+ */
+function fortyfour_microsite_block_info() {
+  $blocks = array();
+
+  $blocks['secondary-menu'] = array(
+    'info'   => t('Secondary Menu Drop Down'),
+    'cache'  => DRUPAL_CACHE_PER_USER,
+    'status' => 1,
+    'weight' => -1,
+    'region' => 'banner',
+  );
+
+  $blocks['president'] = array(
+    'info'   => t("The President's Name"),
+    'cache'  => DRUPAL_CACHE_GLOBAL,
+    'status' => 1,
+    'weight' => 1,
+    'region' => 'banner',
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ *
+ * @param string $delta
+ *   The machine name of the block.
+ *
+ * @return array
+ *   Block view data. block['content'] is a render array.
+ */
+function fortyfour_microsite_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'secondary-menu':
+      $block['subject'] = NULL;
+
+      $secondary_menu = menu_secondary_menu();
+      $menus = function_exists('menu_get_menus') ? menu_get_menus() : menu_list_system_menus();
+      $secondary_links = variable_get('menu_secondary_links_source', 'user-menu');
+
+      // @todo - Find a way to use a theme_wrapper around a block.
+      $block['content'] = array(
+        '#type' => 'markup',
+        '#markup' => theme('links__system_secondary_menu', array(
+          'links' => $secondary_menu,
+          'attributes' => array(
+            'class' => array('links' , 'clearfix'),
+          ),
+          'heading' => array(
+            'text' => $menus[$secondary_links],
+            'level' => 'h2',
+            'class' => array('menu-title', 'arrow-down'),
+          ),
+        )),
+        '#theme_wrappers' => array('secondary_menu_wrapper'),
+      );
+      break;
+
+    case 'president':
+      $block['subject'] = NULL;
+      $block['content'] = array(
+        '#theme' => 'president',
+        '#name' => 'Barrack Obama',
+      );
+  }
+
+  return $block;
+}
+
+/**
+ * Implements hook_block_view_alter().
+ *
+ * If main menu block is added to the dropdown region we will catch it
+ * and add a wrapper around it so that it displays with a nav tag.
+ *
+ * @param array $data
+ *   Block configuration.
+ * @param object $block
+ *   Block metadata.
+ */
+function fortyfour_microsite_block_view_alter(&$data, $block) {
+  // Only catch blocks if it's the right theme.
+  if ($block->theme === "fortyfour") {
+
+    // Further refine which block we want by delta.
+    switch ($block->delta) {
+      case "main-menu":
+        // We don't care about main menu unless it's in the dropdown.
+        if ($block->region === "dropdown_menu") {
+          $data['content']['#theme_wrappers'][] = 'main_menu_wrapper';
+        }
+        break;
+    }
+  }
+}
+
+/**
+ * Implements of hook_theme().
+ *
+ * @return array
+ *   List of theme hook names.
+ */
+function fortyfour_microsite_theme() {
+  return array(
+    'main_menu_wrapper' => array(
+      'render element' => 'element',
+    ),
+    'secondary_menu_wrapper' => array(
+      'render element' => 'element',
+    ),
+    'president' => array(
+      'render element' => 'president',
+    ),
+    'learn_more_video' => array(
+      'variables' => array(
+        'url' => NULL,
+        'title' => NULL,
+        'description' => NULL,
+        'subtext' => NULL,
+        'link_text' => NULL,
+      ),
+    ),
+  );
+}
+
+/**
+ * Wrap a main menu in a nav tag.
+ *
+ * @param array $variables
+ *   Theme variables passed by the caller.
+ *
+ * @return string
+ *   HTML output.
+ */
+function theme_main_menu_wrapper($variables) {
+  $element = $variables['element'];
+
+  $output = '<nav id="main-menu" role="navigation">';
+  $output .= $element['#children'];
+  $output .= '</nav>';
+
+  return $output;
+}
+
+/**
+ * Wrap a secondary menu in a nav tag.
+ *
+ * @param array $variables
+ *   Theme variables passed by the caller.
+ *
+ * @return string
+ *   HTML output.
+ */
+function theme_secondary_menu_wrapper($variables) {
+  $element = $variables['element'];
+
+  $output = '<nav id="secondary-menu" role="navigation">';
+  $output .= $element['#children'];
+  $output .= '</nav>';
+
+  return $output;
+}
+
+/**
+ * Theme a presidents name.
+ *
+ * @param array $variables
+ *   Theme variables passed by the caller.
+ *
+ * @return string
+ *   HTML output.
+ */
+function theme_president($variables) {
+  $president = $variables['president'];
+  $output = '<span class="flag">';
+  $output .= $president['#name'];
+  $output .= '</span>';
+
+  return $output;
+}
+
+/**
+ * Theme a video popup link.
+ *
+ * @param array $variables
+ *   Theme variables passed by the caller.
+ *
+ * @return string
+ *   HTML output.
+ */
+function theme_learn_more_video($variables) {
+  // Setup the colorbox JS Settings.
+  $title = '<h2>' . $variables['title'] . '</h2>';
+  $description = '<p>' . $variables['description'] . '</p>';
+  $video = '<iframe width="461" height="260" src="' .  $variables['url'] . '"></iframe>';
+  $subtext = '<p class="sub-video">' . $variables['subtext'] . '</p>';
+  $modal = '<div class="intro-modal">' . $title . $description . $video . $subtext . '</div>';
+
+  // Add the settings for the click handler.
+  watchdog('ben', $modal);
+  drupal_add_js(array('learnMoreVideo' => array('data' => $modal)), 'setting');
+
+  // Add the click handler.
+  drupal_add_js(drupal_get_path('theme', 'fortyfour') . '/js/learn-more-video.js', array('group' => JS_THEME));
+
+  // Return the html that will actually appear on the page.
+  // -- Hack to make l() create a link for just '#'
+  return l($variables['link_text'], '', array('attributes' => array('class' => 'dash-info'), 'fragment' => 'watch'));
+}
