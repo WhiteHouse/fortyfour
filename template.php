@@ -110,10 +110,12 @@
  * @param $path
  * @return array
  */
+/* -- Delete this line if you want to use this function
 function fortyfour_theme($existing, $type, $theme, $path) {
   include_once './' . drupal_get_path('theme', 'fortyfour') . '/fortyfour-internals/template.theme-registry.inc';
   return _fortyfour_theme($existing, $type, $theme, $path);
 }
+// */
 
 
 /**
@@ -153,6 +155,23 @@ function STARTERKIT_preprocess_html(&$variables, $hook) {
 // */
 
 /**
+ * Helper function to easily get the theme path.
+ *
+ * @return string
+ */
+function _get_theme_path() {
+  // We can be certain that no one will ever need to modify this.
+  // See http://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/drupal_static/7
+  static $fortyfour_path;
+
+  if (empty($fortyfour_path)) {
+    $fortyfour_path = path_to_theme();
+  }
+
+  return $fortyfour_path;
+}
+
+/**
  * Override or insert variables into the page templates.
  *
  * @param $variables
@@ -162,24 +181,72 @@ function STARTERKIT_preprocess_html(&$variables, $hook) {
  */
 function fortyfour_preprocess_page(&$variables, $hook) {
   // Set forty four's theme path for JS.
-  $theme_path = path_to_theme();
+  $theme_path = _get_theme_path();
   $variables['theme_path'] = base_path() . $theme_path;
   drupal_add_js(array('fortyfour' => array('themePath' => $theme_path)), 'setting');
+}
 
-  // Get the Fortyfour_President theme setting and pass it to the template.
-  $variables['fortyfour_president'] = theme_get_setting('fortyfour_president');
+/**
+ * Implementation of hook_page_alter().
+ *
+ * Do not modify this function directly, instead use an alter.
+ * Sub-theme's can override this by implementing their own theme_page_alter().
+ *
+ * For more information on theme variables from hook_preprocess_page that are
+ * redeclared here:
+ *   @see http://api.drupal.org/api/drupal/includes%21theme.inc/function/template_preprocess_page/7
+ *
+ * @param $page
+ */
+function fortyfour_page_alter(&$page) {
+  // Setup template variables that we would normally have in hook_preprocess_page().
+  $page['theme_path']  = base_path() . _get_theme_path();
+  $page['front_page']  = url();
+  $page['site_name']   = (theme_get_setting('toggle_name') ? filter_xss_admin(variable_get('site_name', 'Drupal')) : '');
+  $page['site_slogan'] = (theme_get_setting('toggle_slogan') ? filter_xss_admin(variable_get('site_slogan', '')) : '');
 
-  // More info video link
-  $html = theme('learn_more_video',
-    array(
-      'url' => theme_get_setting('learn_more_video_url'),
-      'title' => theme_get_setting('learn_more_video_title'),
-      'description' => theme_get_setting('learn_more_video_description'),
-      'subtext' => theme_get_setting('learn_more_video_subtext'),
-      'link_text' => theme_get_setting('learn_more_video_link_text'),
-    )
+  // Initialize the region array so that the data will be processed into the content variable.
+  $page['header']['#region'] = 'header';
+  $page['header']['#theme_wrappers'] = array('region');
+
+  // Add the extra data.
+  // LOGO
+  $page['header']['logo'] = array(
+    '#type' => 'markup',
+    '#markup' => '<a href="' . $page['front_page'] . '" title="' . t('Home') . '" rel="home" id="logo" class="logo">Economic Dashboard</a>',
   );
-  $variables['learn_more_video'] = $html;
+
+  // SLOGAN
+  $page['header']['slogan'] = array(
+    '#type' => 'markup',
+    '#markup' => '<hgroup id="name-and-slogan">
+      <h1 id="site-name">
+        <a href="' . $page['front_page'] . '" title="' . t('Home') . '" rel="home"><span>' . $page['site_name'] . '</span></a>
+      </h1>
+
+      <h2 id="site-slogan">' . $page['site_slogan'] . '</h2>
+    </hgroup><!-- /#name-and-slogan -->'
+  );
+
+  // SEAL
+  $page['header']['seal'] = array(
+    '#type' => 'markup',
+    '#markup' => '<div class="seal"><img src="' . $page['theme_path'] . '/images/seal.png"/></div>',
+  );
+
+  // VIDEO
+  $page['header']['video'] = array(
+    '#type' => 'markup',
+    '#markup' => theme('learn_more_video',
+      array(
+        'url' => theme_get_setting('learn_more_video_url'),
+        'title' => theme_get_setting('learn_more_video_title'),
+        'description' => theme_get_setting('learn_more_video_description'),
+        'subtext' => theme_get_setting('learn_more_video_subtext'),
+        'link_text' => theme_get_setting('learn_more_video_link_text'),
+      )
+    ),
+  );
 }
 
 /**
@@ -225,14 +292,8 @@ function STARTERKIT_preprocess_comment(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("region" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_region(&$variables, $hook) {
-  // Don't use Zen's region--sidebar.tpl.php template for sidebars.
-  //if (strpos($variables['region'], 'sidebar_') === 0) {
-  //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('region__sidebar'));
-  //}
+function fortyfour_preprocess_region(&$variables, $hook) {
 }
-// */
 
 /**
  * Override or insert variables into the block templates.

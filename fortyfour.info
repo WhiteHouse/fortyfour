@@ -99,11 +99,13 @@ scripts[] = js/jquery.colorbox.js
 ; And you'll use this variable in maintenance-page.tpl.php:
 ;   <?php print $header_top; ?>
 
+regions[banner]         = Banner
 regions[takeover]       = Takeover
 regions[header]         = Header
-regions[navigation]     = Navigation bar
+regions[navigation]     = Navigation
+regions[dropdown_menu]  = Dropdown Menu
+regions[sub_header]     = Sub-Header
 regions[highlighted]    = Highlighted
-regions[help]           = Help
 regions[content]        = Content
 regions[sidebar_first]  = First sidebar
 regions[sidebar_second] = Second sidebar

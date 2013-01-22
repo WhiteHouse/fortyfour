@@ -24,7 +24,7 @@
     $(this).text('Close').stop();
     $(this).addClass('handle-close');
     }, function(){
-    $(this).text('Filter Charts').stop();
+    $(this).text('Main Menu').stop();
     $(this).removeClass('handle-close');
   });
 

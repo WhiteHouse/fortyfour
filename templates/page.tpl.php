@@ -33,7 +33,6 @@
  * - $breadcrumb: The breadcrumb trail for the current page.
  *
  * Page content (in order of occurrence in the default page.tpl.php):
- * - $fortyfour_president: The theme setting for the president's name.
  * - $learn_more_video: The html for a link to a video or link for a model.
  * - $title_prefix (array): An array containing additional output populated by
  *   modules, intended to be displayed in front of the main title tag that
@@ -72,99 +71,53 @@
  */
 ?>
 
-<?php
-  // Regions that needs rendered first so we know if it exists or not.
-  $sidebar_first  = render($page['sidebar_first']);
-  $sidebar_second = render($page['sidebar_second']);
-  $takeover  = render($page['takeover']);
-  $navigation = render($page['navigation']);
-?>
-
-<div class="banner-bg">
-  <div id ="banner" role="banner" class="region-banner clearfix">
-    
-    <!-- Use Secondary Links for external Links to other WH.gov sites-->
-    <!--<a id="return" href="#">Whitehouse.gov</a>-->
-      <?php if ($secondary_menu): ?>
-      <nav id="secondary-menu" role="navigation">
-        <?php print theme('links__system_secondary_menu', array(
-          'links' => $secondary_menu,
-          'attributes' => array(
-            'class' => array('links' , 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => $secondary_menu_heading,
-            'level' => 'h2',
-            'class' => array('menu-title', 'arrow-down'),
-          ),
-        )); ?>
-    </nav>
-    <?php endif; ?>
-    <!-- /external links menu-->
-
-    <!-- Name of the President -->
-    <?php print theme('president_header', array('president' => $fortyfour_president)); ?>
-  </div>
-</div>
-<div class="header-wrap">
-<?php if ($takeover): ?>
-<div class="takeover">
-  <?php print $takeover; ?>
-</div>
+<?php if ($page['banner']): ?>
+  <?php print render($page['banner']); ?>
 <?php endif; ?>
-  <header id="header" role="banner">
-    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo" class="logo">Economic Dashboard</a>
-    <?php if ($site_name || $site_slogan): ?>
-      <hgroup id="name-and-slogan">
-        <?php if ($site_name): ?>
-          <h1 id="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-          </h1>
-        <?php endif; ?>
 
-        <?php if ($site_slogan): ?>
-          <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
-        <?php endif; ?>
-      </hgroup><!-- /#name-and-slogan -->
+<?php if ($page['takeover'] || $page['header']): dpm($page); ?>
+  <div class="header-wrap">
+
+    <?php if ($page['takeover']): ?>
+      <div class="takeover">
+        <?php print render($page['takeover']); ?>
+      </div>
     <?php endif; ?>
-    <div class="seal"><img src="<?php print $theme_path; ?>/images/seal.png"/></div>
-    <!-- Learn more video -->
-    <?php print $learn_more_video; ?>
-  </header>
-</div>
-<div id="main-nav" class="collapse">
-  
-  <div id="navigation" class="toggle-nav hidden">
-    <?php if ($main_menu): ?>
-      <nav id="main-menu" role="navigation">
-        <?php
-        // This code snippet is hard to modify. We recommend turning off the
-        // "Main menu" on your sub-theme's settings form, deleting this PHP
-        // code block, and, instead, using the "Menu block" module.
-        // @see http://drupal.org/project/menu_block
-        print theme('links__system_main_menu', array(
-          'links' => $main_menu,
-          'attributes' => array(
-            'class' => array('links', 'inline', 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => t('Main menu'),
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?>
-      </nav>
+
+    <?php if ($page['header']): ?>
+      <?php print render($page['header']); ?>
     <?php endif; ?>
-    <?php if ($navigation): ?>
-      <?php print $navigation; ?>
-    <?php endif; ?>
-  </div>
-  
-  <div class="handle-wrap"><a class="handle">Menu</a></div>
-</div><!--main nav-->
-<div id="page">  
-  <?php print render($page['header']); ?>
-  
+
+  </div> <!-- /.header-wrap -->
+<?php endif; ?>
+
+<?php if ($page['navigation']): ?>
+  <?php print render($page['navigation']); ?>
+<?php endif; ?>
+
+<?php if ($page['dropdown_menu']): ?>
+  <!-- Drop Down Menu here -->
+  <div id="main-nav" class="collapse">
+    <div id="navigation" class="toggle-nav hidden">
+
+      <?php if ($page['dropdown_menu']): ?>
+        <?php print render($page['dropdown_menu']); ?>
+      <?php endif; ?>
+
+    </div> <!-- /#navigation -->
+
+    <div class="handle-wrap">
+      <a class="handle">Menu</a>
+    </div>
+
+  </div><!--main nav-->
+<?php endif; ?>
+
+<div id="page">
+  <?php if ($page['sub_header']): ?>
+    <?php print render($page['sub_header']); ?>
+  <?php endif; ?>
+
   <div id="main" class="clearfix">
     <?php if (user_is_logged_in()): ?>
       <?php print $messages; ?>
@@ -180,21 +133,29 @@
     <?php print render($page['content']); ?>
   </div><!-- /#content -->
 
-  <?php if ($sidebar_first || $sidebar_second): ?>
+  <?php if ($page['sidebar_first'] || $page['sidebar_second']): ?>
     <aside class="sidebars">
-      <?php print $sidebar_first; ?>
-      <?php print $sidebar_second; ?>
+      <?php print render($page['sidebar_first']); ?>
+      <?php print render($page['sidebar_second']); ?>
     </aside><!-- /.sidebars -->
   <?php endif; ?>
 
   </div><!-- /#main -->
 </div><!-- /#page -->
-<div class="bottom-divider"></div>
-<div class="footer-wrap">
-  <div class="footer-inner">
-  <?php print render($page['footer']); ?>
-  <div class="footer-bottom">
-    <?php print render($page['bottom']); ?>
+
+<?php if ($page['footer'] || $page['bottom']): ?>
+  <div class="bottom-divider"></div>
+  <div class="footer-wrap">
+    <div class="footer-inner">
+      <?php if ($page['footer']): ?>
+        <?php print render($page['footer']); ?>
+      <?php endif; ?>
+
+      <?php if ($page['bottom']): ?>
+        <div class="footer-bottom">
+          <?php print render($page['bottom']); ?>
+        </div>
+      <?php endif; ?>
+    </div>
   </div>
-  </div>
-</div>
+<?php endif; ?>
