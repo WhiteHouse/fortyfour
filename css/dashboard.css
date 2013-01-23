@@ -72,7 +72,7 @@
 
 /* line 65, ../sass/_buttons.scss */
 .btn:focus {
-  outline: thin dotted #333;
+  outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -329,7 +329,7 @@
   background-image: linear-gradient(top, #555555, #222222);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#222222', GradientType=0);
-  border-color: #222222 #222222 #000000;
+  border-color: #222222 #222222 black;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
@@ -576,7 +576,7 @@ input[type="submit"].btn.btn-mini {
   margin-top: 6px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #000000;
+  border-top: 5px solid black;
 }
 
 /* line 462, ../sass/_buttons.scss */
@@ -705,12 +705,12 @@ a.handle {
 }
 
 /* line 89, ../sass/dashboard.scss */
-.flag {
+.president-name {
   background: url(../images/flag.png) left center no-repeat;
   color: #fff;
   float: right;
   font-size: 0.67em;
-  font-family: georgia , serif;
+  font-family: georgia, serif;
   font-style: italic;
   padding-left: 27px;
   line-height: 2.67em;
@@ -748,7 +748,7 @@ a.handle {
 /* line 122, ../sass/dashboard.scss */
 .arrow-up {
   background: white url(../images/arrow-up.png) 120px center no-repeat;
-  color: #000 !important;
+  color: black !important;
 }
 
 /* line 126, ../sass/dashboard.scss */
@@ -847,7 +847,7 @@ h1.title {
 /* line 194, ../sass/dashboard.scss */
 .change-box {
   background-color: #eaeff5;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
   text-align: center;
   min-height: 65px;
 }
@@ -868,7 +868,7 @@ h3.aside {
 
 /* line 210, ../sass/dashboard.scss */
 h3.strike {
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #999999;
   line-height: 0px;
 }
 
@@ -882,8 +882,8 @@ h3.strike {
 .source-info {
   color: #666;
   font-size: 70%;
-  border-top: 1px solid #999;
-  border-bottom: 1px solid #999;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
   padding: 15px 0px;
 }
 
@@ -925,7 +925,7 @@ h3.strike {
 .read-more, .read-less {
   text-transform: uppercase;
   line-height: 0px;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #999999;
   z-index: 999;
   width: 100%;
   text-align: right;
@@ -960,7 +960,7 @@ a.share-btn {
 
 /* line 283, ../sass/dashboard.scss */
 .title-area {
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #999999;
   padding-bottom: 0.5em;
 }
 
@@ -975,9 +975,9 @@ a.sidebar-close, a.sidebar-open {
   background-color: #F6F6F6;
   font-weight: bold;
   position: absolute;
-  border-right: 1px solid #CCC;
-  border-top: 1px solid #CCC;
-  border-left: 1px solid #CCC;
+  border-right: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
   color: #666;
   padding: 3px 20px;
   font-family: Georgia;
@@ -1078,7 +1078,7 @@ div.user-info {
 
 /* line 379, ../sass/dashboard.scss */
 .region-bottom {
-  border-top: 1px solid #999;
+  border-top: 1px solid #999999;
 }
 
 /* line 382, ../sass/dashboard.scss */
@@ -1189,7 +1189,7 @@ div.user-info {
   font-weight: bold;
   line-height: 125%;
   padding: 8px;
-  border-bottom: 1px solid #C5C5C5;
+  border-bottom: 1px solid #c5c5c5;
   min-height: 46px;
   text-indent: 0px;
 }

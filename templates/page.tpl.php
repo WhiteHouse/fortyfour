@@ -75,7 +75,7 @@
   <?php print render($page['banner']); ?>
 <?php endif; ?>
 
-<?php if ($page['takeover'] || $page['header']): dpm($page); ?>
+<?php if ($page['takeover'] || $page['header']): ?>
   <div class="header-wrap">
 
     <?php if ($page['takeover']): ?>
