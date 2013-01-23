@@ -75,7 +75,7 @@ function fortyfour_microsite_block_view($delta = '') {
       $block['subject'] = NULL;
       $block['content'] = array(
         '#theme' => 'president',
-        '#name' => 'Barrack Obama',
+        '#name' => 'Barack Obama',
       );
   }
 
@@ -187,7 +187,7 @@ function theme_secondary_menu_wrapper($variables) {
  */
 function theme_president($variables) {
   $president = $variables['president'];
-  $output = '<span class="flag">';
+  $output = '<span class="president-name">';
   $output .= $president['#name'];
   $output .= '</span>';
 
