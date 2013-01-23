@@ -1,6 +1,6 @@
 //   TODO
 //[] Base Font declarations
-//[] 
+//[]
 
 @import "base";
 
@@ -38,7 +38,7 @@ body{
   @include border-bottom-right-radius;
   border-right: 1px solid #c5c5c5;
   border-bottom: 1px solid #c5c5c5;
-  border-left: 1px solid #c5c5c5;  
+  border-left: 1px solid #c5c5c5;
   margin-bottom: 2.5em;
   @include box-shadow();
   min-height: 20px;
@@ -69,7 +69,7 @@ a.handle{
   cursor: pointer;
 }
 .handle-close{
-  background: url(../images/economic_dashbaord_menu_close.png) top center no-repeat #fff !important; 
+  background: url(../images/economic_dashbaord_menu_close.png) top center no-repeat #fff !important;
 }
 #content{
   background-color: #fff;
@@ -86,7 +86,7 @@ a.handle{
 	background:url(../images/topbarbg.png) top left repeat-x;
 	height: 31px;
 }
-.flag{
+.president-name{
   background: url(../images/flag.png) left center no-repeat;
   color: #fff;
   float: right;
@@ -209,7 +209,7 @@ h3.aside{
 }
 h3.strike{ //use with span.white-bg inside
   border-bottom: 1px solid #999;
-  line-height: 0px; 
+  line-height: 0px;
 }
 .white-bg{
   background-color: #fff;
@@ -433,7 +433,7 @@ div.user-info{
   padding: 0;
   margin: 0;
   border: 0;
-  @include border-radius(0); 
+  @include border-radius(0);
 }
 .view-front-page-grid a{
   text-decoration: none;
