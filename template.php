@@ -165,7 +165,7 @@ function _get_theme_path() {
   static $fortyfour_path;
 
   if (empty($fortyfour_path)) {
-    $fortyfour_path = path_to_theme();
+    $fortyfour_path = drupal_get_path('theme', 'fortyfour');
   }
 
   return $fortyfour_path;
