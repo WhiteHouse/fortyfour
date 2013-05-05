@@ -82,21 +82,12 @@ function _fortyfour_get_page_wrapper() {
  *   Returns HTML.
  */
 function _fortyfour_get_use_microsite_banner() {
-
-  // Check for user-defined header.
+ // Check for user-defined header.
   if (!$fortyfour_use_microsite_banner = theme_get_setting('fortyfour_use_microsite_banner')) {
-
     // If no user-defined header exists, check to see if an included module is
     // providing defaults (this is useful for implmentations like petitions).
-    if (!$fortyfour_use_microsite_banner = variable_get('fortyfour_use_microsite_banner', FALSE)) {
-
-      // If no module provides defaults, load defaults from default template
-      // files and sets the variable.
-      $fortyfour_use_microsite_banner = FALSE;
-      variable_set('fortyfour_use_microsite_banner', $fortyfour_use_microsite_banner);
-    }
-  }
-
+    $fortyfour_use_microsite_banner = variable_get('fortyfour_use_microsite_banner', FALSE);
+  } 
   return $fortyfour_use_microsite_banner;
 }
 
