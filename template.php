@@ -9,14 +9,14 @@
  * Override or insert variables into the page template.
  */
 function fortyfour_process_page(&$variables) {
-  _fortyfour_primary_layout_setup(&$variables);
+  _fortyfour_primary_layout_setup($variables);
 }
 
 /**
  * Override or insert variables into the maintenace page template.
  */
 function fortyfour_process_maintenance_page(&$variables) {
-  _fortyfour_primary_layout_setup(&$variables);
+  _fortyfour_primary_layout_setup($variables);
 }
 
 /**
@@ -87,7 +87,7 @@ function _fortyfour_get_use_microsite_banner() {
     // If no user-defined header exists, check to see if an included module is
     // providing defaults (this is useful for implmentations like petitions).
     $fortyfour_use_microsite_banner = variable_get('fortyfour_use_microsite_banner', FALSE);
-  } 
+  }
   return $fortyfour_use_microsite_banner;
 }
 
