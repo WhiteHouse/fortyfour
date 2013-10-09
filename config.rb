@@ -28,7 +28,8 @@ javascripts_dir = "js"
 #require 'ninesixty'
 #require 'zen-grids'
 
-
+require 'congressional-unity'
+require 'congressional-uptime'
 
 ##
 ## You probably don't need to edit anything below this.
