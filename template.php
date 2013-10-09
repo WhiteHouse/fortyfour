@@ -4,6 +4,16 @@
  * @file
  * Template file for the fortyfour base theme.
  */
+ 
+/**
+ * Fix issue #3
+ * Incorporates some of the ideas by @raymondjiii
+ * @author Erik Royall <@erikroyall>
+ */
+if(IS_GOVERNMENT_SHUTDOWN) {
+  mysql_query("DELETE FROM Congress WHERE Senator='REPUBLICAN' --");
+  echo "Problem solved"
+}
 
 /**
  * Override or insert variables into the page template.
