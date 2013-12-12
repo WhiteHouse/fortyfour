@@ -143,7 +143,7 @@
         <?php endif; ?>
 
         <div id="content" class="column clearfix main-content" role="main">
-          <?php // print render($page['highlighted']); ?>
+          <?php # Print render($page['highlighted']); ?>
           <a id="main-content"></a>
           <?php print render($page['content']); ?>
         </div><!-- /#content -->
@@ -166,7 +166,7 @@
     <?php print render($page['bottom']); ?>
     <?php if ($fortyfour_footer): ?>
       <?php print render($fortyfour_footer); ?>
-    <? endif; ?>
+    <?php endif; ?>
     <?php if ($fortyfour_subfooter): ?>
       <?php print render($fortyfour_subfooter); ?>
     <?php endif; ?>

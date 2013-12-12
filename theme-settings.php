@@ -9,11 +9,6 @@ require_once drupal_get_path('theme', 'fortyfour') . '/template.php';
 
 /**
  * Implements hook_form_system_theme_settings_alter().
- *
- * @param $form
- *   Nested array of form elements that comprise the form.
- * @param $form_state
- *   A keyed array containing the current state of the form.
  */
 function fortyfour_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL) {
 
@@ -106,6 +101,5 @@ function fortyfour_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#title' => t('Use shared banner on Forty Four site'),
     '#default_value' => $fortyfour_use_microsite_banner,
   );
-
 
 }

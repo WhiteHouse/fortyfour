@@ -52,9 +52,10 @@
  *   in the page's path (e.g. node/12345 and node/12345/revisions, but not
  *   comment/reply/12345).
  *
- * Fortyfour theme specific defined theme settings (see README.txt in fortyfour theme
- * for more details)
- * - $fortyfour_page_wrapper: CSS class id to use when creating the page wrappers
+ * Fortyfour theme specific defined theme settings (see README.txt in fortyfour
+ * theme for more details)
+ * - $fortyfour_page_wrapper: CSS class id to use when creating the page
+ *   wrappers
  * - $fortyfour_header: Fortyfour header elements
  * - $fortyfour_header_menu: Fortyfour header navigation menu
  * - $fortyfour_subfooter_menu: Fortyfour subfooter navigation menu
@@ -208,7 +209,7 @@
           <a id="main-content"></a>
           <img src="<?php print $path_to_fortyfour; ?>/images/site_maintenance_petitions.jpg" alt="Photo of the White House under construction"/>
           <div class="construction-text-wrap clear-block">
-            <br>
+            <br />
             <div class="this-section">We the People is currently undergoing site maintenance.</div>
             <div class="we-appreciate">We appreciate your patience while we make some improvements.</div>
             <div class="we-appreciate bold-construction">Please check back shortly.</div>

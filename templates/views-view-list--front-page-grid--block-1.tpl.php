@@ -20,9 +20,9 @@
     $count = count($rows);
     $per_row = intval($count / 3);
     $remainder = intval($count - ($per_row * 2));
-    $first_row = array_slice($rows , 0 , ($per_row));
-    $second_row = array_slice($rows , $per_row , $per_row);
-    $third_row = array_slice($rows , ($per_row * 2) , $remainder);
+    $first_row = array_slice($rows, 0, ($per_row));
+    $second_row = array_slice($rows, $per_row, $per_row);
+    $third_row = array_slice($rows, ($per_row * 2), $remainder);
   ?>
 
 <?php print $list_type_prefix; ?>
