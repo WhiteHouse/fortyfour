@@ -19,7 +19,7 @@
 ?>
 
 <div id="sub-footer" class="clearfix">
-  <div class="clear"> <a href="https://wwws.whitehouse.gov/"><img src="<?php print $path_to_fortyfour; ?>/images/sftr-whgov.gif" alt="The White House Emblem" title="" width="331" height="14"></a> </div>
+  <div class="clear"> <a href="https://wwws.whitehouse.gov/"><img src="<?php print $path_to_fortyfour; ?>/images/sftr-whgov.gif" alt="" title="" width="331" height="14"></a> </div>
   <ul>
     <li><a href="https://wwws.whitehouse.gov/espanol">En español</a></li>
     <li><a href="https://wwws.whitehouse.gov/accessibility">Accessibility</a></li>

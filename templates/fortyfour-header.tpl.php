@@ -22,7 +22,7 @@
 <!--/#wh-header-title-->
 <div id="hdr-emblem">
   <a href="https://wwws.whitehouse.gov/" class="active">
-    <img src="<?php print $path_to_fortyfour; ?>/images/clear.gif" alt="The White House Emblem" title="" width="1" height="1">
+    <img src="<?php print $path_to_fortyfour; ?>/images/clear.gif" alt="" title="" width="1" height="1">
   </a>
 </div>
 <!--/#hdr emblem-->
