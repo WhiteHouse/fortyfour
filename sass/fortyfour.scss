@@ -1,6 +1,6 @@
 //   TODO
 //[] Base Font declarations
-//[] 
+//[]
 
 @import "base";
 
@@ -23,7 +23,7 @@ body{
   padding:0;
   background:#fff url(../images/bg-main-one-repeat.jpg) repeat-y center top;
 }
-  
+
 .header-wrap{
   //height: 133px;
 }
@@ -39,7 +39,7 @@ body{
   @include border-bottom-right-radius;
   border-right: 1px solid #c5c5c5;
   border-bottom: 1px solid #c5c5c5;
-  border-left: 1px solid #c5c5c5;  
+  border-left: 1px solid #c5c5c5;
   margin-bottom: 2.5em;
   @include box-shadow();
   min-height: 20px;
@@ -96,7 +96,7 @@ body{
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
-  color: #9abfe5; 
+  color: #9abfe5;
   float: left;
   font: 0.75em arial;
   padding-top: 8px;
@@ -173,7 +173,7 @@ body{
 	margin: 0;
 	padding: 0;
 	/* The following fixes sclaing issues on iphone */
-	-webkit-background-size: 1280px auto; 
+	-webkit-background-size: 1280px auto;
 }
 
 .center-on-page {
@@ -197,7 +197,7 @@ p { font-size: 1em;
 /******* HEADER EMBLEM ******************/
 
 #hdr-emblem {
-  float: left; 
+  float: left;
   height: 62px;
   margin: 10px 0 0 0;
   width: 116px;
@@ -214,19 +214,19 @@ p { font-size: 1em;
   font-size: 1em;    /*16px x .75   = 12px */
   }
 
-#wh-header span {   
+#wh-header span {
   width: 200px;
   margin: 0;
   padding: 0;
 }
 
 #wh-header span a {
-  text-indent: -9000px; 
-  width: 340px; 
-  height: 42px; 
+  text-indent: -9000px;
+  width: 340px;
+  height: 42px;
   display: block;
   }
-  
+
 #wh-header-title {
   float: left;
   width: 430px;
@@ -236,9 +236,9 @@ p { font-size: 1em;
 /******* HEADER LINKS ******************/
 
 #hdr-links {
-  width: 270px; 
-  float: right; 
-  text-align: right; 
+  width: 270px;
+  float: right;
+  text-align: right;
   margin: 33px 8px 0 0;
   height: 23px;
   padding: 15px 0 0 0;
@@ -253,7 +253,7 @@ p { font-size: 1em;
 #hdr-links a:hover {text-decoration: underline;}
 
 #hdr-links ul {
-  margin: 0; 
+  margin: 0;
   padding: 0;
 }
 
@@ -309,9 +309,9 @@ p { font-size: 1em;
 
 #wh-header-link-get-email-updates a:hover,
 #wh-header-link-get-email-updates a.modal {
-   background-position: -950px -10px; 
+   background-position: -950px -10px;
 }
-  
+
 #hdr-links #wh-header-link-contact-us {
   padding-left: 10px;
 }
@@ -444,11 +444,11 @@ p { font-size: 1em;
 	float: left;
 	padding: 25px 25px 0 20px;
 }
-#microsite #left-nav {	
+#microsite #left-nav {
 	padding-top: 2px;
 }
 
-.excel-content #left-nav {	
+.excel-content #left-nav {
 	width: 960px;
 	padding: 20px 10px 0 10px;
 }
@@ -568,7 +568,7 @@ ul#topnav li.first-level ul li {
   width: 180px;
   min-height: 12px;
   float: left;
-} 
+}
 ul#topnav li.first-level ul li a {
   color: #0f4f89;
   font: bold 12px arial;
@@ -761,4 +761,19 @@ a:focus { -moz-outline-style: none; } /*this avoids having image replacement sec
   top: -638px;
   left: 235px;
   margin: 5px 0px;
+}
+
+/* Right Rail */
+
+.region-right-rail{
+  .thank-you{
+    background: #f6f6f6;
+    border: 1px solid #e8e8e8;
+    padding: 10px 15px;
+    color: #333;
+    word-wrap: break-word;
+    h3{
+      color:#f00;
+    }
+  }
 }
