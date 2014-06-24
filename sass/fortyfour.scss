@@ -767,12 +767,9 @@ a:focus { -moz-outline-style: none; } /*this avoids having image replacement sec
 
 .region-right-rail{
   .thank-you{
-    background: #f6f6f6;
-    border: 1px solid #e8e8e8;
     padding: 10px 15px;
-    color: #333;
     word-wrap: break-word;
-    h3{
+    > h2{
       color:#f00;
     }
   }

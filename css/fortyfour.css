@@ -1586,13 +1586,14 @@ a:focus {
   left: 235px;
   margin: 5px 0px;
 }
+
+/* Right Rail */
+/* line 769, ../sass/fortyfour.scss */
 .region-right-rail .thank-you {
-  background: #f6f6f6;
-  border: 1px solid #e8e8e8;
   padding: 10px 15px;
-  color: #333;
   word-wrap: break-word;
 }
-.region-right-rail .thank-you h3 {
-  color:#f00;
+/* line 772, ../sass/fortyfour.scss */
+.region-right-rail .thank-you > h2 {
+  color: #f00;
 }
