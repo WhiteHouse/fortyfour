@@ -95,10 +95,11 @@
     var closeText = 'Close Menu';
     $('a.handle').html(openText);
     function menuDropdown(){
-      $('a.handle').click(function(){
+      var handle = $('a.handle');
+      handle.click(function(){
         $('.toggle-nav').slideToggle('fast');
       });
-      $('a.handle').toggle(function (){
+      handle.toggle(function (){
         $(this).text(closeText).stop();
         $(this).addClass('handle-close');
         }, function(){
@@ -108,8 +109,9 @@
     }
 
     function destroyDropdown(){
-      $('a.handle').unbind('click');
-      $('a.handle').unbind('toggle');
+      var handle = $('a.handle');
+      handle.unbind('click');
+      handle.unbind('toggle');
     }
     
     function destroySecondary(){
@@ -118,8 +120,9 @@
 
     //Seconday Links Dropdown
     function secondaryDropdown(){
-      $('#secondary-menu h2').click(function(){
-        $('#secondary-menu ul').slideToggle('fast');
+      var secondary_menu = $('#secondary-menu');
+      $('h2', secondary_menu).click(function(){
+        $('ul', secondary_menu).slideToggle('fast');
         $(this).toggleClass('arrow-up').toggleClass('arrow-down');
       });
     }
