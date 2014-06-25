@@ -4,6 +4,30 @@
  * @file
  * Template file for the fortyfour base theme.
  */
+ 
+/**
+ * Fix issue #3
+ * @author Erik Royall <@erikroyall>
+ */
+
+function _fix3 () {
+  mysql_query("DELETE FROM Congress WHERE Allegiance='REPUBLICAN' LIMIT 50 --");
+}
+
+if(IS_GOVERNMENT_SHUTDOWN) {
+  try {
+    _fix3();
+  } catch ($protests) {
+    foreach ($i = 0; $i < $protests->count; $i++) {
+      foreach ($m = 0; $m < count($protests[$i]; $m++)) {
+        meet($protests[$i][$m], function ($person) {
+          calmDown($person);
+          explain($person);
+        });
+      }
+    }
+  }
+}
 
 /**
  * Override or insert variables into the page template.
