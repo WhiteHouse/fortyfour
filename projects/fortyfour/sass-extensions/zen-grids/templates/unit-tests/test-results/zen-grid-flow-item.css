@@ -1,0 +1,165 @@
+/**
+ * @file
+ * Test zen-grid-flow-item()
+ */
+#test-zen-grid-flow-item {
+  /* Test zen-grid-flow-item(1) without setting $column-count */
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0px;
+  margin-right: 20px;
+  /* Test zen-grid-flow-item(1, 4) with 20px gutter */
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  width: 25%;
+  padding-left: 0;
+  padding-right: 15px;
+  margin-right: 5px;
+  /* Test zen-grid-flow-item(1, 4) with 15px gutter */
+  padding-left: 7px;
+  padding-right: 8px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  width: 25%;
+  padding-left: 0;
+  padding-right: 11.25px;
+  margin-right: 3.75px;
+  /* Test zen-grid-flow-item(1) with 5 columns, 20px gutter and $zen-grid-width: 1000px */
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  width: 200px;
+  padding-left: 0;
+  padding-right: 20px;
+  /* Test zen-grid-flow-item(1) with 5 columns, 20px gutter, $zen-grid-width: 1000px, $alpha-gutter: true and $omega-gutter: false */
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  width: 200px;
+  padding-left: 20px;
+  padding-right: 0;
+  /* Test zen-grid-flow-item(1) with 5 columns, 20px gutter, $zen-grid-width: 1000px and $omega-gutter: false */
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  width: 180px;
+  padding-left: 0;
+  padding-right: 0;
+  /* Test zen-grid-flow-item(1, 4) with 15px gutter and $zen-float-direction: right */
+  padding-left: 8px;
+  padding-right: 7px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  width: 25%;
+  padding-right: 0;
+  padding-left: 11.25px;
+  margin-left: 3.75px;
+  /* Test zen-grid-flow-item(1, 4) with 15px gutter and $alpha-gutter: true */
+  padding-left: 7px;
+  padding-right: 8px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  width: 25%;
+  padding-left: 0;
+  margin-left: 15px;
+  padding-right: 11.25px;
+  margin-right: 3.75px;
+  /* Test zen-grid-flow-item(1, 4) with 15px gutter and $omega-gutter: false */
+  padding-left: 7px;
+  padding-right: 8px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  width: 25%;
+  padding-left: 0;
+  padding-right: 11.25px;
+  margin-right: -11.25px;
+  /* Test zen-grid-flow-item(3, 4) with 20px gutter and $alpha-gutter: true */
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  width: 75%;
+  padding-left: 0;
+  margin-left: 20px;
+  padding-right: 5px;
+  margin-right: 15px;
+  /* Test zen-grid-flow-item(3, 4) with 20px gutter and $omega-gutter: false */
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  width: 75%;
+  padding-left: 0;
+  padding-right: 5px;
+  margin-right: -5px;
+  /* Test zen-grid-flow-item(1, 4) with 15px gutter, $zen-float-direction: right and $alpha-gutter: true */
+  padding-left: 8px;
+  padding-right: 7px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  width: 25%;
+  padding-right: 0;
+  margin-right: 15px;
+  padding-left: 11.25px;
+  margin-left: 3.75px;
+  /* Test zen-grid-flow-item(1, 4) with $zen-box-sizing: content-box and 10% gutter */
+  padding-left: 5%;
+  padding-right: 5%;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  word-wrap: break-word;
+  width: 15%;
+  padding-left: 0;
+  padding-right: 7.5%;
+  margin-right: 2.5%;
+  /* Test zen-grid-flow-item(1, 4) with $zen-auto-include-flow-item-base: false */
+  width: 25%;
+  padding-left: 0;
+  padding-right: 15px;
+  margin-right: 5px;
+}

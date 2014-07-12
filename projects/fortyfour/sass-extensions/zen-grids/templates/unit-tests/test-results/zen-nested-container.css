@@ -1,0 +1,21 @@
+/**
+ * @file
+ * Test zen-nested-container()
+ */
+#test-zen-nested-container {
+  /* Test zen-nested-container() */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#test-zen-nested-container-2 {
+  /* Test zen-nested-container() with $legacy-support-for-ie7: true */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#test-zen-nested-container-3 {
+  /* Test zen-nested-container() with $legacy-support-for-ie6: true */
+  padding-left: 0;
+  padding-right: 0;
+}

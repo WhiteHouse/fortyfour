@@ -1,0 +1,78 @@
+/**
+ * @file
+ * Modular styles.
+ */
+
+
+html {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+p {
+  margin: {
+    top: 1.5em;
+    bottom: 1.5em;
+  }
+}
+
+/* Skip link styling */
+.skip-link {
+  margin: 0;
+}
+.skip-link__link,
+.skip-link__link:visited {
+  display: block;
+  width: 100%;
+  padding: 2px 0 3px 0;
+  text-align: center;
+  background-color: #666;
+  color: #fff;
+}
+/* The skip-link link will be completely hidden until a user tabs to the link. */
+@media all and (min-width: 444px) {
+  .skip-link__link {
+    @include visually-focusable();
+  }
+}
+
+/* Set a consistent padding around all containers */
+.header,
+.footer {
+  @extend %grid-item;
+}
+.grid-item,
+.footer {
+  padding-top: 1.5em;
+}
+
+/* Source-order meta info */
+header {
+  h1,
+  h2 {
+    display: inline;
+  }
+  p {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #c00;
+  }
+}
+
+.pull-quote {
+  $font-size: 1.2em;
+
+  @include zen-float();
+  @include zen-grid-flow-item(1, 2);
+  @media all and (min-width: 999px) {
+    @include zen-grid-flow-item(1, 3);
+  }
+  margin: {
+    top: 1em*(1.5em/$font-size);
+  }
+  font-size: $font-size;
+  line-height: 1em*(1.5em/$font-size);
+  font-weight: bold;
+  font-style: italic;
+}
