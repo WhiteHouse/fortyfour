@@ -85,15 +85,7 @@ stylesheets[all][] = css/styles.css
 ; And you'll use this variable in maintenance-page.tpl.php:
 ;   <?php print $header_top; ?>
 
-regions[header]         = Header
-regions[navigation]     = Navigation bar
-regions[highlighted]    = Highlighted
-regions[help]           = Help
-regions[content]        = Content
-regions[sidebar_first]  = First sidebar
-regions[sidebar_second] = Second sidebar
-regions[footer]         = Footer
-regions[bottom]         = Page bottom
+regions[page_content]         = Page content
 
 ; The page_top and page_bottom regions are hidden, which means they will not
 ; show up on the blocks administration page. But they are required in order for
