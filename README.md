@@ -12,7 +12,7 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
   see https://drupal.org/node/245802
 
 
-*** IMPORTANT NOTE ***
+####IMPORTANT NOTE
 *
 * In Drupal 7, the theme system caches which template files and which theme
 * functions should be called. This means that if you add a new theme,
