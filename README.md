@@ -1,5 +1,4 @@
-# BUILD A THEME WITH ZEN
-----------------------
+## BUILD A THEME WITH ZEN
 
 The base Zen theme is designed to be easily extended by its sub-themes. You
 shouldn't modify any of the CSS or PHP files in the zen/ folder; but instead you
@@ -13,7 +12,7 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
 
 ----
 
-# IMPORTANT NOTE
+## IMPORTANT NOTE
 
 In Drupal 7, the theme system caches which template files and which theme
 functions should be called. This means that if you add a new theme,
