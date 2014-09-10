@@ -11,19 +11,20 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
   Why? To learn why you shouldn't modify any of the files in the zen/ folder,
   see https://drupal.org/node/245802
 
+----
 
 ####IMPORTANT NOTE
 
-* In Drupal 7, the theme system caches which template files and which theme
-* functions should be called. This means that if you add a new theme,
-* preprocess or process function to your template.php file or add a new template
-* (.tpl.php) file to your sub-theme, you will need to rebuild the "theme
-* registry." See https://drupal.org/node/173880#theme-registry
-*
-* Drupal 7 also stores a cache of the data in .info files. If you modify any
-* lines in your sub-theme's .info file, you MUST refresh Drupal 7's cache by
-* simply visiting the Appearance page at admin/appearance.
-*
+In Drupal 7, the theme system caches which template files and which theme
+functions should be called. This means that if you add a new theme,
+preprocess or process function to your template.php file or add a new template
+(.tpl.php) file to your sub-theme, you will need to rebuild the "theme
+registry." See https://drupal.org/node/173880#theme-registry
+
+Drupal 7 also stores a cache of the data in .info files. If you modify any
+lines in your sub-theme's .info file, you MUST refresh Drupal 7's cache by
+simply visiting the Appearance page at admin/appearance.
+
 
 
  1. Setup the location for your new sub-theme.
