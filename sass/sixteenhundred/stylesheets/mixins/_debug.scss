@@ -1,0 +1,23 @@
+@mixin debugmessage($message, $color: rgba(255,255,0, 0.9)) {
+  &::before {
+    content: $message;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    background: #{$color};
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 99;
+  }
+}
+
+@mixin debugmessageinline($message, $color: rgba(255,255,0, 0.9)) {
+  &::after {
+    content: $message;
+    font-weight: bold;
+    background: #{$color};
+    margin-left: 1em;
+  }
+}

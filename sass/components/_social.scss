@@ -1,0 +1,183 @@
+// Simple variable abstraction to help make this simpler to read and understand.
+$color-social-share-default:  $color-gray60;
+$color-social-share-hover: $color-blue2;
+
+%social-share-icon-base{
+  &:hover{
+    border: 1px solid $color-social-share-hover;
+    color: $color-social-share-hover;
+  }
+  color: $color-social-share-default;
+}
+
+.social-share-facebook:before {
+  @extend %social-share-icon-base;
+  content: "\f09a";
+  padding-top: 7px;
+  padding-left: 10px;
+}
+
+.social-share-twitter:before {
+  @extend %social-share-icon-base;
+  content: "\f099";
+  padding-top: 7px;
+  padding-left: 7px;
+
+}
+.social-share-email:before,
+.social-share-mailto:before {
+  @extend %social-share-icon-base;
+  content: "\f0e0";
+  padding-top: 8px;
+  padding-left: 8px;
+  font-size: 16px !important;
+}
+
+.social-share-instagram:before {
+  @extend %social-share-icon-base;
+  content: "\f16d";
+  padding-top: 7px;
+  padding-left: 8px;
+}
+
+.social-share-youtube:before {
+  @extend %social-share-icon-base;
+  content: "\f16a";
+  padding-top: 7px;
+  padding-left: 7px;
+}
+
+.social-share a {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 26px;
+  background-color: #fff;
+  margin-right: 0.5em;
+  color: $color-social-share-default;
+  padding: 16px 0px 0px 0px;
+  margin-left:45px;
+  text-transform: uppercase;
+  font-weight: $font-weight-normal;
+
+  &:hover {
+    color: $color-social-share-hover;
+  }
+
+  &:before {
+    position: absolute;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    left: -45px;
+    top: 10px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 50%;
+    border: 1px solid $color-social-share-default;
+  }
+
+  // At tablet hide the social network label
+  @include breakpoint($tablet) {
+    margin: 0px;
+    color: transparent;
+    &:hover {
+      color: transparent;
+    }
+    &:before {
+      left:0px;
+    }
+  }
+
+  // At desktop bring the social network labels.
+  @include breakpoint($desktop) {
+    margin-left:45px;
+    margin-top:0px;
+    color: $color-social-share-default;
+    &:hover {
+      color: $color-social-share-hover;
+    }
+    &:before {
+      left: -45px;
+      top: 10px;
+    }
+  }
+}
+.follow-label,
+.share-label{
+  font-family: $helvetica;
+  text-transform: uppercase;
+  font-size:13px;
+  color: $color-dark-gray;
+  margin:0;
+}
+
+
+.social-share{
+  margin-bottom:35px;
+}
+
+
+.social-follow{
+  margin-top: 0px;
+  ul{
+    list-style-type: none;
+    padding-left:0px;
+    margin-top: 0px;
+  }
+  li{
+    height:35px;
+    margin-bottom:10px;
+  }
+}
+
+
+
+/**
+ * Sticky Social Share Styles
+ */
+#section-share-wrapper {
+  position: relative;
+  box-sizing: border-box;
+  padding-top:20px;
+
+  @include breakpoint($desktop) {
+    margin-left: 30px;
+  }
+
+  @include breakpoint($tablet){
+    padding-top:83px;
+  }
+  &.menu-fixed-top {
+    position: fixed;
+    top: 0;
+  }
+
+  &.menu-at-footer {
+    bottom: 0;
+    top: auto;
+  }
+}
+
+// This compensates for the admin toolbar header.
+.navbar-horizontal{
+  // If the header is horizontal and expanded.
+  @include breakpoint($tablet) {
+    #section-share-wrapper {
+      padding-top: 135px;
+    }
+  }
+}
+
+// If the nav has been set to vertical typically for mobile
+.navbar-vertical{
+  @include breakpoint($tablet) {
+    #section-share-wrapper {
+      padding-top: 135px;
+    }
+  }
+}

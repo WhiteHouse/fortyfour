@@ -1,0 +1,184 @@
+/**
+ * @file
+ * Header
+ *
+ * Adds header styles.
+ */
+
+.whr-header-bg {
+  background: white image-url('fortyfour/bg/wh_header_decor_desktop_large_format.png') no-repeat center top;
+  // One off breakpoint to keep the background positioned correctly.
+  @include breakpoint(445px) {
+    background-position: center -62px;
+  }
+  @include breakpoint($tablet_breakpoint) {
+    background-position: center -140px;
+  }
+}
+.whr-wrapper {
+  @include clearfix;
+  @include breakpoint($tablet_breakpoint) {
+    @include span(12 of $desktop-columns);
+    float: none;
+  }
+  @include wrap-center-content();
+}
+.whr-navbar {
+  position: relative;
+  background: $header-background;
+  @include clearfix;
+}
+
+/**
+ * Style the slogan that is above the rest of the header.
+ */
+.whr-contact-slogan {
+  @include clearfix;
+  padding: 11px 0.615em 6px; // 8px / 13px.
+}
+.pane-page-slogan {
+  float: left;
+  color: $slogan-text;
+  font-size: 0.769em; // 10px / 13px.
+  font-family: $hoefler;
+  font-style: italic;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  @include breakpoint($tablet) {
+    font-size: 0.923em; // 12px / 13px.
+    line-height: 1em;
+  }
+  @include breakpoint($tablet_breakpoint) {
+    font-size: 1.077em; // 14px / 13px.
+    line-height: 1em;
+  }
+}
+.whr-lead {
+  margin-right: 0.7em;
+  font-size: 1.1em;
+}
+.whr-president {
+  @include element-invisible;
+  @include breakpoint(600px) {
+    font-size: 0.75em; // 9px / 12px.
+    line-height: 1em;
+    text-transform: uppercase;
+    @include element-invisible-off;
+  }
+  @include breakpoint($tablet_breakpoint) {
+    font-size: 0.714em; // 10px / 14px.
+    line-height: 1em;
+  }
+}
+
+/**
+ * Style the contact menu and it's links.
+ */
+.whr-contact-nav {
+  @include element-invisible;
+  @include breakpoint($tablet_breakpoint) {
+    @include element-invisible-off;
+    float: right;
+  }
+}
+.whr-contact-nav ul {
+  margin: 0;
+  padding: 0;
+}
+.whr-contact-nav--horizontal-1-level-menu--menu-item {
+  float: left;
+  margin-right: 35px;
+  list-style: none;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.whr-contact-nav--horizontal-1-level-menu--menu-item a {
+  padding-right: 10px;
+  background: image-url('fortyfour/sprites/contact-nav-icons.png') no-repeat right top;
+  font-family: $whitney;
+  font-size: 0.923em; // 12px / 13px.
+  font-weight: bold;
+
+  &.active {
+    background-position: right -23px;
+  }
+
+  &:link,
+  &:visited {
+    color: $color-blue1;
+  }
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    color: $active-link;
+  }
+}
+
+/**
+ * Style and position the site's logo.
+ */
+.pane-page-logo {
+  position: absolute;
+  top: -17.5px;
+  left: 50%;
+  width: 70px;
+  height: 56px;
+  margin-left: -35px;
+  text-align: center;
+  @include breakpoint($tablet) {
+    top: -23.5px;
+    width: 97px;
+    height: 67px;
+    margin-left: -48.5px;
+  }
+  @include breakpoint($tablet_breakpoint) {
+    position: static;
+    float: left;
+    width: 70px;
+    height: 56px;
+    margin: 12.5px 18px 0 0;
+  }
+}
+
+/**
+ * Style the site's breadcrumbs.
+ */
+nav.breadcrumb {
+  padding: 1.154em 0 0.769em; // 15px / 13px; 10px / 13px.
+  margin-left: 10px;
+  @include breakpoint($tablet_breakpoint) {
+    padding: 1.154em 0 0.923em; // 15px / 13px; 12px / 13px.
+  }
+
+  @include breakpoint($desktop) {
+    margin-left: 0px;
+  }
+  li {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $gray60;
+    font-weight: bold;
+    a {
+      color: $gray40;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &:before {
+      padding-right: 5px;
+      content: '·';
+      font-size: 1em;
+      vertical-align: middle;
+    }
+    &:after {
+      padding-left: 5px;
+      content: '';
+    }
+    &:first-child:before {
+      content: '';
+      padding-right: 0px;
+    }
+  }
+}

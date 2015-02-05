@@ -18,6 +18,7 @@
 /**
  * HTML5 display definitions
  */
+@import "init";
 
 /* Correct `block` display not defined in IE 8/9. */
 article,
@@ -179,39 +180,12 @@ blockquote {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
-h1 {
-  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
-  @include adjust-font-size-to( $h1-font-size );
-
-  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-  @include leader(1, $h1-font-size);
-  @include trailer(1, $h1-font-size);
-}
-h2 {
-  @include adjust-font-size-to( $h2-font-size );
-  @include leader(1, $h2-font-size);
-  @include trailer(1, $h2-font-size);
-}
-h3 {
-  @include adjust-font-size-to( $h3-font-size );
-  @include leader(1, $h3-font-size);
-  @include trailer(1, $h3-font-size);
-}
-h4 {
-  @include adjust-font-size-to( $h4-font-size );
-  @include leader(1, $h4-font-size);
-  @include trailer(1, $h4-font-size);
-}
-h5 {
-  @include adjust-font-size-to( $h5-font-size );
-  @include leader(1, $h5-font-size);
-  @include trailer(1, $h5-font-size);
-}
-h6 {
-  @include adjust-font-size-to( $h6-font-size );
-  @include leader(1, $h6-font-size);
-  @include trailer(1, $h6-font-size);
-}
+h1{font-size:2em;line-height:1.84615em;margin-top:0.92308em;margin-bottom:0.92308em}
+h2{font-size:1.5em;line-height:1.23077em;margin-top:1.23077em;margin-bottom:1.23077em}
+h3{font-size:1.17em;line-height:1.57791em;margin-top:1.57791em;margin-bottom:1.57791em}
+h4{font-size:1em;line-height:1.84615em;margin-top:1.84615em;margin-bottom:1.84615em}
+h5{font-size:0.83em;line-height:2.22428em;margin-top:2.22428em;margin-bottom:2.22428em}
+h6{font-size:0.67em;line-height:2.75545em;margin-top:2.75545em;margin-bottom:2.75545em}
 
 /* Address styling not present in IE 8/9, Safari 5, and Chrome. */
 abbr[title] {
@@ -352,10 +326,6 @@ img {
   /* Responsive images */
   max-width: 100%;
   height: auto;
-  @if $legacy-support-for-ie8 {
-    /* Correct IE 8 not scaling image height when resized. */
-    width: auto;
-  }
 }
 
 /* Correct overflow displayed oddly in IE 9. */

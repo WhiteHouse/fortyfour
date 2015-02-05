@@ -1,0 +1,106 @@
+/**
+ * @file
+ * Featured content
+ */
+
+/**
+ * Adds featured content styles. Corresponds to the pane style: "Featured
+ * Content - Livestream Page"
+ */
+%featured,
+.featured {
+  @include clearfix;
+  margin: 0 0 1.538em 0; // 20px / 13px
+}
+.featured__image {
+  float: left;
+  width: 38%;
+  @include breakpoint($tablet) {
+    float: none;
+    width: 100%;
+    padding-left: 0;
+  }
+  @include breakpoint($desktop) {
+    float: left;
+    width: 38%;
+  }
+}
+.featured__wrap {
+  float: left;
+  width: 62%;
+  padding-left: 1.231em; // 16px / 13px
+  @include breakpoint($tablet) {
+    float: none;
+    width: 100%;
+    padding-left: 0;
+  }
+  @include breakpoint($desktop) {
+    float: left;
+    width: 62%;
+    padding-left: 1.231em; // 16px / 13px
+  }
+}
+.featured__title {
+  margin: 0;
+  color: $gray;
+  font-weight: normal;
+  line-height: 1.333em; // 17px / 13px
+}
+
+/**
+ * Featured single column content. Corresponds to the pane style: "Featured
+ * Content - Live Feed"
+ */
+.featured--single-column {
+  @extend %featured;
+}
+%featured--single-column__image,
+.featured--single-column__image {
+  float: left;
+  width: 38%;
+  @include breakpoint($tablet) {
+    float: none;
+    width: 100%;
+  }
+}
+
+%featured--single-column__wrap,
+.featured--single-column__wrap {
+  float: left;
+  width: 62%;
+  padding-left: 1.231em; // 16px / 13px
+  @include breakpoint($tablet) {
+    float: none;
+    width: 100%;
+    padding-left: 0;
+  }
+}
+%featured--single-column__title,
+.featured--single-column__title {
+  margin: 0;
+  color: $gray;
+  font-weight: normal;
+  line-height: 1.333em; // 17px / 13px
+}
+.featured--single-column .featured__image {
+  @extend %featured--single-column__image;
+}
+.featured--single-column .featured__wrap {
+  @extend %featured--single-column__wrap;
+}
+.featured--single-column .featured__title {
+  @extend %featured--single-column__title;
+}
+
+/**
+ * Default Fieldable Pane of type "Featured Content". These styles corresponde
+ * to the Pane style: "Default Pane Style"
+ */
+.pane-bundle-feature-content-panel-pane {
+  @extend %featured;
+
+  .featured__title {
+    /* This title is redundant because it's already printed as h2.pane-title */
+    display: none;
+  }
+}

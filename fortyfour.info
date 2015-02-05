@@ -65,8 +65,8 @@ stylesheets[all][] = css/styles.css
 
 
 ; Optionally add some JavaScripts to your theme.
-
-;scripts[] = js/script.js
+scripts[] = js/html5shiv.js
+scripts[] = js/theme.js
 
 
 
@@ -84,14 +84,14 @@ stylesheets[all][] = css/styles.css
 ;   <?php print render($page['header_top']); ?>
 ; And you'll use this variable in maintenance-page.tpl.php:
 ;   <?php print $header_top; ?>
-
-regions[page_content]         = Page content
+; regions[page_content]         = Page content
 
 ; The page_top and page_bottom regions are hidden, which means they will not
 ; show up on the blocks administration page. But they are required in order for
 ; the html.tpl.php to work properly, so do not delete them.
 
 regions[page_top]       = Page top
+regions[content]        = Content
 regions[page_bottom]    = Page bottom
 
 
@@ -117,16 +117,16 @@ features[] = secondary_menu
 ; Set the default values of settings on the theme-settings.php form.
 
 settings[zen_breadcrumb]           = yes
-settings[zen_breadcrumb_separator] = ' › '
+settings[zen_breadcrumb_separator] = ''
 settings[zen_breadcrumb_home]      = 1
 settings[zen_breadcrumb_trailing]  = 0
-settings[zen_breadcrumb_title]     = 0
-settings[zen_skip_link_anchor]     = main-menu
+settings[zen_breadcrumb_title]     = 1
+settings[zen_skip_link_anchor]     = block-menu-block-sixteenhundrednav-main
 settings[zen_skip_link_text]       = Jump to navigation
 settings[zen_html5_respond_meta][] = respond
 settings[zen_html5_respond_meta][] = html5
 settings[zen_html5_respond_meta][] = meta
-settings[zen_rebuild_registry]     = 1
+settings[zen_rebuild_registry]     = 0
 settings[zen_wireframes]           = 0
 
 ; To make this sub-theme an admin theme with shortcut links next to titles,

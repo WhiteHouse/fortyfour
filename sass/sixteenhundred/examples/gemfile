@@ -1,0 +1,6 @@
+source "https://rubygems.org"
+
+gem 'compass', '>= 1.0.1' # This version is needed for susy 2.x
+gem 'breakpoint'
+gem 'susy'
+# gem 'sixteenhundred', :path => "vendor/sixteenhundred"

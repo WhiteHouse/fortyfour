@@ -1,0 +1,14 @@
+/**
+ * @file
+ * Title
+ *
+ * Adds title styles.
+ */
+
+.title--header {
+  padding: 0 0 0.5em 0;
+  margin: 0 0 1em 0;
+  @include adjust-font-size-to(20px);
+  font-weight: normal;
+  border-bottom: 1px solid $gray-border;
+}

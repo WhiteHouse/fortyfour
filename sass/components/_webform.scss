@@ -1,0 +1,197 @@
+.node-webform {
+  margin-bottom: 1.538em; // 20px / 13px
+}
+
+.imagefield {
+  float:left;
+}
+
+.webform-left {
+  padding: 2.462em 1.231em; // 32px / 13px, 16px / 13px
+}
+
+.webform-right{
+  padding: 2.462em 1.231em; // 32px / 13px, 16px / 13px
+}
+
+.node-webform label {
+  color: #5d5d5d;
+  float: left;
+  margin-bottom: 0.308em; // 4px / 13px
+  width: 100%;
+}
+
+.webform-component-textarea label {
+  line-height: 1.231em; // 16px / 13px
+}
+
+.node-webform input {
+  border: 1px solid #ccc;
+  max-width: 100%;
+}
+
+input.form-file {
+  border: none;
+}
+
+.webform-bg {
+  background: url('/sites/default/themes/framedynamic/img/background_blue_splice.png') repeat;
+}
+
+.webform-bg a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.webform-full-bg label {
+  color : #fff;
+}
+
+.webform-full-bg h2 {
+  color: #fff;
+  margin: 0 0 0.769em 0; // 10px / 13px
+}
+
+.webform-full-bg h3 {
+  color: #789bb9;
+  margin: 0 0 0.769em 0; // 10px / 13px
+}
+
+.webform-full-bg .webform-component-checkboxes {
+  float:left;
+}
+
+.webform-bg p {
+  color: #fff;
+}
+
+.webform-component {
+  padding-bottom: 0.385em; // 5px / 13px
+  margin-bottom: 0.769em; // 10px / 13px
+  width: 100%;
+
+  .webform-component {
+    margin-bottom: 0;
+  }
+
+  .form-item {
+    margin: 0;
+  }
+
+  .form-checkboxes,
+  .form-radios {
+    margin: 0;
+  }
+}
+
+.webform-component-markup {
+  margin: 0;
+}
+
+.webform-component-markup p {
+  margin: 0 0 0.769em 0; // 10px / 13px
+}
+
+.webform-component label {
+  display: block;
+  font-weight: bold;
+  color: rgb(89, 89, 89);
+  margin-bottom: 0.2em;
+}
+
+.webform-component-checkboxes,
+.webform-component-textarea {
+  margin-bottom: 0.615em; // 8px / 13px
+}
+
+.webform-component-textarea {
+  line-height: 1.231em; // 16px / 13px
+}
+
+/* Form buttons */
+.webform-client-form input.form-submit,
+.webform-client-form input[type="submit"]{
+  @include btn;
+
+  &.btn-blue {
+    @include gradient-button($btn-color-top, $btn-color-bottom, $btn-hover);
+  }
+
+  &.btn-dark-blue {
+    @include gradient-button(#369, #036, #036);
+  }
+
+  &.btn-red-submit,
+  &.btn-red {
+    @include gradient-button(#b60000, #880000, #7e0000);
+  }
+
+  &.btn-gold {
+    @include gradient-button(#b9884e, #65400a, #65400a);
+  }
+
+  &.btn-green {
+    @include gradient-button(#76b100, #669900, #5e8d00);
+  }
+
+  &.btn-dark-grey {
+    @include gradient-button(#5b5b5b, #2e2e2e, #949494);
+  }
+
+  &.btn-light-grey {
+    @include gradient-button(#a8a8a8, #8a8a8a, #c8c8c8);
+    color: #424242;
+    &:hover {
+      color: #424242;
+    }
+  }
+
+  &.btn-white {
+    @include gradient-button(#fff, #fff, #fff);
+    border: 1px solid #cbcbcb;
+    color: #336699;
+    &:hover {
+      color: #003366;
+    }
+    @include single-box-shadow(0, 0, 0, false, #fff);
+    @include single-text-shadow(0, 0, 0, false, #fff);
+  }
+}
+
+.node-webform #edit-submit-1 {
+  display: none;
+}
+
+.border-shadow {
+  border-right: 1px solid #e4e4e4;
+  border-left: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  box-shadow: 0 0.769em 1.385em -0.769em #666; // 10px / 13px, 18px / 13px, 10px / 13px
+  -moz-box-shadow: 0 0.769em 1.385em -0.769em #666; // 10px / 13px, 18px / 13px, 10px / 13px
+  -webkit-box-shadow: 0 0.769em 1.385em -0.769em #666; // 10px / 13px, 18px / 13px, 10px / 13px
+}
+
+.center-content {
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  border-bottom: none;
+}
+
+.webform-component-checkboxes {
+  float: left;
+}
+
+.required-text {
+  color: #f00;
+  width: 100%;
+  float: left;
+  margin-top: 1.538em; // 20px / 13px
+}
+
+.resizable-textarea {
+  width: 100%;
+  @include breakpoint($tablet) {
+    float:left;
+  }
+}

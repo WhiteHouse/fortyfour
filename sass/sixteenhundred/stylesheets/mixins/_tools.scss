@@ -1,0 +1,170 @@
+// http://vvv.tobiassjosten.net/css/px-to-em-with-sass/
+@function em($px, $base: $base-font-size) {
+  @return ($px / $base) * 1em;
+}
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+@mixin hidden() {
+  display: none;
+  visibility: hidden;
+}
+
+@mixin hidden-phone {
+  @include breakpoint($mobile) {
+    display: none;
+  }
+}
+
+@mixin hidden-phone-and-tablet {
+  @include breakpoint($mobile) {
+    display: none;
+  }
+  @include breakpoint($tablet) {
+    display: none;
+  }
+}
+
+@mixin visuallyhidden() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+// Clearfix
+@mixin clearfix() {
+  zoom:1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// crossbrowser inline-block
+@mixin inline-block {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+}
+
+// placeholder:
+// @extend %inline-block;
+%inline-block {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+}
+
+// hidpi: same concept as "responsive", except that this is focusing on
+// HiDPI (a.k.a. retina) displays.
+@mixin hidpi($media: all) {
+  @media
+  only #{$media} and (min--moz-device-pixel-ratio: 1.5),
+  only #{$media} and (-o-min-device-pixel-ratio: 3/2),
+  only #{$media} and (-webkit-min-device-pixel-ratio: 1.5),
+  only #{$media} and (min-device-pixel-ratio: 1.5),
+  only #{$media} and (min-resolution: 144dpi),
+  only #{$media} and (min-resolution: 1.5dppx) {
+
+    @content;
+  }
+}
+
+// Generates multiple color stops in gradients for a given element
+//
+// example:
+// @include x-multiple-colored-gradient(( "top", #aaa 0%, #bbb 50%, #ccc 100% ));
+//
+// Documentation: docs/multiple-colored-gradient.md
+@mixin x-multiple-colored-gradient($args) {
+
+  $gradient: ();
+  $pos: nth($args, 1);
+  $pos_newsyntax: ();
+
+  @if ($pos != 'top')
+    and ($pos != 'right')
+    and ($pos != 'bottom')
+    and ($pos != 'left')
+    and ($pos != 'to top')
+    and ($pos != 'to right')
+    and ($pos != 'to bottom')
+    and ($pos != 'to left') {
+    $pos: 'top';
+  }
+
+  // New Syntax
+  @if $pos == 'top' {
+    $pos_newsyntax: 'to bottom';
+  } @else if $pos == 'right' {
+    $pos_newsyntax: 'to left';
+  } @else if $pos == 'bottom' {
+    $pos_newsyntax: 'to top';
+  } @else if $pos == 'left' {
+    $pos_newsyntax: 'to right';
+  }
+
+  @each $g in $args {
+    @if ($g != 'top')
+      and ($g != 'right')
+      and ($g != 'bottom')
+      and ($g != 'left')
+      and ($g != 'to top')
+      and ($g != 'to right')
+      and ($g != 'to bottom')
+      and ($g != 'to left') {
+      $gradient: append($gradient, $g, comma);
+    }
+  }
+
+  background-image:  -webkit-linear-gradient(unquote($pos), $gradient);
+  background-image:     -moz-linear-gradient(unquote($pos), $gradient);
+  background-image:      -ms-linear-gradient(unquote($pos), $gradient);
+  background-image:       -o-linear-gradient(unquote($pos), $gradient);
+  background-image: unquote('linear-gradient(#{$pos_newsyntax}, #{$gradient})');
+}

@@ -94,12 +94,6 @@
   float: left;
 }
 
-/* The name of the website. */
-.header__site-name {
-  margin: 0;
-  @include adjust-font-size-to( $h1-font-size );
-}
-
 /* The link around the name of the website. */
 .header__site-link {
   &:link,
@@ -474,36 +468,6 @@ span.field-label {
 }
 
 /**
- * Menus.
- */
-.menu__item.is-leaf {
-  list-style-image: inline-image("menu-leaf.png");
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    *list-style-image: image-url("menu-leaf.png");
-  }
-  list-style-type: square;
-}
-.menu__item.is-expanded {
-  list-style-image: inline-image("menu-expanded.png");
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    *list-style-image: image-url("menu-expanded.png");
-  }
-  list-style-type: circle;
-}
-.menu__item.is-collapsed {
-  list-style-image: inline-image("menu-collapsed.png");
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    *list-style-image: image-url("menu-collapsed.png");
-  }
-  list-style-type: disc;
-}
-
-/* The active item in a Drupal menu. */
-.menu a.active {
-  color: #000;
-}
-
-/**
  * Marker.
  */
 
@@ -804,4 +768,76 @@ tr.selected td {
     background-color: #0072b9;
     background-image: image-url("progress.gif");
   }
+}
+
+
+/**
+ * Blockquote.
+ */
+blockquote.blockquote-1 {
+  font-size: 19px;
+  line-height: 24px;
+  font-family: 'Georgia', 'DejaVu Serif', serif;
+  font-style: italic;
+  font-weight: normal;
+  color: rgb(51,51,51);
+  margin: 0 0 0 16px;
+  padding: 0 0 0 16px;
+  border-left: 2px solid rgb(51,51,51);
+}
+
+blockquote.blockquote-2 {
+  font-size: 19px;
+  line-height: 24px;
+  font-family: 'Georgia', 'DejaVu Serif', serif;
+  font-style: normal;
+  color: rgb(51,51,51);
+  margin: 16px 0;
+  padding: 16px 0;
+  border-top: 2px solid rgb(51,51,51);
+  border-bottom: 2px solid rgb(51,51,51);
+  text-align: center;
+}
+
+blockquote.fact-style-1 {
+  font-size: 19px;
+  line-height: 23px;
+  font-family: 'Helvetica Neue', DejaVu, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  color: rgb(51,51,51);
+  margin-left: 16px;
+  padding-left: 16px;
+  border-left: 2px solid rgb(51,51,51);
+}
+
+blockquote.pullquote-1 {
+  font-size: 19px;
+  line-height: 24px;
+  font-family: 'Georgia', 'DejaVu Serif', serif;
+  font-style: italic;
+  font-weight: normal;
+  color: rgb(51,51,51);
+  margin-left: 16px;
+  padding-left: 16px;
+  border-left: 2px solid rgb(51,51,51);
+  float: right;
+  width: 50%
+}
+
+blockquote.blockquote-1 div.citation::before,
+blockquote.blockquote-2 div.citation::before,
+blockquote.pullquote-1 div.citation::before {
+  content: "-";
+  font-size: 12px;
+  font-family: 'Helvetica Neue', DejaVu, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+blockquote div.citation {
+  font-size: 12px;
+  font-family: 'Helvetica Neue', DejaVu, sans-serif;
+  font-style: normal;
+  font-weight: bold;
 }

@@ -1,0 +1,113 @@
+/* Styles are in this file to begin the new Style Guide css breakout*/
+@mixin sixteenhundred-fonts(){
+
+
+  %body-links{
+    /* Links */
+    a {
+      font-weight: $font-weight-bold;
+
+      &:link,
+      &:visited {
+        font-weight: $font-weight-bold;
+      }
+
+      &:hover,
+      &:active {
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+
+  %body-text{
+    font-size: 16px;
+    font-family: $helvetica-neue;
+    font-weight: normal;
+    line-height: 23px;
+    color: $color-dark-gray;
+    @extend %body-links;
+
+  }
+
+  %summary-text{
+    font-size: 20px;
+    font-family: $hoefler;
+    font-weight: normal;
+    line-height: 32px;
+    color: $gray70;
+    @extend %body-links;
+  }
+
+  %header-base{
+    font-family: $whitney;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: .292em;
+    color: $color-dark-gray;
+
+  }
+
+  %horizontal-rule{
+    border-bottom: 1px solid  $color-gray-light;
+  }
+
+
+  h1{
+    @extend %header-base;
+    font-family: $hoefler;
+    font-size: 35px;
+    line-height: 38px;
+    margin-top:30px;
+  }
+
+  h2{
+    @extend %header-base;
+    font-size: 24px;
+    line-height: 27px;
+  }
+
+  h3{
+    @extend %header-base;
+    font-size: 22px;
+    line-height: 25px;
+  }
+
+  h4{
+    @extend %header-base;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  /* Stylesheet modifiers */
+  .formal{
+    font-family: $hoefler;
+  }
+
+  .semibold{
+    font-weight: $font-weight-bold;
+  }
+
+  .light{
+    font-weight: 100;
+  }
+
+  .forall-summary{
+    @extend %horizontal-rule;
+    padding-bottom:35px;
+    margin-bottom:35px;
+
+    p:last-child {
+      margin-bottom:0px;
+    }
+  }
+
+  .forall-summary, .forall-summary p {
+    @extend %summary-text;
+  }
+
+  .forall-body, .forall-body p {
+    @extend %body-text;
+  }
+}
+

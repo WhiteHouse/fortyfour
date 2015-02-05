@@ -9,14 +9,21 @@
 /* Import Sass mixins, variables, Compass modules, etc. */
 @import "init";
 
-/* HTML element (SMACSS base) rules */
+/* Basic HTML element styles */
 @import "normalize";
+@import "base_styling";
+@import "fluid_media";
+@import "form";
 
-/* Component (SMACSS module) rules */
+/* Component styles */
+@import "components/buttons";
 @import "components/misc";
-// Optionally, add your own components here.
-@import "print";
+@import "components/featured";
+@import "components/header";
+@import "components/webform";
+@import "components/titles";
+@import "components/social";
+@import "components/editor";
 
-/* SMACSS theme rules */
-/* @import "theme-A"; */
-/* @import "theme-B"; */
+/* Print */
+@import "print";

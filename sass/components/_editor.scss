@@ -1,0 +1,25 @@
+// Styles specifically for the inside of CKEditor textareas.
+.ckeditor44 {
+  margin: 20px;
+
+  figure {
+    border: solid 1px #ccc;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 10px 20px;
+    display: inline-block;
+  }
+}
+
+// Widget styles (mostly borrowed from the default stylesheet)
+
+
+.cke_widget_wrapper:hover > .cke_widget_element {
+  outline: 2px solid yellow;
+  cursor: default;
+}
+
+.cke_widget_wrapper.cke_widget_focused > .cke_widget_element,
+.cke_widget_wrapper .cke_widget_editable.cke_widget_editable_focused {
+outline: 2px solid #ace;
+}

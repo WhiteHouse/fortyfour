@@ -1,0 +1,9 @@
+<svg version="1.1" id="infographic_nav_icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+  width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+  <g class="icon">
+    <rect x="4.378" y="11.972" transform="matrix(1 0.002 -0.002 1 0.0326 -0.0132)" width="4.36" height="8.358"/>
+    <rect x="10.921" y="8.715" transform="matrix(1 0.002 -0.002 1 0.0293 -0.0264)" width="4.36" height="11.629"/>
+    <rect x="17.469" y="2.55" transform="matrix(1 0.0021 -0.0021 1 0.0244 -0.0418)" width="4.36" height="17.808"/>
+    <polygon points="1.82,22.138 1.864,0 0.007,0 0,0.169 0,24 24,24 24,22.181 	"/>
+  </g>
+</svg>

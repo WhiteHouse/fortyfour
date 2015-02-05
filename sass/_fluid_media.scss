@@ -1,0 +1,45 @@
+/**
+ * Fluid Media
+ */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Correct IE 8 not scaling image height when resized. */
+.lt-ie9 img {
+  width: auto;
+}
+
+// Styling for captioned images
+.image-captioned {
+  margin-bottom: 20px;
+
+  img {
+    margin-bottom: 11px;
+  }
+
+  figcaption {
+    font-family: $helvetica-neue;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.image-right {
+  float: right;
+  margin-left: 16px;
+  margin-bottom: 11px;
+  margin-top: 5px;
+}
+
+.image-left {
+  float: left;
+  margin-right: 16px;
+  margin-bottom: 11px;
+  margin-top: 5px;
+}
+
+.image-center {
+  text-align: center;
+}

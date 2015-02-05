@@ -1,0 +1,82 @@
+/**
+ * @file
+ * Footer
+ *
+ * Adds footer styles.
+ */
+
+
+.sitewide-footer {
+  // Give it the embossed-looking little top border.
+  background: $gray-background url('../sixteenhundred/images/hr.jpg') top repeat-x;
+  padding: 0 10%;
+  // Reset some basic things. No menu bullets, no default indenting.
+  clear:both;
+  display:block;
+  margin: 0px;
+  & li.menu__item.is-expanded,
+  & li.leaf {
+    list-style-image: none;
+    list-style-type: none;
+    display:inline;
+  }
+  ul.menu {
+     padding-left: 0px;
+  }
+}
+
+.sitewide-footer--social-nav{
+  text-align:center;
+}
+
+/**
+ * Main nav items in the sitewide footer.
+ */
+
+.sitewide-footer--navmenu{
+  background: transparent url('../sixteenhundred/images/hr.jpg') top repeat-x;
+  padding: 0 0 1em;
+  display:block;
+  clear:both;
+}
+
+// Top-level menu items appear as sections.
+.sitewide-footer--main-nav--menu-level-1 {
+  // Items of this type are links.
+  float:left;
+  display:block;
+  max-width: 18%;
+  min-width: 10em;
+  margin: 0 2% 0 0;
+  padding: 1em 0;
+  & > a {
+    text-transform: uppercase;
+    color: $color-near-black;
+    text-decoration: none;
+    font-weight: 900;
+  }
+}
+// Second-level menu items appear as categories. These don't have links.
+.sitewide-footer--main-nav--menu-level-2 {
+  color: $color-gray40;
+  font-weight: bold;
+  list-style-type: none;
+}
+// Third-level menu items appear as listed links.
+.sitewide-footer--main-nav--menu-level-3 {
+    list-style-type: none;
+  & a {
+    color: $color-blue1;
+    font-weight: normal;
+    text-decoration: none;
+    display:block;
+  }
+}
+
+.sitewide-footer--utility-nav{
+  background: transparent url('../sixteenhundred/images/hr.jpg') top repeat-x;
+  padding: 1px 0;
+  display:block;
+  clear:both;
+  text-align:center;
+}

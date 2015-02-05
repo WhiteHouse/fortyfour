@@ -1,0 +1,38 @@
+// Page width and centering.
+@mixin page-width() {
+  width: 75.077em; // 976px / 13px
+  margin: 0 auto;
+}
+
+// Padding for mobile layouts.
+@mixin mobile-padding() {
+  padding: 1.538em; // 20px / 13px
+}
+
+%l-1-2 {
+  @include container(2);
+}
+
+%l-1-2__item-even {
+  @include span(2 of 2);
+  padding: 0;
+
+  @include breakpoint($tablet) {
+    @include span(1 of 2);
+    padding-right: 0;
+  }
+}
+
+%l-1-2__item-odd {
+  @include span(2 of 2);
+  padding: 0;
+
+  @include breakpoint($tablet) {
+    @include span(1 of 2);
+    padding-left: 0;
+  }
+}
+
+%l-1-2__new-row {
+  clear: left;
+}

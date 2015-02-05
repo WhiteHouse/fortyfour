@@ -1,0 +1,18 @@
+/**
+ * @file
+ * IE9
+ *
+ * Adds IE9-specific styles. Included via direct html.tpl.php override.
+ */
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+
+/* Header Style IE9 Overrides
+ *
+ * Search Form/Fields overrides moved.
+ * Search overrides moved to whitehouse_nav module.
+ */
+.whr-navbar .whr-wrapper {
+  padding-right:0px;
+}

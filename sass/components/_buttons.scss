@@ -1,0 +1,94 @@
+// Use mixins from sixteenhundred to build button classes for use in the
+// fortyfour in the theme.
+
+.btn {
+  @include btn;
+}
+
+// Large and small varients currently work for standard buttons but not the social buttons.
+// To support social, we'll need to add support for scalable graphics or multiple images.
+.btn-large {
+  @include btn-large;
+}
+.btn-small {
+  @include btn-small;
+}
+
+.btn-blue {
+  @include gradient-button($btn-color-top, $btn-color-bottom, $btn-hover);
+}
+.btn-dark-blue {
+  @include gradient-button(#369, #036, #036);
+}
+.btn-red {
+  @include gradient-button(#b60000, #880000, #7e0000);
+}
+.btn-gold {
+  @include gradient-button(#b9884e, #65400a, #65400a);
+}
+.btn-green {
+  @include gradient-button(#76b100, #669900, #5e8d00);
+}
+.btn-dark-gray {
+  @include gradient-button(#5b5b5b, #2e2e2e, #949494);
+}
+.btn-light-gray {
+  @include gradient-button(#a8a8a8, #8a8a8a, #c8c8c8);
+  color: #424242;
+  &:hover {
+    color: #424242;
+  }
+}
+.btn-white {
+  @include gradient-button(#fff, #fff, #fff);
+  border: 1px solid #cbcbcb;
+  color: #336699;
+  &:hover {
+    color: #003366;
+  }
+  @include single-box-shadow(0, 0, 0, false, #fff);
+  @include single-text-shadow(0, 0, 0, false, #fff);
+}
+
+.btn-facebook, .btn-blue-facebook {
+  @include gradient-button($btn-color-top, $btn-color-bottom, $btn-hover, "fortyfour/social-icons/fb_btn_icon2.png");
+}
+.btn-twitter, .btn-blue-twitter {
+  @include gradient-button($btn-color-top, $btn-color-bottom, $btn-hover, "fortyfour/social-icons/twt_btn_icon2.png");
+}
+.btn-dark-blue-facebook {
+  @include gradient-button(#369, #036, #036, "fortyfour/social-icons/fb_btn_icon2.png");
+}
+.btn-dark-blue-twitter {
+  @include gradient-button(#369, #036, #036, "fortyfour/social-icons/twt_btn_icon2.png");
+}
+.btn-red-facebook {
+  @include gradient-button(#b60000, #880000, #7e0000, "fortyfour/social-icons/fb_btn_icon2.png");
+}
+.btn-red-twitter {
+  @include gradient-button(#b60000, #880000, #7e0000, "fortyfour/social-icons/twt_btn_icon2.png");
+}
+.btn-gold-facebook {
+  @include gradient-button(#b9884e, #65400a, #65400a, "fortyfour/social-icons/fb_btn_icon2.png");
+}
+.btn-gold-twitter {
+  @include gradient-button(#b9884e, #65400a, #65400a, "fortyfour/social-icons/twt_btn_icon2.png");
+}
+.btn-green-facebook {
+  @include gradient-button(#76b100, #669900, #5e8d00, "fortyfour/social-icons/fb_btn_icon2.png");
+}
+.btn-green-twitter {
+  @include gradient-button(#76b100, #669900, #5e8d00, "fortyfour/social-icons/twt_btn_icon2.png");
+}
+.btn-dark-gray-facebook {
+  @include gradient-button(#5b5b5b, #2e2e2e, #949494, "fortyfour/social-icons/fb_btn_icon2.png");
+}
+.btn-dark-gray-twitter {
+  @include gradient-button(#5b5b5b, #2e2e2e, #949494, "fortyfour/social-icons/twt_btn_icon2.png");
+}
+.btn-light-gray-facebook {
+  @include gradient-button(#a8a8a8, #8a8a8a, #c8c8c8, "fortyfour/social-icons/fb_btn_icon2.png");
+}
+.btn-light-gray-twitter {
+  @include gradient-button(#a8a8a8, #8a8a8a, #c8c8c8, "fortyfour/social-icons/twt_btn_icon2.png");
+}

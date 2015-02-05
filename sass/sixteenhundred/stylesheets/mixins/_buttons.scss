@@ -1,0 +1,97 @@
+// Partial for all button definitions.
+
+// The mixin for a standard button. Example usage:
+//
+//  .call-to-action {
+//    @include btn;
+//  }
+//
+@mixin btn {
+  background-color: $btn-color-bottom;
+  @include background-image(linear-gradient(top, $btn-color-top, $btn-color-bottom));
+  @include border-radius();
+  @include single-box-shadow(0, 1px, 2px, false, rgba(0,0,0,0.4));
+  @include single-text-shadow(0, -1px, 1px, false, rgba(0,0,0,0.2));
+  border: none;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-family: $arial;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  &:visited {
+    color: #fff;
+  }
+  &:hover, &:focus {
+    @include background($btn-hover);
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+// Large and small varients currently work for standard buttons but not the social buttons.
+// To support social, we'll need to add support for scalable graphics or multiple images.
+// To use this, include the mixin after the btn @include. Example Usage:
+//
+//  .main-action {
+//    @include btn;
+//    @include btn-large;
+//  }
+//
+@mixin btn-large {
+  padding: 13px 19px;
+  font-size: 16px;
+}
+@mixin btn-small {
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+// A mixin for overriding default button styles with bg colors and an optional icon image.
+// To use this, include the mixin after the btn @include. For example:
+//
+// .red-button {
+//   @include btn;
+//   @include gradient-button(#b60000, #880000, #7e0000);
+// }
+//
+@mixin gradient-button($color-top: $btn-color-top, $color-bottom: $btn-color-bottom, $color-hover: $btn-hover, $image-path: false) {
+  // Overrides the gradient & hover state on .btn
+  @if $image-path == false {
+    background-color: $color-top; // Fallback for < ie8.
+    @include background-image(linear-gradient(top, $color-top, $color-bottom));
+    &:hover {
+      background-color: $color-hover;
+    }
+  }
+
+  // Optional image path allows for split-buttons like social buttons.
+  @if $image-path != false {
+    background-color: $color-top; // Fallback for < ie8.
+    background: url($image-path), $color-top; // Fallback for < ie9.
+    @include background(image-url($image-path), linear-gradient(top, $color-top, $color-bottom));
+    background-repeat: no-repeat;
+
+    // Make space for the icon if multiple backgrounds are supported (provided by modernizr).
+    padding-left: 48px;
+    padding-right: 14px;
+
+    // Fallbacks for no multiple bg's.
+    .no-multiplebgs & {
+      background-color: $color-top;
+      padding-left: 14px;
+      &:hover {
+        background-color: $color-hover;
+      }
+    }
+
+    &:hover {
+      @include background(image-url($image-path), $color-hover);
+      background-repeat: no-repeat;
+    }
+  }
+}

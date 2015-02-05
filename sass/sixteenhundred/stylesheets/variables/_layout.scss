@@ -1,0 +1,69 @@
+// Susy Grid Default Variables
+
+/*
+ * These variables live here so that they can be shared with modules.
+*/
+$mobile-columns: 4;
+
+$tablet: all and min-width 480px;
+$tablet-large : all and min-width 720px;
+$tablet-columns: 8;
+
+$desktop:  all and min-width 960px, 'no-query' '.no-responsive';
+$desktop-columns: 12;
+
+$tablet-breakpoint: 850px;
+
+
+$susy: (
+  columns: $mobile-columns,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+@include layout($susy);
+
+
+
+@mixin sixteenhundred-default-responsivegrid(){
+  @include container($mobile-columns);
+
+  @include breakpoint($tablet) {
+    @include container($tablet-columns);
+  }
+
+  @include breakpoint($desktop) {
+    @include container($desktop-columns);
+  }
+}
+
+/*
+ * Much of the content around the site has been designed with a max-width of
+ * 960px.  This code is designed to call out that assumption and centralize it
+ * so that we can change if need be.  Also should help prevent confusion about
+ * that width.
+*/
+$content-width: 960px;
+
+@mixin wrap-center-content(){
+  max-width: $content-width;
+  margin: 0 auto;
+}
+
+
+
+// @TODO we should revisit
+@mixin hidpi($media: all) {
+  @media
+  only #{$media} and (min--moz-device-pixel-ratio: 1.5),
+  only #{$media} and (-o-min-device-pixel-ratio: 3/2),
+  only #{$media} and (-webkit-min-device-pixel-ratio: 1.5),
+  only #{$media} and (min-device-pixel-ratio: 1.5),
+  only #{$media} and (min-resolution: 144dpi),
+  only #{$media} and (min-resolution: 1.5dppx) {
+
+    @content;
+  }
+}
+
