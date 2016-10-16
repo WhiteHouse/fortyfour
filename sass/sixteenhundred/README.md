@@ -282,7 +282,7 @@ To Do
 
 Demos
 ---------------
-- cd to /sites/all/themes/fourtyfour/
+- cd to /sites/all/themes/fortyfour/
 - bundle exec compass watch
 - should add some basic examples that are bundled with the framework.
 - demo showing how to import and use the framework.
