@@ -252,7 +252,7 @@ Best Practices For Framework Developers
   a functional area of your requirement.  When the resulting files are tightly
   coupled to one another create a directory for them.
 - Any time that a new piece of code is added to components it should have an
-  accomodating style-guide example.
+  accommodating style-guide example.
 - Do not under any circumstances include SASS which is specific to a site, or
   a product.  Any product specific code should be built into your products
   theming layer.
