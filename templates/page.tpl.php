@@ -9,7 +9,7 @@
  * This is a "single region" page template, delegating responsibility for layout
  * to Panels layout plugins, node template files (where not panelized), and custom page callbacks.
  *
- * Available variables provided by thinskin:
+ * Available variables provided by ThinSkin:
  * - $page_manager_control: NULL if not under Page Manager (Panels) control. Not
  *   NULL if controlled by Panels. NOTE: The assumption here is that pages under
  *   Page Manager control will include things like $tabs and $messages via
