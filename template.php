@@ -17,12 +17,12 @@
  *   The name of the template being rendered ("maintenance_page" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function fortyfour_preprocess_maintenance_page(&$variables, $hook) {
+function thinskin_preprocess_maintenance_page(&$variables, $hook) {
   // When a variable is manipulated or added in preprocess_html or
   // preprocess_page, that same work is probably needed for the maintenance page
   // as well, so we can just re-use those functions to do that work here.
-  fortyfour_preprocess_html($variables, $hook);
-  fortyfour_preprocess_page($variables, $hook);
+  thinskin_preprocess_html($variables, $hook);
+  thinskin_preprocess_page($variables, $hook);
 }
 // */
 
@@ -35,7 +35,7 @@ function fortyfour_preprocess_maintenance_page(&$variables, $hook) {
  *   The name of the template being rendered ("html" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function fortyfour_preprocess_html(&$variables, $hook) {
+function thinskin_preprocess_html(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 
   // The body tag's classes are controlled by the $classes_array variable. To
@@ -52,7 +52,7 @@ function fortyfour_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-function fortyfour_preprocess_page(&$variables, $hook) {
+function thinskin_preprocess_page(&$variables, $hook) {
   if (isset($variables['node'])) {
     // Tell the template whether the node is panelizer-controlled.
     $variables['page_manager_control'] = isset($variables['node']->panelizer_view_mode) ? $variables['node']->panelizer_view_mode : NULL;
@@ -73,11 +73,11 @@ function fortyfour_preprocess_page(&$variables, $hook) {
  *   The name of the template being rendered ("node" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function fortyfour_preprocess_node(&$variables, $hook) {
+function thinskin_preprocess_node(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 
   // Optionally, run node-type-specific preprocess functions, like
-  // fortyfour_preprocess_node_page() or fortyfour_preprocess_node_story().
+  // thinskin_preprocess_node_page() or thinskin_preprocess_node_story().
   $function = __FUNCTION__ . '_' . $variables['node']->type;
   if (function_exists($function)) {
     $function($variables, $hook);
@@ -94,7 +94,7 @@ function fortyfour_preprocess_node(&$variables, $hook) {
  *   The name of the template being rendered ("comment" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function fortyfour_preprocess_comment(&$variables, $hook) {
+function thinskin_preprocess_comment(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 }
 // */
@@ -108,7 +108,7 @@ function fortyfour_preprocess_comment(&$variables, $hook) {
  *   The name of the template being rendered ("region" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function fortyfour_preprocess_region(&$variables, $hook) {
+function thinskin_preprocess_region(&$variables, $hook) {
   // Don't use Zen's region--sidebar.tpl.php template for sidebars.
   //if (strpos($variables['region'], 'sidebar_') === 0) {
   //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('region__sidebar'));
@@ -125,7 +125,7 @@ function fortyfour_preprocess_region(&$variables, $hook) {
  *   The name of the template being rendered ("block" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function fortyfour_preprocess_block(&$variables, $hook) {
+function thinskin_preprocess_block(&$variables, $hook) {
   // Add a count to all the blocks in the region.
   // $variables['classes_array'][] = 'count-' . $variables['block_id'];
 
@@ -145,7 +145,7 @@ function fortyfour_preprocess_block(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("block" in this case.)
  */
-function fortyfour_preprocess_fieldable_panels_pane(&$variables, $hook) {
+function thinskin_preprocess_fieldable_panels_pane(&$variables, $hook) {
   $theme_hook_suggestions = $variables['theme_hook_suggestions'];
 
   // Determine if this is a featured content fieldable panel pane.

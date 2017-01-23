@@ -7,7 +7,7 @@
  * @param $form_state
  *   A keyed array containing the current state of the form.
  */
-function fortyfour_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL)  {
+function thinskin_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL)  {
   // Work-around for a core bug affecting admin themes. See issue #943212.
   if (isset($form_id)) {
     return;
@@ -16,10 +16,10 @@ function fortyfour_form_system_theme_settings_alter(&$form, &$form_state, $form_
   // Create the form using Forms API: http://api.drupal.org/api/7
 
   /* -- Delete this line if you want to use this setting
-  $form['fortyfour_example'] = array(
+  $form['thinskin_example'] = array(
     '#type'          => 'checkbox',
-    '#title'         => t('fortyfour sample setting'),
-    '#default_value' => theme_get_setting('fortyfour_example'),
+    '#title'         => t('thinskin sample setting'),
+    '#default_value' => theme_get_setting('thinskin_example'),
     '#description'   => t("This option doesn't do anything; it's just an example."),
   );
   // */
