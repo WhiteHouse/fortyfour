@@ -6,7 +6,7 @@
  */
 
 .whr-header-bg {
-  background: white image-url('fortyfour/bg/wh_header_decor_desktop_large_format.png') no-repeat center top;
+  background: white image-url('thinskin/bg/wh_header_decor_desktop_large_format.png') no-repeat center top;
   // One off breakpoint to keep the background positioned correctly.
   @include breakpoint(445px) {
     background-position: center -62px;
@@ -96,7 +96,7 @@
 }
 .whr-contact-nav--horizontal-1-level-menu--menu-item a {
   padding-right: 10px;
-  background: image-url('fortyfour/sprites/contact-nav-icons.png') no-repeat right top;
+  background: image-url('thinskin/sprites/contact-nav-icons.png') no-repeat right top;
   font-family: $whitney;
   font-size: 0.923em; // 12px / 13px.
   font-weight: bold;

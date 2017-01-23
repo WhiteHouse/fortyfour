@@ -1,5 +1,5 @@
 // Use mixins from sixteenhundred to build button classes for use in the
-// fortyfour in the theme.
+// thinskin in the theme.
 
 .btn {
   @include btn;
@@ -51,44 +51,44 @@
 }
 
 .btn-facebook, .btn-blue-facebook {
-  @include gradient-button($btn-color-top, $btn-color-bottom, $btn-hover, "fortyfour/social-icons/fb_btn_icon2.png");
+  @include gradient-button($btn-color-top, $btn-color-bottom, $btn-hover, "thinskin/social-icons/fb_btn_icon2.png");
 }
 .btn-twitter, .btn-blue-twitter {
-  @include gradient-button($btn-color-top, $btn-color-bottom, $btn-hover, "fortyfour/social-icons/twt_btn_icon2.png");
+  @include gradient-button($btn-color-top, $btn-color-bottom, $btn-hover, "thinskin/social-icons/twt_btn_icon2.png");
 }
 .btn-dark-blue-facebook {
-  @include gradient-button(#369, #036, #036, "fortyfour/social-icons/fb_btn_icon2.png");
+  @include gradient-button(#369, #036, #036, "thinskin/social-icons/fb_btn_icon2.png");
 }
 .btn-dark-blue-twitter {
-  @include gradient-button(#369, #036, #036, "fortyfour/social-icons/twt_btn_icon2.png");
+  @include gradient-button(#369, #036, #036, "thinskin/social-icons/twt_btn_icon2.png");
 }
 .btn-red-facebook {
-  @include gradient-button(#b60000, #880000, #7e0000, "fortyfour/social-icons/fb_btn_icon2.png");
+  @include gradient-button(#b60000, #880000, #7e0000, "thinskin/social-icons/fb_btn_icon2.png");
 }
 .btn-red-twitter {
-  @include gradient-button(#b60000, #880000, #7e0000, "fortyfour/social-icons/twt_btn_icon2.png");
+  @include gradient-button(#b60000, #880000, #7e0000, "thinskin/social-icons/twt_btn_icon2.png");
 }
 .btn-gold-facebook {
-  @include gradient-button(#b9884e, #65400a, #65400a, "fortyfour/social-icons/fb_btn_icon2.png");
+  @include gradient-button(#b9884e, #65400a, #65400a, "thinskin/social-icons/fb_btn_icon2.png");
 }
 .btn-gold-twitter {
-  @include gradient-button(#b9884e, #65400a, #65400a, "fortyfour/social-icons/twt_btn_icon2.png");
+  @include gradient-button(#b9884e, #65400a, #65400a, "thinskin/social-icons/twt_btn_icon2.png");
 }
 .btn-green-facebook {
-  @include gradient-button(#76b100, #669900, #5e8d00, "fortyfour/social-icons/fb_btn_icon2.png");
+  @include gradient-button(#76b100, #669900, #5e8d00, "thinskin/social-icons/fb_btn_icon2.png");
 }
 .btn-green-twitter {
-  @include gradient-button(#76b100, #669900, #5e8d00, "fortyfour/social-icons/twt_btn_icon2.png");
+  @include gradient-button(#76b100, #669900, #5e8d00, "thinskin/social-icons/twt_btn_icon2.png");
 }
 .btn-dark-gray-facebook {
-  @include gradient-button(#5b5b5b, #2e2e2e, #949494, "fortyfour/social-icons/fb_btn_icon2.png");
+  @include gradient-button(#5b5b5b, #2e2e2e, #949494, "thinskin/social-icons/fb_btn_icon2.png");
 }
 .btn-dark-gray-twitter {
-  @include gradient-button(#5b5b5b, #2e2e2e, #949494, "fortyfour/social-icons/twt_btn_icon2.png");
+  @include gradient-button(#5b5b5b, #2e2e2e, #949494, "thinskin/social-icons/twt_btn_icon2.png");
 }
 .btn-light-gray-facebook {
-  @include gradient-button(#a8a8a8, #8a8a8a, #c8c8c8, "fortyfour/social-icons/fb_btn_icon2.png");
+  @include gradient-button(#a8a8a8, #8a8a8a, #c8c8c8, "thinskin/social-icons/fb_btn_icon2.png");
 }
 .btn-light-gray-twitter {
-  @include gradient-button(#a8a8a8, #8a8a8a, #c8c8c8, "fortyfour/social-icons/twt_btn_icon2.png");
+  @include gradient-button(#a8a8a8, #8a8a8a, #c8c8c8, "thinskin/social-icons/twt_btn_icon2.png");
 }

@@ -26,7 +26,7 @@
 
   <?php print $styles; ?>
   <!--[if lte IE 9]>
-    <link href="<?php print $base_path; ?>sites/whitehouse.gov/themes/forall/fortyfour/css/ie9.css" rel="stylesheet" type="text/css">
+    <link href="<?php print $base_path; ?>sites/whitehouse.gov/themes/forall/thinskin/css/ie9.css" rel="stylesheet" type="text/css">
   <![endif]-->
   <?php print $scripts; ?>
   <?php if ($add_html5_shim and !$add_respond_js): ?>
